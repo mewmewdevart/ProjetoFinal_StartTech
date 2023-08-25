@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); // Fonte Raleway
-@import url(./app/scss_reset.scss); //  Resetador de estilos
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+@import './app/scss_reset.scss';
 
-// Cores principais usadas no Projeto
+ /*  Cores principais usadas no Projeto */
 $corPrincipal: #FFC603;
 $corSombraPrincipal: #D8AA0B;
 $preto: #060606;
@@ -9,7 +9,7 @@ $pretoSuave: #282830;
 $cinza: #C4C4C4;
 $branco: #FEFBFB;
 
-// Cores do Sistema: Usada em Alertas
+/* Cores do Sistema: Usada em Alertas */
 $support-01: #2962FF;
 $support-02: #0BB07B;
 $support-03: #FFCE52;
@@ -17,7 +17,7 @@ $support-04: #F03D3D;
 $support-05: #E0E0E0;
 
 $fontePadrao: 'Raleway', sans-serif;
-$titulos: 3.5%; // Equivalente a 35px em relação à fonte padrão
-$paragrafos:  112.5%; // Equivalente a 18px em relação à fonte padrão
+$titulos: 3.5%; 
+$paragrafos:  112.5%;
 
 html, body { min-height: 100vh; font-family: $fontePadrao; font-size: $paragrafos;}
