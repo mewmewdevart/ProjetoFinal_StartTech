@@ -1,0 +1,135 @@
+.sessao01 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://i.ibb.co/Fmy71js/externa02-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  .texto-exibicoes {
+    width: 1140px;
+    margin: auto;
+    h2 {
+      //   margin-top: 100px;
+      padding-top: 25vh;
+      width: 23vw;
+      text-align: start;
+      word-spacing: -3px;
+      //   background-color: black;
+      font-size: 40px;
+      color: white;
+    }
+    p {
+      width: 23vw;
+      padding-top: 3vh;
+      font-size: 20px;
+      color: white;
+    }
+  }
+  .cards-exibicoes {
+    // background-color: red;
+    width: 1140px;
+    height: 40vh;
+    margin: auto;
+    mat-grid-list {
+      mat-grid-tile {
+        mat-card {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 40px;
+          img {
+            height: 100%;
+            width: 190px;
+            justify-content: center;
+            align-items: center;
+            background: none;
+          }
+        }
+      }
+    }
+  }
+}
+.sessao02 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://i.ibb.co/Fmy71js/externa02-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .texto-exibicoes {
+      width: 1140px;
+      margin: auto;
+      h2 {
+        //   margin-top: 100px;
+        padding-top: 25vh;
+        width: 23vw;
+        text-align: start;
+        word-spacing: -3px;
+        //   background-color: black;
+        font-size: 40px;
+        color: white;
+      }
+      p {
+        width: 23vw;
+        padding-top: 3vh;
+        font-size: 20px;
+        color: white;
+      }
+    }
+    .cards-exibicoes {
+      // background-color: red;
+      width: 1140px;
+      height: 40vh;
+      margin: auto;
+      mat-grid-list {
+        mat-grid-tile {
+          mat-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            img {
+              height: 100%;
+              width: 190px;
+              justify-content: center;
+              align-items: center;
+              background: none;
+            }
+          }
+        }
+      }
+    }
+}
+
+
+// Estilos para telas pequenas (até 768px)
+@media screen and (max-width: 768px) {
+  .sessao01 {
+    position: relative;
+    width: 768px;
+    height: 845px;
+    background-image: url("https://i.ibb.co/Fmy71js/externa02-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .sessao02 {
+    position: relative;
+    width: 768px;
+    height: 845px;
+    background-image: url("https://i.ibb.co/Fmy71js/externa02-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+// Estilos para telas médias (de 769px até 1024px)
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}
+
+// Estilos para telas grandes (acima de 1024px)
+@media screen and (min-width: 1025px) {
+}
