@@ -1,0 +1,38 @@
+
+	<mat-toolbar>
+	<div class="container">
+	<h1 class="logo">StartCine +</h1>
+
+	<!-- Tela menor que 1000px? display: flex -->
+	<div class="navbar-responsivo-menu">
+		<button mat-button [matMenuTriggerFor]="menu"> <mat-icon>menu</mat-icon></button>
+		<mat-menu #menu="matMenu">
+			<button mat-menu-item routerLink="/"><mat-icon>home</mat-icon>Inicio</button>
+			<button mat-menu-item routerLink="#"><mat-icon>movie_filter</mat-icon>Filmes</button>
+			<button mat-menu-item routerLink="#"><mat-icon>live_tv</mat-icon>Séries</button>
+			<button mat-menu-item routerLink="#"><mat-icon>star</mat-icon>Animes</button>
+			<button mat-menu-item routerLink="#"><mat-icon>search</mat-icon>Pesquisar</button>
+		</mat-menu>
+	</div>
+
+	<!-- Tela menor que 1000px? display: none -->
+	<div class="navbar-responsivo">
+	  <button mat-button routerLink="/"><mat-icon>home</mat-icon>Inicio</button>
+	  <button mat-button routerLink="#"><mat-icon>movie_filter</mat-icon>Filmes</button>
+	  <button mat-button routerLink="#"><mat-icon>live_tv</mat-icon>Séries</button>
+	  <button mat-button routerLink="#"><img src="../../assets/images/icon-pokemon.svg" alt="pikachu animation" class="anime-icon">Animes</button>
+	  <button mat-button routerLink="#"><mat-icon>search</mat-icon>Pesquisar</button>
+	</div>
+
+	  <span class="example-spacer"></span>
+
+	  <button mat-button routerLink="#"><mat-icon>add</mat-icon>Minha lista</button>
+	  <button mat-button [matMenuTriggerFor]="accountMenu"> <mat-icon>account_circle</mat-icon></button>
+	  <mat-menu #accountMenu="matMenu">
+		<button mat-menu-item routerLink="#">Conta</button>
+		<button mat-menu-item routerLink="#">Configurações</button>
+		<button mat-menu-item routerLink="#">Ajuda</button>
+		<button mat-menu-item routerLink="#">Sair</button>
+	  </mat-menu>
+	</div>
+	</mat-toolbar>
