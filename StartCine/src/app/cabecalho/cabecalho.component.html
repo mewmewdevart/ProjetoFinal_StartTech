@@ -12,6 +12,7 @@
 			<button mat-menu-item routerLink="#"><mat-icon>live_tv</mat-icon>Séries</button>
 			<button mat-menu-item routerLink="#"><mat-icon>star</mat-icon>Animes</button>
 			<button mat-menu-item routerLink="#"><mat-icon>search</mat-icon>Pesquisar</button>
+			<button mat-menu-item routerLink="#"><mat-icon>add</mat-icon>Minha lista</button>
 		</mat-menu>
 	</div>
 
@@ -26,13 +27,15 @@
 
 	  <span class="example-spacer"></span>
 
-	  <button mat-button routerLink="#"><mat-icon>add</mat-icon>Minha lista</button>
-	  <button mat-button [matMenuTriggerFor]="accountMenu"> <mat-icon>account_circle</mat-icon></button>
-	  <mat-menu #accountMenu="matMenu">
-		<button mat-menu-item routerLink="#">Conta</button>
-		<button mat-menu-item routerLink="#">Configurações</button>
-		<button mat-menu-item routerLink="#">Ajuda</button>
-		<button mat-menu-item routerLink="#">Sair</button>
-	  </mat-menu>
+	  <div class="navbar-direita">
+		<button mat-button routerLink="#" class="navbar-responsivo-direita"><mat-icon>add</mat-icon>Minha lista</button>
+		<button mat-button [matMenuTriggerFor]="accountMenu"> <mat-icon>account_circle</mat-icon></button>
+		<mat-menu #accountMenu="matMenu">
+			<button mat-menu-item routerLink="#">Conta</button>
+			<button mat-menu-item routerLink="#">Configurações</button>
+			<button mat-menu-item routerLink="#">Ajuda</button>
+			<button mat-menu-item routerLink="#">Sair</button>
+		</mat-menu>
+	</div>
 	</div>
 	</mat-toolbar>
