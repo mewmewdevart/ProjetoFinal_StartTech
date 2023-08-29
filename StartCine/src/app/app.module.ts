@@ -7,8 +7,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatCardModule} from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
 import { NgFor } from '@angular/common';
 
 
@@ -18,6 +19,9 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { HomeComponent } from './home/home.component';
 import { ExibicoesExternasComponent } from './exibicoes-externas/exibicoes-externas.component';
 import { HomeExternaComponent } from './home-externa/home-externa.component';
+import { RodapeComponent } from './rodape/rodape.component';
+import { RodapeDadosComponent } from './rodape-dados/rodape-dados.component';
+import { SliderHomeComponent } from './slider-home/slider-home.component';
 
 
 @NgModule({
@@ -26,7 +30,10 @@ import { HomeExternaComponent } from './home-externa/home-externa.component';
     CabecalhoComponent,
     HomeComponent,
     ExibicoesExternasComponent,
-    HomeExternaComponent
+    HomeExternaComponent,
+    RodapeComponent,
+    RodapeDadosComponent,
+    SliderHomeComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +46,8 @@ import { HomeExternaComponent } from './home-externa/home-externa.component';
     MatGridListModule,
     MatButtonModule,
     MatCardModule,
-    NgFor
+    NgFor,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
