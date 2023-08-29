@@ -1,48 +1,15 @@
 <section class="sessao01">
   <div class="container">
     <div class="texto-exibicoes">
-      <h2>Todas as suas séries, animes e filmes favoritos em um só lugar.</h2>
-      <p>"Passagem direta para um mundo de entretenimento ilimitado!</p>
-    </div>
-    <div class="cards-exibicoes">
-      <mat-grid-list cols="6" rowHeight="2:4">
-        <div *ngFor="let exibir of destaques">
-          <mat-grid-tile>
-            <mat-card>
-              <img
-                mat-card-image
-                [src]="exibir.foto"
-                [alt]="exibir.titulo"
-                class="img-card"
-              />
-            </mat-card>
-          </mat-grid-tile>
-        </div>
-      </mat-grid-list>
-    </div>
-  </div>
-</section>
-<section class="sessao02">
-  <div class="container">
-    <div class="texto-exibicoes">
-      <h2>Assista onde quiser!</h2>
-      <p>Assista a quantos filmes e séries quiser no celular, tablet, laptop e TV.</p>
-    </div>
-    <div class="cards-exibicoes">
-      <mat-grid-list cols="6" rowHeight="2:4">
-        <div *ngFor="let exibir of destaques">
-          <mat-grid-tile>
-            <mat-card>
-              <img
-                mat-card-image
-                [src]="exibir.foto"
-                [alt]="exibir.titulo"
-                class="img-card"
-              />
-            </mat-card>
-          </mat-grid-tile>
-        </div>
-      </mat-grid-list>
+      <h2>TODAS AS SUAS SÉRIES, ANIMES E FILMES FAVORITOS EM UM SÓ LUGAR.</h2>
+      <p>"Passagem direta para um mundo de entretenimento ilimitado!"</p>
+      <div class="cartao-externo">
+        <div *ngFor="let cartao of destaques">
+          <mat-card >
+            <img [src]="cartao.foto" alt="">
+          </mat-card> 
+        </div>      
+      </div>
     </div>
   </div>
 </section>
