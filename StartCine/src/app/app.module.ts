@@ -18,6 +18,7 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { HomeComponent } from './home/home.component';
 import { ExibicoesExternasComponent } from './exibicoes-externas/exibicoes-externas.component';
 import { HomeExternaComponent } from './home-externa/home-externa.component';
+import { SubtelaExternaComponent } from './subtela-externa/subtela-externa.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { HomeExternaComponent } from './home-externa/home-externa.component';
     CabecalhoComponent,
     HomeComponent,
     ExibicoesExternasComponent,
-    HomeExternaComponent
+    HomeExternaComponent,
+    SubtelaExternaComponent
   ],
   imports: [
     BrowserModule,
