@@ -23,3 +23,5 @@ $titulos: 3.5%;
 $paragrafos:  112.5%;
 
 html, body { min-height: 100vh; font-family: $fontePadrao; font-size: $paragrafos;}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

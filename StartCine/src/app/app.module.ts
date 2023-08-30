@@ -18,6 +18,10 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { HomeComponent } from './home/home.component';
 import { ExibicoesExternasComponent } from './exibicoes-externas/exibicoes-externas.component';
 import { HomeExternaComponent } from './home-externa/home-externa.component';
+import { MaterialModule } from 'src/material.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {ToastrModule} from 'ngx-toastr'
 
 
 @NgModule({
@@ -39,7 +43,11 @@ import { HomeExternaComponent } from './home-externa/home-externa.component';
     MatGridListModule,
     MatButtonModule,
     MatCardModule,
-    NgFor
+    MaterialModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    NgFor,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
