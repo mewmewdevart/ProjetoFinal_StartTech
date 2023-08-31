@@ -23,7 +23,20 @@
 							<p>{{ filme.sinopse }}</p>
 					</div> 
 				</div>
-				<iframe [src]="filme.iframe" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+
+				<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+					<mat-tab label="SUGESTOES">
+						<!-- SLIDER -->
+					</mat-tab>
+					<mat-tab label="DETALHES">
+						<div class="container">
+							<div class="row">
+								
+							</div>
+						</div>
+					</mat-tab>
+				  </mat-tab-group>
+		
 			</div>
 		</div>
 	</div>

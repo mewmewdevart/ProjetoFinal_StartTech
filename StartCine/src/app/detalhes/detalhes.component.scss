@@ -1,12 +1,18 @@
 @import "../app.component.scss";
 
 .container-fluid {
-	min-height: calc(100vh - 175px);
+	background-color: $preto;
 	display: flex;
 	margin: auto;
 	color: $branco;
+	.background-image {
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	}
 	.container {
-		width: 78%;
+		width: 80%;
 		margin: 0 auto;
 		h2 {
 			margin-top: 100px;
@@ -59,16 +65,79 @@
 				}
 			}
 		p {
-			margin-top: 16px;
+			margin-top: 1%;
+			margin-bottom: 7%;
 		}
 	}
 }
 
+.container {
+	margin-top: 5%;
+	width: 80%;
+	h1 {
+		margin-bottom: 10px;
+		color: $branco;
+		font-weight: bold;
+	}
+}
 
-.background-image {
-	width: 100%;
-	height: 500px;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+.mat-mdc-tab-header { 
+    font-size: 18px;
+    line-height: 150%;
+}
+  
+  .mat-mdc-tab.mdc-tab {
+    background-color: $cinza-clarissimo;
+  }
+  
+  .mat-mdc-tab-body.mat-mdc-tab-body-active {
+	min-height: 40vh;
+	font-weight: 400;
+	color: $branco;
+}
+  
+  .mat-mdc-tab.mdc-tab { 
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: normal;
+    background-color: $preto;
+    &.mdc-tab-indicator--active { 
+      background-color: $cinza-clarissimo;
+    }
+  }
+  
+  .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label {
+    color: $branco;
+    }
+  
+.mdc-tab-indicator__content--underline, .mat-mdc-tab-group, .mat-mdc-tab-nav-bar  {
+    --mdc-tab-indicator-active-indicator-color: #F2F2F2;
+    --mat-tab-header-disabled-ripple-color: rgba(0, 0, 0, 0.38);
+    --mat-tab-header-pagination-icon-color: #F2F2F2;
+    --mat-tab-header-inactive-label-text-color: #afafaf;
+    --mat-tab-header-active-label-text-color: #F2F2F2;
+    --mat-tab-header-active-ripple-color: #F2F2F2;
+    --mat-tab-header-inactive-ripple-color: #F2F2F2;
+    --mat-tab-header-inactive-focus-label-text-color: #FFC603;
+    --mat-tab-header-inactive-hover-label-text-color: #afafaf;
+	--mat-tab-header-active-focus-label-text-color: #FEFBFB;
+    --mat-tab-header-active-hover-label-text-color: #F2F2F2;
+    --mat-tab-header-active-focus-indicator-color: #F2F2F2;
+    --mat-tab-header-active-hover-indicator-color: #F2F2F2;
+  }
+  
+  .mdc-tab-indicator .mdc-tab-indicator__content.mdc-tab-indicator__content--underline {
+	border-color: $cinza_claro;
+}
+  
+  
+// Media queries para tamanhos de tela específicos
+@media screen and (max-width: 1000px) {
+	.container {
+		margin-top: 15%;
+		width: 100%;
+		h1 {
+			margin-bottom: 10px;
+		}
+	}
 }

@@ -6,6 +6,9 @@ import { HomeComponent } from './home/home.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component'; 
 import { ContatoComponent } from './contato/contato.component';
 import { DetalhesComponent } from './detalhes/detalhes.component';
+import { ConteudoComponent } from './conteudo/conteudo.component';
+import { FavoritosComponent } from './favoritos/favoritos.component';
+import { PesquisaComponent } from './pesquisa/pesquisa.component';
 
 const routes: Routes = [
   //{ path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -13,6 +16,10 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'quem-somos', component: QuemSomosComponent },
+  { path: 'conteudo', component: ConteudoComponent },
+  { path: 'conteudo', component: ConteudoComponent },
+  { path: 'pesquisa', component: PesquisaComponent },
+  { path: 'favoritos', component: FavoritosComponent },
   { path: 'contato', component: ContatoComponent },
   { path: 'detalhes/:id', component: DetalhesComponent }
 ];

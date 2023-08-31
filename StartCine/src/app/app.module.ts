@@ -24,6 +24,9 @@ import { SessionTimerComponent } from './session-timer/session-timer.component';
 import { AuthService } from './auth.service';
 
 import ptBr from '@angular/common/locales/pt';
+import { ConteudoComponent } from './conteudo/conteudo.component';
+import { PesquisaComponent } from './pesquisa/pesquisa.component';
+import { FavoritosComponent } from './favoritos/favoritos.component';
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -34,6 +37,9 @@ registerLocaleData(ptBr);
     DetalhesComponent,
     RodapeComponent,
     SessionTimerComponent,
+    ConteudoComponent,
+    PesquisaComponent,
+    FavoritosComponent,
   ],
   imports: [
     CommonModule,

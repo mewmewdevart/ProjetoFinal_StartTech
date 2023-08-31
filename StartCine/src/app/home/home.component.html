@@ -29,8 +29,8 @@
 			</ol>
 		</aside>
 	</section>
-	<section>
 
+	<section>
 		<div *ngFor="let filme of filmes">
 			<mat-grid-tile *ngIf="filme.favorito">
 			</mat-grid-tile>
@@ -48,10 +48,11 @@
 					</div>
 					<div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="false">
 						<div class="carousel-inner">
+
 							<div class="carousel-item active">
 								<div class="row">
 									<div class="card-item col-md-3 mb-3" *ngFor="let filme of filmes">
-										<div class="card" (click)="verDetalhes(filme.id)">
+										<div class="card" (click)="verDetalhes(filme.id)" *ngIf="filme.id !== 5 && filme.id !== 6" > <!-- GAMBIARRA TEMPORARIA -->
 											<img [src]="filme.image" [alt]="filme.title">
 											<h4>{{filme.title}}</h4>
 										</div>
@@ -59,27 +60,6 @@
 								</div>
 							</div>
 
-							<div class="carousel-item">
-								<div class="row">
-									<div class="card-item col-md-3 mb-3" *ngFor="let filme of filmes">
-										<div class="card" (click)="verDetalhes(filme.id)">
-											<img [src]="filme.image" [alt]="filme.title">
-											<h4>{{filme.title}}</h4>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="carousel-item">
-								<div class="row">
-									<div class="card-item col-md-3 mb-3" *ngFor="let filme of filmes">
-										<div class="card" (click)="verDetalhes(filme.id)">
-											<img [src]="filme.image" [alt]="filme.title">
-											<h4>{{filme.title}}</h4>
-										</div>
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
