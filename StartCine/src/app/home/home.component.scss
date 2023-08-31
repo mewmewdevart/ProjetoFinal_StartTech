@@ -1,6 +1,36 @@
-// Importando estilos globais
-@import '../../styles.scss';
 
+/* GAMBIARRA TEORICAMENTE TEMPORARIA */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+$fonteLogo: 'Montserrat Alternates', sans-serif;
+$fontePadrao: 'Raleway', sans-serif;
+$fonte-principal: 'Raleway', sans-serif;
+$fonte-secundaria: 'Raleway', sans-serif;
+$pequena: 12px;
+$media: 16px;
+$grande: 24px;
+$extra-grande: 32px;
+
+/* CORES */
+$corPrincipal: #FFC603;
+$cor-principal: #FFC603;
+$corSombraPrincipal: #D8AA0B;
+
+$cor-secundaria: #408EC6;
+$branco:  #FEFBFB;
+$cinza-claro: #afafaf;
+$cinza-medio: #1E2761;
+$cinza-escuro: #45484A;
+$preto: #060606;
+
+/* SOMBRAS */
+$card-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+$card-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+$card-shadow-hover: 0 8px 16px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.11);
+
+/* CARROSEL DE FILMES - PRINCIPAIS */
 #carrosel {
     display: flex;
     justify-content: center;
@@ -63,6 +93,7 @@ li {
 			margin-top: 16px;
 		}
 		button {
+			border: none;
 			margin-top: 16px;
 			background-color: $corPrincipal;
 			display: flex;
@@ -82,7 +113,7 @@ li {
 		}
 	}
 }
-	
+
 .carrossel {
 		position: relative;
 		width: 100%;
@@ -254,6 +285,63 @@ li {
 
 @media screen and (min-width: 1400px) {
     .container-content {
+		margin-top: 100px;
         width: 69%;
     }
+}
+
+/* CARROSEL DE FILMES */
+section {
+	display: flex;
+	width: 80%;
+	margin: 0 auto;
+	border: none;
+	background-color: $preto;
+	h3 {
+		color: $corPrincipal;
+		font-family: $fontePadrao;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: 56px;
+	}
+	h4 {
+		color: $cinza-claro;
+		font-family: $fontePadrao;
+	}
+	.container-opcoes {
+			position: relative;
+		   display: flex;
+		   justify-content: space-between;
+		   .botaoEsquerda,
+		   .botaoDireita {
+			   width: 100px;
+			   position: absolute;
+			   min-height: 185px;
+			   z-index: 2;
+		   }
+		   .botaoEsquerda {
+			   left: 0;
+		   }
+		   .botaoDireita{
+			   right: 0;
+		   }
+	   }
+	   .card {
+		   background-color: transparent;
+		   width: 265px;
+	   }
+	   .card:hover {
+		width: 268px;
+	}
+}
+
+@media (max-width: 767px) {
+	.botaoEsquerda,
+	.botaoDireita {
+		width: 100px;
+		position: absolute;
+		height: 1550px;
+		z-index: 2;
+	}
 }

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "startCine": {
+    "startcine": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -30,13 +30,12 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
             "scripts": [
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "./node_modules/jquery/dist/jquery.min.js"
+               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           },
           "configurations": {
@@ -70,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "startCine:build:production"
+              "browserTarget": "startcine:build:production"
             },
             "development": {
-              "browserTarget": "startCine:build:development"
+              "browserTarget": "startcine:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "startCine:build"
+            "browserTarget": "startcine:build"
           }
         },
         "test": {
@@ -108,6 +107,6 @@
     }
   },
   "cli": {
-    "analytics": "1666a108-7a22-48e3-ac42-918a432b0199"
+    "analytics": "2c9ee930-3d97-4383-b595-7325a6c70980"
   }
 }

@@ -1,7 +1,6 @@
-
-	<mat-toolbar>
+<mat-toolbar>
 	<div class="container">
-	<h1 class="logo">StartCine +</h1>
+	<img src="../../assets/images/logo.svg" alt="logo do startCine">
 
 	<!-- Tela menor que 1000px? display: flex -->
 	<div class="navbar-responsivo-menu">
@@ -38,4 +37,23 @@
 		</mat-menu>
 	</div>
 	</div>
-	</mat-toolbar>
+</mat-toolbar>
+	
+<!-- 
+<mat-toolbar>
+	<div class="container">
+		<h1>StartCine+</h1>
+		<span class="menu-spacer"></span>
+		<button mat-button routerLink="/">Home</button>
+		<button mat-button routerLink="quem-somos">Quem Somos</button>
+		<button mat-button routerLink="contato">Contato</button>
+		<button class="auth" *ngIf="!loggedIn" mat-button routerLink="login">
+			<mat-icon aria-hidden="false" aria-label="Acessar o sistema" fontIcon="login"></mat-icon>
+			Acessar o sistema
+		</button>
+		<button class="auth" *ngIf="loggedIn" mat-button (click)="logout()">
+			<mat-icon aria-hidden="false" aria-label="Sair do sistema" fontIcon="logout"></mat-icon>
+			Sair do sistema
+		</button>
+	</div>    
+</mat-toolbar> -->

@@ -1,0 +1,35 @@
+<div class="modal-container">
+    <h1>Adicionando um novo imóvel</h1>
+    <mat-form-field>
+        <mat-label>Título:</mat-label>
+        <input matInput placeholder="Ex.: Casa de campo" [(ngModel)]="titulo" required />
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Imagem:</mat-label>
+        <input matInput placeholder="Cole aqui a URL da imagem" [(ngModel)]="foto" />
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Descrição do imóvel</mat-label>
+        <textarea matInput [(ngModel)]="descricao"></textarea>
+        <textarea matInput [(ngModel)]="descricao2"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Quantidade de quartos:</mat-label>
+      <input matInput [(ngModel)]="quartos" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Quantidade de banheiros:</mat-label>
+      <input matInput [(ngModel)]="banheiros" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Área total (somente numeros em m²):</mat-label>
+      <input matInput placeholder="Ex.: 360" [(ngModel)]="area" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Preço (somente numeros em R$):</mat-label>
+      <input matInput placeholder="Ex.: 150000" [(ngModel)]="preco" />
+    </mat-form-field>
+    <button mat-button (click)="adicionarImovel()">
+        Enviar
+    </button>
+  </div>

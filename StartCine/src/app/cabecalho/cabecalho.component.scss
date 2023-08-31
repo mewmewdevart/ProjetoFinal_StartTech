@@ -1,7 +1,6 @@
-@import '../../styles.scss';
-
+@import '../app.component.scss';
 mat-toolbar {
-  font-family: $fontePadrao;
+  font-family: $fonte-principal;
   background-color: transparent;
   position: fixed;
   z-index: 5;
@@ -10,6 +9,7 @@ mat-toolbar {
 	width: 80%;
 	display: flex;
 	margin: auto;
+	backdrop-filter: blur(10px);
 	
 	h1 {
 	  padding-top: 8px;
@@ -28,7 +28,7 @@ mat-toolbar {
 	
 	.navbar-responsivo, .navbar-direita {
 	  position: relative;
-	  font-family: $fontePadrao;
+	  font-family: $fonte-principal;
 	  
 	  button {
 		.anime-icon {
@@ -36,7 +36,7 @@ mat-toolbar {
 			width: 20px;
 			filter: invert(100%) grayscale(100%) brightness(1000%) sepia(0%);
 			color: $corPrincipal;
-			transition: filter 0.3s; /* Adiciona uma transição suave para o efeito */
+			transition: filter 0.3s; 
 		  }
 		  .anime-icon {
 			padding-top: 5px;
@@ -75,7 +75,7 @@ mat-toolbar {
 
 .navbar-responsivo-menu {
   display: none;
-  font-family: $fontePadrao;
+  font-family: $fonte-principal;
 }
 
 @media screen and (max-width: 1000px) {

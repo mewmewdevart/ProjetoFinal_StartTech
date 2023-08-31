@@ -1,54 +1,60 @@
 import { NgModule } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-// MATERIAL UI
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatMenuModule } from '@angular/material/menu';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { CommonModule } from '@angular/common';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
-import { HomeComponent } from './home/home.component';
-import { ExibicoesExternasComponent } from './exibicoes-externas/exibicoes-externas.component';
-import { HomeExternaComponent } from './home-externa/home-externa.component';
+import { DetalhesComponent } from './detalhes/detalhes.component';
 import { RodapeComponent } from './rodape/rodape.component';
-import { RodapeDadosComponent } from './rodape-dados/rodape-dados.component';
-import { SliderHomeComponent } from './slider-home/slider-home.component';
-import { SubtelaExternaComponent } from './subtela-externa/subtela-externa.component';
+import { SessionTimerComponent } from './session-timer/session-timer.component';
+import { AuthService } from './auth.service';
+
+import ptBr from '@angular/common/locales/pt';
+registerLocaleData(ptBr);
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		CabecalhoComponent,
-		HomeComponent,
-		ExibicoesExternasComponent,
-		HomeExternaComponent,
-		RodapeComponent,
-		RodapeDadosComponent,
-		SubtelaExternaComponent,
-		SliderHomeComponent
-	],
-	imports: [
-		BrowserModule,
-		AppRoutingModule,
-		BrowserAnimationsModule,
-		MatIconModule,
-		MatButtonModule,
-		MatToolbarModule,
-		MatMenuModule,
-		MatGridListModule,
-		MatCardModule,
-		MatTabsModule,
-		CommonModule
-	],
-	providers: [],
-	bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    QuemSomosComponent,
+    CabecalhoComponent,
+    DetalhesComponent,
+    RodapeComponent,
+    SessionTimerComponent,
+  ],
+  imports: [
+    CommonModule,
+    BrowserModule,
+    ReactiveFormsModule,
+    FormsModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    MatSnackBarModule,
+    MatGridListModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatTabsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+  ],
+  providers: [
+    AuthService,
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,131 @@
+{
+	"filmes": [
+		{
+			"id": 1,
+			"title": "John Wick 3: Parabellum",
+			"releaseYear": 2019,
+			"image": "https://i.imgur.com/eMsr58c.png",
+			"genre": [
+				"Ação",
+				"Crime",
+				"Suspense"
+			],
+			"director": "Chad Stahelski",
+			"actors": [
+				"Keanu Reeves",
+				"Halle Berry"
+			],
+			"rating": 7.4,
+			"iframe": "URL_DO_IFRAME",
+			"favorito": false,
+			"sinopse": "Após matar um membro da alta cúpula da guilda de assassinos, John Wick se torna um alvo de 14 milhões de dólares para os assassinos profissionais em todo o mundo. Agora, ele deve lutar por sua sobrevivência enquanto busca uma maneira de sair dessa situação mortal."
+		},
+		{
+			"id": 2,
+			"title": "O Poderoso Chefão",
+			"releaseYear": 1972,
+			"image": "https://i.imgur.com/eMsr58c.png",
+			"genre": [
+				"Crime",
+				"Drama"
+			],
+			"director": "Francis Ford Coppola",
+			"actors": [
+				"Marlon Brando",
+				"Al Pacino"
+			],
+			"rating": 9.2,
+			"iframe": "#",
+			"favorito": false,
+			"sinopse": "No submundo do crime em Nova Iorque, Don Vito Corleone, um poderoso chefe da máfia, lida com negócios ilícitos enquanto tenta manter sua família unida. Quando seu filho Michael é arrastado para o mundo do crime, uma série de eventos desencadeia uma guerra entre famílias rivais, ameaçando o equilíbrio precário que o Don conseguiu alcançar."
+		},
+		{
+			"id": 3,
+			"title": "Um Sonho de Liberdade",
+			"releaseYear": 1994,
+			"image": "https://i.imgur.com/eMsr58c.png",
+			"genre": [
+				"Drama"
+			],
+			"director": "Frank Darabont",
+			"actors": [
+				"Tim Robbins",
+				"Morgan Freeman"
+			],
+			"rating": 9.3,
+			"iframe": "#",
+			"favorito": false,
+			"sinopse": "Andy Dufresne, um banqueiro injustamente condenado por assassinato, é enviado para a Penitenciária Estadual de Shawshank. Lá, ele forma laços improváveis com outros detentos, incluindo Red. Ao longo dos anos, Andy usa sua inteligência e determinação para enfrentar a vida na prisão, buscando ao mesmo tempo provar sua inocência. Um drama emocionante sobre amizade, esperança e a busca pela liberdade."
+		},
+		{
+			"id": 4,
+			"title": "O Senhor dos Anéis: O Retorno do Rei",
+			"releaseYear": 2003,
+			"image": "https://i.imgur.com/eMsr58c.png",
+			"genre": [
+				"Ação",
+				"Aventura",
+				"Fantasia"
+			],
+			"director": "Peter Jackson",
+			"actors": [
+				"Elijah Wood",
+				"Viggo Mortensen"
+			],
+			"rating": 8.9,
+			"iframe": "#",
+			"favorito": false,
+			"sinopse": "Na conclusão épica da trilogia, Frodo e Sam continuam sua perigosa jornada em direção à Montanha da Perdição, enquanto a batalha final pelo controle da Terra Média se desenrola. Aragorn deve aceitar seu destino como rei, e todos os povos livres se unem para enfrentar as forças das trevas de Sauron. Uma história de coragem, amizade e sacrifício que determinará o destino do mundo."
+		},
+		{
+			"id": 5,
+			"title": "O Rei Leão",
+			"releaseYear": 1994,
+			"image": "https://i.imgur.com/eMsr58c.png",
+			"genre": [
+				"Animação",
+				"Aventura",
+				"Drama"
+			],
+			"director": "Roger Allers, Rob Minkoff",
+			"actors": [
+				"Matthew Broderick",
+				"Jeremy Irons"
+			],
+			"rating": 8.5,
+			"iframe": "#",
+			"favorito": false,
+			"sinopse": "Simba, um jovem leão destinado a se tornar rei, é injustamente acusado da morte de seu pai, Mufasa. Exilado, Simba cresce longe de sua terra natal até que um encontro inesperado o lembra de sua verdadeira identidade e responsabilidades. Ele deve enfrentar seu passado e reivindicar seu lugar de direito como rei da Pedra do Reino. Uma jornada de autodescoberta e redenção."
+		},
+		{
+			"id": 6,
+			"title": "Interestelar",
+			"releaseYear": 2014,
+			"image": "https://i.imgur.com/eMsr58c.png",
+			"genre": [
+				"Aventura",
+				"Drama",
+				"Ficção Científica"
+			],
+			"director": "Christopher Nolan",
+			"actors": [
+				"Matthew McConaughey",
+				"Anne Hathaway"
+			],
+			"rating": 8.6,
+			"iframe": "#",
+			"favorito": false,
+			"sinopse": "Em um futuro onde a Terra está à beira do colapso ambiental, um grupo de exploradores é enviado em uma missão interestelar para encontrar um novo lar para a humanidade. Enfrentando distâncias astronômicas e fenômenos cósmicos desconhecidos, eles exploram planetas alienígenas em busca de esperança. Uma narrativa emocionante sobre amor, sacrifício e a luta pela sobrevivência da humanidade."
+		}
+	],
+	"usuarios": [
+		{
+			"name": "Administrador",
+			"username": "admin",
+			"password": "123",
+			"confirmPassword": "123",
+			"id": 1,
+			"type": "admin"
+		}
+	]
+}

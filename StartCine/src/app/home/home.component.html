@@ -1,66 +1,145 @@
 <section id="carrosel" class="carrossel" aria-label="Galeria">
-	<ol class="carrossel-visao-geral">
-		<li id="carrossel-slide1" tabindex="0" class="carrossel-slide" style="background-image: url('../../assets/images/home-banner.png')">
-			<div class="carrossel-capturador"></div>
-			<div class="container-content">
-				<div class="content-carrosel">
-					<h1>Titulo</h1>
-					<h2>Informacoes Básicas</h2>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident placeat quos eius, blanditiis voluptas laboriosam illo iusto saepe distinctio veritatis minus excepturi, similique nihil qui illum unde esse sit amet.</p>
-					<button mat-button>	<mat-icon>play_arrow</mat-icon>Assistir ao Trailer</button>
+		<ol class="carrossel-visao-geral">
+			<li *ngFor="let filme of filmes.slice(0, 4); let i = index" [id]="'carrossel-slide' + (i + 1)" tabindex="0" class="carrossel-slide" [style.background-image]="'url(\'' + filme.image + '\')'">
+				<div class="container-content">
+					<div class="content-carrosel">
+						<h1>{{ filme.title }}</h1>
+						<p>{{ getSinopseLimitada(filme.sinopse) }}</p>
+						<button mat-button><mat-icon>play_arrow</mat-icon>Assistir ao Trailer</button>
+					</div>
 				</div>
-			</div>
-		</li>
-		<li id="carrossel-slide2" tabindex="0" class="carrossel-slide" style="background-image: url('../../assets/images/home-banner.png')">
-			<div class="carrossel-capturador"></div>
-			<div class="container-content">
-				<div class="content-carrosel">
-					<h1>Titulo</h1>
-					<h2>Informacoes Básicas</h2>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident placeat quos eius, blanditiis voluptas laboriosam illo iusto saepe distinctio veritatis minus excepturi, similique nihil qui illum unde esse sit amet.</p>
-					<button mat-button>	<mat-icon>play_arrow</mat-icon>Assistir ao Trailer</button>
-				</div>
-			</div>
-		</li>
-		<li id="carrossel-slide3" tabindex="0" class="carrossel-slide" style="background-image: url('../../assets/images/home-banner.png')">
-			<div class="container-content">
-				<div class="content-carrosel">
-					<h1>Titulo</h1>
-					<h2>Informacoes Básicas</h2>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident placeat quos eius, blanditiis voluptas laboriosam illo iusto saepe distinctio veritatis minus excepturi, similique nihil qui illum unde esse sit amet.</p>
-					<button mat-button>	<mat-icon>play_arrow</mat-icon>Assistir ao Trailer</button>
-				</div>
-			</div>
-		</li>
-		<li id="carrossel-slide4" tabindex="0" class="carrossel-slide" style="background-image: url('../../assets/images/home-banner.png')">
-			<div class="carrossel-capturador"></div>
-			<div class="container-content">
-				<div class="content-carrosel">
-					<h1>Titulo</h1>
-					<h2>Informacoes Básicas</h2>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident placeat quos eius, blanditiis voluptas laboriosam illo iusto saepe distinctio veritatis minus excepturi, similique nihil qui illum unde esse sit amet.</p>
-					<button mat-button>	<mat-icon>play_arrow</mat-icon>Assistir ao Trailer</button>
-				</div>
-			</div>
-		</li>
-	</ol>
-
-	<aside class="carrossel-navegacao">
-		<ol class="carrossel-lista-navegacao">
-			<li class="carrossel-item-navegacao">
-				<a href="#carrossel-slide1" class="carrossel-botao-navegacao">1</a>
-			</li>
-			<li class="carrossel-item-navegacao">
-				<a href="#carrossel-slide2" class="carrossel-botao-navegacao">2</a>
-			</li>
-			<li class="carrossel-item-navegacao">
-				<a href="#carrossel-slide3" class="carrossel-botao-navegacao">3</a>
-			</li>
-			<li class="carrossel-item-navegacao">
-				<a href="#carrossel-slide4" class="carrossel-botao-navegacao">4</a>
 			</li>
 		</ol>
-	</aside>
-</section>
+	
+		<!-- Precisa consertar -->
+		<aside class="carrossel-navegacao">
+			<ol class="carrossel-lista-navegacao">
+				<li class="carrossel-item-navegacao">
+					<a href="#carrossel-slide1" class="carrossel-botao-navegacao">1</a>
+				</li>
+				<li class="carrossel-item-navegacao">
+					<a href="#carrossel-slide2" class="carrossel-botao-navegacao">2</a>
+				</li>
+				<li class="carrossel-item-navegacao">
+					<a href="#carrossel-slide3" class="carrossel-botao-navegacao">3</a>
+				</li>
+				<li class="carrossel-item-navegacao">
+					<a href="#carrossel-slide4" class="carrossel-botao-navegacao">4</a>
+				</li>
+			</ol>
+		</aside>
+	</section>
+	<section>
 
-<app-slider-home></app-slider-home>
+		<div *ngFor="let filme of filmes">
+			<mat-grid-tile *ngIf="filme.favorito">
+			</mat-grid-tile>
+		</div>
+	
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<h3 class="mb-3">FILMES</h3>
+				</div>
+				<div class="col-12">
+					<div class="container-opcoes">
+						<div class="botaoEsquerda" href="#carouselExampleIndicators2" role="button" data-bs-slide="prev"></div>
+						<div class="botaoDireita" href="#carouselExampleIndicators2" role="button" data-bs-slide="next"></div>
+					</div>
+					<div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="false">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<div class="row">
+									<div class="card-item col-md-3 mb-3" *ngFor="let filme of filmes">
+										<div class="card" (click)="verDetalhes(filme.id)">
+											<img [src]="filme.image" [alt]="filme.title">
+											<h4>{{filme.title}}</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="carousel-item">
+								<div class="row">
+									<div class="card-item col-md-3 mb-3" *ngFor="let filme of filmes">
+										<div class="card" (click)="verDetalhes(filme.id)">
+											<img [src]="filme.image" [alt]="filme.title">
+											<h4>{{filme.title}}</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="carousel-item">
+								<div class="row">
+									<div class="card-item col-md-3 mb-3" *ngFor="let filme of filmes">
+										<div class="card" (click)="verDetalhes(filme.id)">
+											<img [src]="filme.image" [alt]="filme.title">
+											<h4>{{filme.title}}</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+	</section>
+	
+
+<!-- 
+<div class="container">
+		<h1>Olá {{ nome }}!<br>Confira aqui os seus imóveis favoritos:</h1>
+		<mat-grid-list cols="3" rowHeight="3:4.1">
+				<div *ngFor="let filme of filmes">
+						<mat-grid-tile *ngIf="filme.favorito">
+								<mat-card>
+										<img mat-card-image [src]="filme.image" [alt]="filme.title" />
+										<mat-card-content>
+												<h2>{{ filme.title }}</h2>
+												<p>Gênero: {{ filme.genre.join(', ') }}</p>
+												<p>Diretor: {{ filme.director }}</p>
+												<p>Atores: {{ filme.actors.join(', ') }}</p>
+												<p>Avaliação: {{ filme.rating }}</p>
+										</mat-card-content>
+										<mat-card-actions>
+												<button
+														[class]="(filme.favorito === false ? 'favorite' : 'favorite-checked')"
+														[title]="(filme.favorito === false ? 'Adicionar aos Favoritos' : 'Remover dos favoritos')"
+														(click)="toggleFavorito(filme.id)">
+														<mat-icon aria-hidden="false" aria-label="Favorite icon" fontIcon="favorite"></mat-icon>
+												</button>
+												<button mat-button (click)="verDetalhes(filme.id)">Mais detalhes</button>
+										</mat-card-actions>
+								</mat-card>
+						</mat-grid-tile>
+				</div>
+		</mat-grid-list>
+		<h1>Todos os filmes:</h1>
+
+		<mat-grid-list cols="3" rowHeight="3:4.1">
+				<mat-grid-tile *ngFor="let filme of filmes">
+						<mat-card>
+								<img mat-card-image [src]="filme.image" [alt]="filme.title" />
+								<mat-card-content>
+										<h2>{{ filme.title }}</h2>
+										<p>Gênero: {{ filme.genre.join(', ') }}</p>
+										<p>Diretor: {{ filme.director }}</p>
+										<p>Atores: {{ filme.actors.join(', ') }}</p>
+										<p>Avaliação: {{ filme.rating }}</p>
+								</mat-card-content>
+								<mat-card-actions>
+										<button
+												[class]="(filme.favorito === false ? 'favorite' : 'favorite-checked')"
+												[title]="(filme.favorito === false ? 'Adicionar aos Favoritos' : 'Remover dos favoritos')"
+												(click)="toggleFavorito(filme.id)">
+												<mat-icon aria-hidden="false" aria-label="Favorite icon" fontIcon="favorite"></mat-icon>
+										</button>
+										<button mat-button (click)="verDetalhes(filme.id)">Mais detalhes</button>
+								</mat-card-actions>
+						</mat-card>
+				</mat-grid-tile>
+		</mat-grid-list>
+</div>
+-->

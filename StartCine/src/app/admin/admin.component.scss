@@ -1,0 +1,94 @@
+@import "../app.component.scss";
+
+.container {
+    padding-top: 30px;
+    min-height: calc(100vh - 254px);
+    width: 1140px;
+    display: block;
+    margin: auto; 
+    .header {
+        display: flex;
+        gap: 20px;
+        button {
+            display: block;
+            width: 30%;
+            height: 52px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: green;
+            color: $branco;
+            font-family: $fonte-secundaria;
+            font-size: $media;
+        }
+    }
+    table {
+        width: 100%;
+        td {
+            padding: 0 10px;
+            font-size: 0.9em;
+            font-family: $fonte-secundaria;
+            line-height: 150%;
+            color: $cinza-medio;
+            h2 {
+                font-family: $fonte-principal;
+                font-size: $grande;
+                color: $cor-principal;
+                margin-top:15px;
+            }
+            ul, li {
+                list-style-type: none;
+                padding-left: 0;
+                margin-left: 0;
+                color: $cor-principal;
+                font-size: $media;
+                line-height: 150%;
+            }
+            &:last-child {
+                .favorite {
+                    background-color: $branco;
+                    border: 1px solid $cor-principal;
+                    margin-right: 10px;
+                    mat-icon {
+                        color: $cor-principal;
+                    }
+                }
+                .favorite-checked {
+                    background-color: $cor-principal;
+                    margin-right: 10px;
+                }
+                .save {
+                    background-color: gold;
+                    border: 1px solid gold;
+                    mat-icon {
+                        color: $preto;
+                    }
+                }
+                .delete {
+                    background-color: red;
+                    border: 1px solid red;
+                    mat-icon {
+                        color: $branco;
+                    }
+                }
+                button {
+                    width: 80%;
+                    height: 48px;
+                    cursor: pointer;
+                    border: none;
+                    border-radius: 4px;
+                    background-color: $cor-secundaria;
+                    color: $branco;
+                    font-family: $fonte-secundaria;
+                    font-size: $media;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }   
+    .mat-mdc-form-field {
+        font-size: 14px;
+        width: 100%;
+    }
+}
+

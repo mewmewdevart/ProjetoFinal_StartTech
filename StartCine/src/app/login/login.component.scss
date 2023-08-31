@@ -1,0 +1,81 @@
+@import "../app.component.scss";
+
+mat-tab-group {
+    min-height: calc(100vh - 224px);
+    .container {
+        width: 1140px;
+        display: block;
+        margin: auto;
+        h2 {
+            font-family: $fonte-principal;
+            font-size: $grande;
+            line-height: $extra-grande;
+            padding-top: 60px;
+            color: $cor-principal;
+        }
+        div {
+            mat-form-field {
+                display: block;
+                font-family: $fonte-secundaria;
+                font-size: $media;
+            }
+            button {
+                display: block;
+                background-color: $cor-principal;
+                color: $branco;
+                font-size: $media;
+                line-height: $grande;
+                border: none;
+                border-radius: 4px;
+                width: 100%;
+                height: 48px;
+                cursor: pointer;
+                &:hover {
+                    background-color: #FF1234;
+                }
+                &:disabled {
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+}
+
+// MATERIAL TABS (TUTORIAL NO LINK ABAIXO
+// https://medium.com/the-clever-dev/the-ultimate-guide-to-angular-material-tab-and-tab-indicator-styling-e85851f7cd60#id_token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjdjOWM3OGUzYjAwZTFiYjA5MmQyNDZjODg3YjExMjIwYzg3YjdkMjAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyMTYyOTYwMzU4MzQtazFrNnFlMDYwczJ0cDJhMmphbTRsamRjbXMwMHN0dGcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDQ4NDU2MzUxNTI0NTY0Mzk1NzkiLCJlbWFpbCI6InJvb3NldmVsdC5mcmFua2xpbjgxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJuYmYiOjE2OTI2Mjg3NzksIm5hbWUiOiJSb29zZXZlbHQgRnJhbmtsaW4iLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUFjSFR0ZUJKeHNHUmVHV0ttMGJsVlZhb0RWQkRQN1dLWWdJbDRnNFdaZncyZXIyaWVnOT1zOTYtYyIsImdpdmVuX25hbWUiOiJSb29zZXZlbHQiLCJmYW1pbHlfbmFtZSI6IkZyYW5rbGluIiwibG9jYWxlIjoicHQtQlIiLCJpYXQiOjE2OTI2MjkwNzksImV4cCI6MTY5MjYzMjY3OSwianRpIjoiMzQ3NzZkNDMyZGQ2ZDgzN2ZhM2E0MWQ1ZWJkZDhjZmEwMDU4ODVlYSJ9.CoDcpw67gBYGHhZlf1odRllFHk06PXZVxNgP218uh0T7wYO1AMB640PaYidzqum8ukAiQoxj8zWfoWnHgUTkedN0UuHorV10jG_5Lc4wVHqmQkVLRO5vqh_o6CiZAau3YAmejhVS4PJBLARgZuxxXf0td7PqIavrKvddxLPJ8jDskGno9U9nQiWe2h9NGu31q9XH-zsXuDUIwFl2CmaACB8F6_4KY2fTR7wZidtmnZ2OwQ_pEB0vRAR3TUdBSiMWmlCLVRaTyjLBqO9VVhTuVFiPy1OTsE0OcNFj08tYK1oVtnFPLC5Fr5Blw9pfz0MlWMOsUz8NVna37FYbrF_uLg
+
+.mat-mdc-tab-header { 
+    font-size: 1em;
+    line-height: 150%;
+}
+  
+  .mat-mdc-tab.mdc-tab {
+    background-color: $cor-secundaria;
+    padding: 10px 0 60px 0;
+  }
+  
+  .mat-mdc-tab-body.mat-mdc-tab-body-active 
+  { min-height: 48px; background-color: $branco; }
+  
+  .mat-mdc-tab.mdc-tab { 
+    font-size: 2em;
+    font-weight: bold;
+    font-family: $fonte-principal;
+    letter-spacing: normal;
+    background-color: $cinza-claro;
+    &.mdc-tab-indicator--active { 
+      background-color: $cor-secundaria;
+    }
+  }
+  
+  .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label {
+    color: white; 
+    }
+  
+  .mdc-tab-indicator__content--underline {
+    --mdc-tab-indicator-active-indicator-color: green;
+  }
+  
+  .mdc-tab-indicator .mdc-tab-indicator__content.mdc-tab-indicator__content--underline { border-top-width: 4px; border-color: $cor-principal; }
+  
+  
