@@ -1,0 +1,17 @@
+<section class="sessao01">
+    <div class="container">
+        <div class="row">
+            <div class="texto-exibicoes">
+                <h2>TODAS AS SUAS SÉRIES, ANIMES E FILMES FAVORITOS EM UM SÓ LUGAR.</h2>
+                <p>"Passagem direta para um mundo de entretenimento ilimitado!"</p>
+                <div class="cartao-externo">
+                  <div *ngFor="let cartao of destaques">
+                    <mat-card >
+                      <img [src]="cartao.foto" alt="">
+                    </mat-card> 
+                  </div>      
+                </div>
+              </div>
+        </div>
+    </div>
+</section>

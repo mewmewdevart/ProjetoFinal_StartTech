@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -27,6 +27,10 @@ import ptBr from '@angular/common/locales/pt';
 import { ConteudoComponent } from './conteudo/conteudo.component';
 import { PesquisaComponent } from './pesquisa/pesquisa.component';
 import { FavoritosComponent } from './favoritos/favoritos.component';
+import { HomeExternaComponent } from './home-externa/home-externa.component';
+import { ExibicoesComponent } from './home-externa/exibicoes/exibicoes.component';
+import { SubhomeComponent } from './home-externa/subhome/subhome.component';
+
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -40,6 +44,9 @@ registerLocaleData(ptBr);
     ConteudoComponent,
     PesquisaComponent,
     FavoritosComponent,
+    HomeExternaComponent,
+    ExibicoesComponent,
+    SubhomeComponent,
   ],
   imports: [
     CommonModule,
@@ -61,6 +68,7 @@ registerLocaleData(ptBr);
   providers: [
     AuthService,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

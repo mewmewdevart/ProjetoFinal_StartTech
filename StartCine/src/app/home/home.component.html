@@ -1,72 +1,77 @@
-<section id="carrosel" class="carrossel" aria-label="Galeria">
-		<ol class="carrossel-visao-geral">
-			<li *ngFor="let filme of filmes.slice(0, 4); let i = index" [id]="'carrossel-slide' + (i + 1)" tabindex="0" class="carrossel-slide" [style.background-image]="'url(\'' + filme.image + '\')'">
-				<div class="container-content">
-					<div class="content-carrosel">
-						<h1>{{ filme.title }}</h1>
-						<p>{{ getSinopseLimitada(filme.sinopse) }}</p>
-						<button mat-button><mat-icon>play_arrow</mat-icon>Assistir ao Trailer</button>
-					</div>
-				</div>
-			</li>
-		</ol>
-	
-		<!-- Precisa consertar -->
-		<aside class="carrossel-navegacao">
-			<ol class="carrossel-lista-navegacao">
-				<li class="carrossel-item-navegacao">
-					<a href="#carrossel-slide1" class="carrossel-botao-navegacao">1</a>
-				</li>
-				<li class="carrossel-item-navegacao">
-					<a href="#carrossel-slide2" class="carrossel-botao-navegacao">2</a>
-				</li>
-				<li class="carrossel-item-navegacao">
-					<a href="#carrossel-slide3" class="carrossel-botao-navegacao">3</a>
-				</li>
-				<li class="carrossel-item-navegacao">
-					<a href="#carrossel-slide4" class="carrossel-botao-navegacao">4</a>
-				</li>
-			</ol>
-		</aside>
-	</section>
 
-	<section>
-		<div *ngFor="let filme of filmes">
-			<mat-grid-tile *ngIf="filme.favorito">
-			</mat-grid-tile>
-		</div>
-	
-		<div class="container">
-			<div class="row">
-				<div class="col-6">
-					<h3 class="mb-3">FILMES</h3>
-				</div>
-				<div class="col-12">
-					<div class="container-opcoes">
-						<div class="botaoEsquerda" href="#carouselExampleIndicators2" role="button" data-bs-slide="prev"></div>
-						<div class="botaoDireita" href="#carouselExampleIndicators2" role="button" data-bs-slide="next"></div>
-					</div>
-					<div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="false">
-						<div class="carousel-inner">
-
-							<div class="carousel-item active">
-								<div class="row">
-									<div class="card-item col-md-3 mb-3" *ngFor="let filme of filmes">
-										<div class="card" (click)="verDetalhes(filme.id)" *ngIf="filme.id !== 5 && filme.id !== 6" > <!-- GAMBIARRA TEMPORARIA -->
-											<img [src]="filme.image" [alt]="filme.title">
-											<h4>{{filme.title}}</h4>
-										</div>
-									</div>
-								</div>
-							</div>
-
+<section id="carrosel" class="carrossel carousel slide" data-bs-ride="carousel" aria-label="Galeria">	
+	  <div class="carousel-inner container-fluid">
+		<div *ngFor="let filme of filmes.slice(0, 4); let i = index" class="carousel-item" [class.active]="i === 0" [style.background-image]="'url(' + filme.image + ')'">
+			<div class="container">
+				<div class="row vh-100 justify-content-left align-items-center">
+					<div class="col-md-6">
+						<div class="content-carrosel container">
+							<h1>{{ filme.title }}</h1>
+							<p>{{ getSinopseLimitada(filme.sinopse) }}</p>
+							<button class="btn btn-primary" type="button"><span class="material-icons">play_arrow</span> Assistir ao Trailer</button>
 						</div>
 					</div>
 				</div>
 			</div>
-			</div>
-	</section>
+					
+		  </div>
+	  </div>
 	
+	  <a class="carousel-control-prev" href="#carrosel" role="button" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	  </a>
+	  <a class="carousel-control-next" href="#carrosel" role="button" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	  </a>
+
+	  <!-- 
+	  <ol class="carousel-indicators">
+        <li data-bs-target="#carrosel" data-bs-slide-to="0" class="active" onclick="goToSlide(0)"></li>
+        <li data-bs-target="#carrosel" data-bs-slide-to="1" onclick="goToSlide(1)"></li>
+        <li data-bs-target="#carrosel" data-bs-slide-to="2" onclick="goToSlide(2)"></li>
+        <li data-bs-target="#carrosel" data-bs-slide-to="3" onclick="goToSlide(3)"></li>
+    </ol> -->
+</section>
+  
+  
+  
+  
+  <section>
+	<!-- Listagem de filmes favoritos -->
+	<div *ngFor="let filme of filmes">
+	  <mat-grid-tile *ngIf="filme.favorito">
+	  </mat-grid-tile>
+	</div>
+  
+	<!-- Carrossel de filmes -->
+	<div class="carousel-slider">
+	  <div id="movieCarousel" class="carousel slide" data-bs-ride="carousel">
+		<div class="carousel-inner">
+		  <div class="carousel-item" *ngFor="let chunk of dividirArrayEmGrupos(filmes, 4); let i = index" [class.active]="i === 0">
+			<div class="row">
+			  <div class="card-item col-md-3 mb-3" *ngFor="let filme of chunk">
+				<div class="card" (click)="verDetalhes(filme.id)">
+				  <img [src]="filme.image" [alt]="filme.title">
+				  <h4>{{filme.title}}</h4>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+		  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Previous</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+		  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		  <span class="visually-hidden">Next</span>
+		</button>
+	  </div>
+	</div>
+</section>
+  
 
 <!-- 
 <div class="container">

@@ -1,10 +1,130 @@
-@import "../app.component.scss";
+//@import "../app.component.scss";
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/* Definição de variáveis de fontes */
+$fonteLogo: 'Montserrat Alternates', sans-serif;
+$fontePadrao: 'Raleway', sans-serif;
+$tamanhoPequeno: 12px;
+$tamanhoMedio: 18px;
+$tamanhoGrande: 32px;
+$tamanhoExtraGrande: 42px;
+
+/* Cores */
+$corPrincipal: #FFC603;
+$corPrincipalComplementar: #D8AA0B;
+$corBranco: #FEFBFB;
+$corCinzaClaro: #afafaf;
+$corCinzaMedio: #7b7b7b;
+$corCinzaEscuro: #45484A;
+$corPreto: #060606;
+
+// Definições globais
+* {
+	padding: 0;
+	box-sizing: border-box;
+	scrollbar-color: transparent transparent;
+	scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+	width: 0;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: transparent;
+	border: none;
+}
+
+* {
+	-ms-overflow-style: none;
+}
+
+// Resetando estilos de listas
+ol,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+// Container de Detalhes
+.container {
+	font-size: $tamanhoMedio;
+	color: $corBranco;
+	h2 {
+		color: $corBranco;
+		font-family: $fontePadrao;
+		font-size: 48px;
+		font-style: normal;
+		font-weight: 800;
+		line-height: 56px; 
+	}
+	li {
+		display: inline;
+	}
+	p {
+		color: $corBranco;
+		font-family: $fontePadrao;
+		font-size: $tamanhoMedio;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 22px;
+	}
+	.btn-container {
+		display: flex;
+		gap: 11px;
+		button {
+			background-color: $corBranco;
+			display: flex;
+			width: 164px;
+			height: 56px;
+			padding: 6px 16px;
+			align-items: center;
+			gap: 8px;
+			border-radius: 6px;
+			margin-bottom: 20px;
+			color: $corPreto;
+			font-size: 14px;
+			font-weight: 700;
+			text-transform: uppercase;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out;
+			&:hover {
+				background-color: $corCinzaClaro;
+			} svg {
+				padding-bottom: 5px;
+			}
+			}
+			.botaoAdd {
+				display: flex;
+				align-items: center;
+				border: none;
+				background-color: $corBranco;
+				text-align: center;
+				width: 54px;
+				height: 54px;
+				border-radius: 50%;
+			}
+		}
+}
+
+@media (max-width: 1200px) { 
+    .container {
+        padding: 10px;
+    }
+}
+
+// Detalhes
 .container-fluid {
-	background-color: $preto;
+	background-color: $corPreto;
 	display: flex;
 	margin: auto;
-	color: $branco;
+	color: $corBranco;
 	.background-image {
 	width: 100%;
 	background-size: cover;
@@ -16,8 +136,8 @@
 		margin: 0 auto;
 		h2 {
 			margin-top: 100px;
-			color: $branco;
-			font-family: $fonte-principal;
+			color: $corBranco;
+			font-family: $fontePadrao;
 			font-size: 48px;
 			font-style: normal;
 			font-weight: 800;
@@ -31,9 +151,9 @@
             display: flex;
             gap: 11px;
 			button {
-				background-color: $cinza-clarissimo;
+				background-color: $corBranco;
 				display: flex;
-				width: 124px;
+				width: 164px;
 				height: 56px;
 				padding: 6px 16px;
 				align-items: center;
@@ -41,14 +161,14 @@
 				margin-top: 16px;
 				border-radius: 6px;
 	
-				color: $preto;
+				color: $corPreto;
 				font-size: 14px;
 				font-weight: 700;
 				text-transform: uppercase;
 				cursor: pointer;
 				transition: background-color 0.3s ease-in-out;
 				&:hover {
-					background-color: $cinza-escuro;
+					background-color: $corCinzaClaro;
 				} svg {
 					padding-bottom: 5px;
 				}
@@ -57,7 +177,7 @@
 					display: flex;
 					align-items: center;
 					border: none;
-					background-color: white;
+					background-color: $corBranco;
 					text-align: center;
 					width: 54px;
 					height: 54px;
@@ -71,43 +191,34 @@
 	}
 }
 
-.container {
-	margin-top: 5%;
-	width: 80%;
-	h1 {
-		margin-bottom: 10px;
-		color: $branco;
-		font-weight: bold;
-	}
-}
-
+// Tab do Detalhes
 .mat-mdc-tab-header { 
     font-size: 18px;
     line-height: 150%;
 }
   
   .mat-mdc-tab.mdc-tab {
-    background-color: $cinza-clarissimo;
+    background-color: $corCinzaClaro;
   }
   
   .mat-mdc-tab-body.mat-mdc-tab-body-active {
 	min-height: 40vh;
 	font-weight: 400;
-	color: $branco;
+	color: $corBranco;
 }
   
   .mat-mdc-tab.mdc-tab { 
     font-size: 18px;
     font-weight: bold;
     letter-spacing: normal;
-    background-color: $preto;
+    background-color: $corPreto;
     &.mdc-tab-indicator--active { 
-      background-color: $cinza-clarissimo;
+      background-color: $corCinzaClaro;
     }
   }
   
   .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label {
-    color: $branco;
+    color: $corBranco;
     }
   
 .mdc-tab-indicator__content--underline, .mat-mdc-tab-group, .mat-mdc-tab-nav-bar  {
@@ -127,17 +238,5 @@
   }
   
   .mdc-tab-indicator .mdc-tab-indicator__content.mdc-tab-indicator__content--underline {
-	border-color: $cinza_claro;
-}
-  
-  
-// Media queries para tamanhos de tela específicos
-@media screen and (max-width: 1000px) {
-	.container {
-		margin-top: 15%;
-		width: 100%;
-		h1 {
-			margin-bottom: 10px;
-		}
-	}
+	border-color: $corCinzaClaro;
 }
