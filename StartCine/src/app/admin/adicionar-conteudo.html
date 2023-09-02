@@ -1,0 +1,60 @@
+<div class="modal-container container">
+	<h1 class="mb-4">Adicionando um novo conteúdo</h1>
+	<div class="row">
+		<div class="col-md-6">
+			<mat-form-field class="mb-3">
+				<mat-label>Categoria:</mat-label>
+				<input matInput placeholder="Ex.: Filme" [(ngModel)]="conteudo.categoria" required>
+			</mat-form-field>
+			<mat-form-field class="mb-3">
+				<mat-label>Título:</mat-label>
+				<input matInput placeholder="Ex.: Matrix" [(ngModel)]="conteudo.title" required>
+			</mat-form-field>
+			<mat-form-field class="mb-3">
+				<mat-label>Ano de Lançamento:</mat-label>
+				<input matInput placeholder="Ex.: 1999" [(ngModel)]="conteudo.releaseYear" required>
+			</mat-form-field>
+			<mat-form-field class="mb-3">
+				<mat-label>Imagem:</mat-label>
+				<input matInput placeholder="Cole aqui a URL da imagem" [(ngModel)]="conteudo.image" required>
+			</mat-form-field>
+			<mat-form-field class="mb-3">
+				<mat-label>Gênero:</mat-label>
+				<input matInput placeholder="Ex.: Ação, Ficção Científica" [(ngModel)]="conteudo.genre" required>
+			</mat-form-field>
+			<mat-form-field class="mb-3">
+				<mat-label>Diretor:</mat-label>
+				<input matInput placeholder="Ex.: Wachowskis" [(ngModel)]="conteudo.director" required>
+			</mat-form-field>
+		</div>
+		<div class="col-md-6">
+			<mat-form-field class="mb-3">
+				<mat-label>Atores:</mat-label>
+				<input matInput placeholder="Ex.: Keanu Reeves, Laurence Fishburne" [(ngModel)]="conteudo.actors" required>
+			</mat-form-field>
+			<mat-form-field class="mb-3">
+				<mat-label>Classificação:</mat-label>
+				<input matInput placeholder="Ex.: PG-13" [(ngModel)]="conteudo.classificacao" required>
+			</mat-form-field>
+			<mat-form-field class="mb-3">
+				<mat-label>Nota:</mat-label>
+				<input matInput placeholder="Ex.: 8.7" [(ngModel)]="conteudo.rating" required>
+			</mat-form-field>
+			<mat-form-field class="mb-3">
+				<mat-label>Iframe:</mat-label>
+				<input matInput placeholder="Cole aqui o código Iframe" [(ngModel)]="conteudo.iframe" required>
+			</mat-form-field>
+			<mat-form-field class="mb-3">
+				<mat-label>Sinopse:</mat-label>
+				<textarea matInput [(ngModel)]="conteudo.sinopse" required></textarea>
+			</mat-form-field>
+			<mat-form-field class="mb-3">
+				<mat-label>Duração:</mat-label>
+				<input matInput placeholder="Ex.: 2h 16min" [(ngModel)]="conteudo.duracao" required>
+			</mat-form-field>
+		</div>
+	</div>
+	<button mat-button (click)="adicionarConteudo()">
+		Enviar
+	</button>
+</div>

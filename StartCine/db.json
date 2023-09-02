@@ -1,358 +1,358 @@
 {
-	"filmes": [
-	  {
-		"id": 1,
-		"title": "John Wick 3: Parabellum",
-		"releaseYear": 2019,
-		"image": "https://i.imgur.com/eMsr58c.png",
-		"genre": [
-		  "Ação",
-		  "Crime",
-		  "Suspense"
-		],
-		"director": "Chad Stahelski",
-		"actors": [
-		  "Keanu Reeves",
-		  "Halle Berry"
-		],
-		"rating": 7.4,
-		"iframe": "URL_DO_IFRAME",
-		"favorito": false,
-		"sinopse": "Após matar um membro da alta cúpula da guilda de assassinos, John Wick se torna um alvo de 14 milhões de dólares para os assassinos profissionais em todo o mundo. Agora, ele deve lutar por sua sobrevivência enquanto busca uma maneira de sair dessa situação mortal.",
-		"duracao": "2h 10min",
-		"classificacao": "18 anos"
-	  },
-	  {
-		"id": 2,
-		"title": "O Poderoso Chefão",
-		"releaseYear": 1972,
-		"image": "https://i.imgur.com/eMsr58c.png",
-		"genre": [
-		  "Crime",
-		  "Drama"
-		],
-		"director": "Francis Ford Coppola",
-		"actors": [
-		  "Marlon Brando",
-		  "Al Pacino"
-		],
-		"rating": 9.2,
-		"iframe": "#",
-		"favorito": false,
-		"sinopse": "No submundo do crime em Nova Iorque, Don Vito Corleone, um poderoso chefe da máfia, lida com negócios ilícitos enquanto tenta manter sua família unida. Quando seu filho Michael é arrastado para o mundo do crime, uma série de eventos desencadeia uma guerra entre famílias rivais, ameaçando o equilíbrio precário que o Don conseguiu alcançar.",
-		"duracao": "2h 55min",
-		"classificacao": "16 anos"
-	  },
-	  {
-		"id": 3,
-		"title": "Um Sonho de Liberdade",
-		"releaseYear": 1994,
-		"image": "https://i.imgur.com/eMsr58c.png",
-		"genre": [
-		  "Drama"
-		],
-		"director": "Frank Darabont",
-		"actors": [
-		  "Tim Robbins",
-		  "Morgan Freeman"
-		],
-		"rating": 9.3,
-		"iframe": "#",
-		"favorito": false,
-		"sinopse": "Andy Dufresne, um banqueiro injustamente condenado por assassinato, é enviado para a Penitenciária Estadual de Shawshank. Lá, ele forma laços improváveis com outros detentos, incluindo Red. Ao longo dos anos, Andy usa sua inteligência e determinação para enfrentar a vida na prisão, buscando ao mesmo tempo provar sua inocência. Um drama emocionante sobre amizade, esperança e a busca pela liberdade.",
-		"duracao": "2h 22min",
-		"classificacao": "14 anos"
-	  },
-	  {
-		"id": 4,
-		"title": "O Senhor dos Anéis: O Retorno do Rei",
-		"releaseYear": 2003,
-		"image": "https://i.imgur.com/eMsr58c.png",
-		"genre": [
-		  "Ação",
-		  "Aventura",
-		  "Fantasia"
-		],
-		"director": "Peter Jackson",
-		"actors": [
-		  "Elijah Wood",
-		  "Viggo Mortensen"
-		],
-		"rating": 8.9,
-		"iframe": "#",
-		"favorito": false,
-		"sinopse": "Na conclusão épica da trilogia, Frodo e Sam continuam sua perigosa jornada em direção à Montanha da Perdição, enquanto a batalha final pelo controle da Terra Média se desenrola. Aragorn deve aceitar seu destino como rei, e todos os povos livres se unem para enfrentar as forças das trevas de Sauron. Uma história de coragem, amizade e sacrifício que determinará o destino do mundo.",
-		"duracao": "3h 30min",
-		"classificacao": "14 anos"
-	  },
-	  {
-		"id": 5,
-		"title": "O Rei Leão",
-		"releaseYear": 1994,
-		"image": "https://i.imgur.com/eMsr58c.png",
-		"genre": [
-		  "Animação",
-		  "Aventura",
-		  "Drama"
-		],
-		"director": "Roger Allers, Rob Minkoff",
-		"actors": [
-		  "Matthew Broderick",
-		  "Jeremy Irons"
-		],
-		"rating": 8.5,
-		"iframe": "#",
-		"favorito": false,
-		"sinopse": "Simba, um jovem leão destinado a se tornar rei, é injustamente acusado da morte de seu pai, Mufasa. Exilado, Simba cresce longe de sua terra natal até que um encontro inesperado o lembra de sua verdadeira identidade e responsabilidades. Ele deve enfrentar seu passado e reivindicar seu lugar de direito como rei da Pedra do Reino. Uma jornada de autodescoberta e redenção.",
-		"duracao": "1h 18min",
-		"classificacao": "Livre"
-	  },
-	  {
-		"id": 6,
-		"title": "Interestelar",
-		"releaseYear": 2014,
-		"image": "https://i.imgur.com/eMsr58c.png",
-		"genre": [
-		  "Aventura",
-		  "Drama",
-		  "Ficção Científica"
-		],
-		"director": "Christopher Nolan",
-		"actors": [
-		  "Matthew McConaughey",
-		  "Anne Hathaway"
-		],
-		"rating": 8.6,
-		"iframe": "#",
-		"favorito": false,
-		"sinopse": "Em um futuro onde a Terra está à beira do colapso ambiental, um grupo de exploradores é enviado em uma missão interestelar para encontrar um novo lar para a humanidade. Enfrentando distâncias astronômicas e fenômenos cósmicos desconhecidos, eles exploram planetas alienígenas em busca de esperança. Uma narrativa emocionante sobre amor, sacrifício e a luta pela sobrevivência da humanidade.",
-		"duracao": "2h 48min",
-		"classificacao": "12 anos"
-	  },
-	  {
-		"id": 7,
-		"title": "Cidadão Kane",
-		"releaseYear": 1941,
-		"image": "https://i.imgur.com/eMsr58c.png",
-		"genre": [
-		  "Drama",
-		  "Mistério"
-		],
-		"director": "Orson Welles",
-		"actors": [
-		  "Orson Welles",
-		  "Joseph Cotten"
-		],
-		"rating": 8.4,
-		"iframe": "URL_DO_IFRAME",
-		"favorito": false,
-		"sinopse": "O magnata da mídia Charles Foster Kane deixa para trás um império após sua morte. Um repórter é designado para descobrir o significado de sua última palavra, 'Rosebud'. Ao explorar a vida de Kane, o filme revela os detalhes de sua ascensão ao poder e a complexidade de sua personalidade, explorando temas como ambição e solidão.",
-		"duracao": "1h 59min",
-		"classificacao": "16 anos"
-	  },
-	  {
-		"id": 8,
-		"title": "Matrix",
-		"releaseYear": 1999,
-		"image": "https://i.imgur.com/eMsr58c.png",
-		"genre": [
-		  "Ação",
-		  "Ficção Científica"
-		],
-		"director": "The Wachowskis",
-		"actors": [
-		  "Keanu Reeves",
-		  "Laurence Fishburne"
-		],
-		"rating": 8.7,
-		"iframe": "URL_DO_IFRAME",
-		"favorito": false,
-		"sinopse": "Um jovem hacker chamado Neo descobre que a realidade que ele conhece é uma simulação criada por máquinas para manter a humanidade sob controle. Ele se junta a um grupo de rebeldes para lutar contra as máquinas e despertar a humanidade. O filme é conhecido por suas cenas de ação inovadoras e por explorar filosofias sobre realidade e existência.",
-		"duracao": "2h 16min",
-		"classificacao": "14 anos"
-	  },
-	  {
-		"id": 9,
-		"title": "Pulp Fiction: Tempo de Violência",
-		"releaseYear": 1994,
-		"image": "https://i.imgur.com/eMsr58c.png",
-		"genre": [
-		  "Crime",
-		  "Drama"
-		],
-		"director": "Quentin Tarantino",
-		"actors": [
-		  "John Travolta",
-		  "Samuel L. Jackson"
-		],
-		"rating": 8.9,
-		"iframe": "URL_DO_IFRAME",
-		"favorito": false,
-		"sinopse": "O filme interliga várias histórias de criminosos, boxeadores, assassinos e outros personagens enquanto eles navegam por situações bizarras e violentas. A narrativa não linear, diálogos memoráveis e cenas icônicas fizeram de Pulp Fiction um clássico cult.",
-		"duracao": "2h 34min",
-		"classificacao": "18 anos"
-	  },
-	  {
-		"id": 10,
-		"title": "Clube da Luta",
-		"releaseYear": 1999,
-		"image": "https://i.imgur.com/eMsr58c.png",
-		"genre": [
-		  "Drama",
-		  "Psicológico"
-		],
-		"director": "David Fincher",
-		"actors": [
-		  "Brad Pitt",
-		  "Edward Norton"
-		],
-		"rating": 8.8,
-		"iframe": "URL_DO_IFRAME",
-		"favorito": false,
-		"sinopse": "Um homem desiludido forma um clube de combate subterrâneo como uma forma de liberar suas frustrações e raiva. No entanto, as coisas saem de controle quando o clube evolui para algo mais sinistro e desafiador. Um filme que examina a alienação moderna e as complexidades da psique humana.",
-		"duracao": "2h 19min",
-		"classificacao": "16 anos"
-	  },
-	  {
-		"id": 11,
-		"title": "O Iluminado",
-		"releaseYear": 1980,
-		"image": "https://i.imgur.com/eMsr58c.png",
-		"genre": [
-		  "Drama",
-		  "Terror"
-		],
-		"director": "Stanley Kubrick",
-		"actors": [
-		  "Jack Nicholson",
-		  "Shelley Duvall"
-		],
-		"rating": 8.4,
-		"iframe": "URL_DO_IFRAME",
-		"favorito": false,
-		"sinopse": "Baseado no romance de Stephen King, o filme segue um escritor e sua família enquanto eles cuidam de um hotel isolado durante o inverno. A solidão e o isolamento começam a afetar a sanidade do escritor, levando-o a uma espiral descendente de loucura e violência.",
-		"duracao": "2h 26min",
-		"classificacao": "16 anos"
-	  },
-	  {
-		"id": 12,
-		"title": "A Lista de Schindler",
-		"releaseYear": 1993,
-		"image": "https://i.imgur.com/eMsr58c.png",
-		"genre": [
-		  "Biografia",
-		  "Drama",
-		  "História"
-		],
-		"director": "Steven Spielberg",
-		"actors": [
-		  "Liam Neeson",
-		  "Ralph Fiennes"
-		],
-		"rating": 8.9,
-		"iframe": "URL_DO_IFRAME",
-		"favorito": false,
-		"sinopse": "Oskar Schindler, um empresário alemão, usa sua fábrica como um refúgio para judeus durante o Holocausto. Ele salva a vida de mais de mil pessoas, mas luta com o peso da responsabilidade e o horror da guerra. Baseado em eventos reais, o filme retrata um ato extraordinário de humanidade em meio à atrocidade.",
-		"duracao": "3h 15min",
-		"classificacao": "16 anos"
-	  },
-	  {
-		"id": 13,
-		"title": "Interestelar",
-		"releaseYear": 2014,
-		"image": "https://i.imgur.com/eMsr58c.png",
-		"genre": [
-		  "Aventura",
-		  "Drama",
-		  "Ficção Científica"
-		],
-		"director": "Christopher Nolan",
-		"actors": [
-		  "Matthew McConaughey",
-		  "Anne Hathaway"
-		],
-		"rating": 8.6,
-		"iframe": "URL_DO_IFRAME",
-		"favorito": false,
-		"sinopse": "Em um futuro onde a Terra está à beira do colapso ambiental, um grupo de exploradores é enviado em uma missão interestelar para encontrar um novo lar para a humanidade. Enfrentando distâncias astronômicas e fenômenos cósmicos desconhecidos, eles exploram planetas alienígenas em busca de esperança. Uma narrativa emocionante sobre amor, sacrifício e a luta pela sobrevivência da humanidade.",
-		"duracao": "2h 48min",
-		"classificacao": "12 anos"
-	  },
-	  {
-		"id": 14,
-		"title": "A Origem",
-		"releaseYear": 2010,
-		"image": "https://i.imgur.com/eMsr58c.png",
-		"genre": [
-		  "Ação",
-		  "Aventura",
-		  "Ficção Científica"
-		],
-		"director": "Christopher Nolan",
-		"actors": [
-		  "Leonardo DiCaprio",
-		  "Joseph Gordon-Levitt"
-		],
-		"rating": 8.8,
-		"iframe": "URL_DO_IFRAME",
-		"favorito": false,
-		"sinopse": "Dom Cobb é um ladrão habilidoso que invade os sonhos das pessoas para roubar informações valiosas. Ele é oferecido uma chance de redenção: realizar uma 'inserção', que envolve implantar uma ideia na mente de alguém. O filme explora o poder da mente humana, a realidade subjetiva e as ramificações morais da manipulação.",
-		"duracao": "2h 28min",
-		"classificacao": "14 anos"
-	  },
-	  {
-		"id": 15,
-		"title": "Cidade de Deus",
-		"releaseYear": 2002,
-		"image": "https://i.imgur.com/eMsr58c.png",
-		"genre": [
-		  "Ação",
-		  "Crime",
-		  "Drama"
-		],
-		"director": "Fernando Meirelles, Kátia Lund",
-		"actors": [
-		  "Alexandre Rodrigues",
-		  "Leandro Firmino"
-		],
-		"rating": 8.6,
-		"iframe": "URL_DO_IFRAME",
-		"favorito": false,
-		"sinopse": "Baseado em fatos reais, o filme segue a vida de jovens na favela Cidade de Deus, no Rio de Janeiro. Enquanto alguns tentam escapar da violência e da criminalidade, outros são puxados para o mundo do crime. A narrativa complexa e a cinematografia impressionante destacam a dura realidade da vida nas favelas.",
-		"duracao": "2h 10min",
-		"classificacao": "18 anos"
-	  },
-	  {
-		"id": 16,
-		"title": "A Viagem de Chihiro",
-		"releaseYear": 2001,
-		"image": "https://i.imgur.com/eMsr58c.png",
-		"genre": [
-		  "Animação",
-		  "Aventura",
-		  "Família"
-		],
-		"director": "Hayao Miyazaki",
-		"actors": [
-		  "Rumi Hiiragi",
-		  "Miyu Irino"
-		],
-		"rating": 8.6,
-		"iframe": "URL_DO_IFRAME",
-		"favorito": false,
-		"sinopse": "A jovem Chihiro e seus pais acidentalmente entram em um mundo mágico repleto de espíritos e seres sobrenaturais. Quando seus pais são transformados em porcos, Chihiro embarca em uma jornada para salvar sua família e descobre seu próprio poder no processo. Um conto de amadurecimento e maravilha, apresentado com a magia característica do Studio Ghibli.",
-		"duracao": "2h 5min",
-		"classificacao": "Livre"
-	}
-],
-"usuarios": [
-	{
-		"name": "Administrador",
-		"username": "admin",
-		"password": "123",
-		"confirmPassword": "123",
-		"id": 1,
-		"type": "admin"
-	}
-]
+  "conteudo": [
+    {
+      "id": 1,
+      "categoria": "filme",
+      "title": "John Wick 3: Parabellum",
+      "releaseYear": 2019,
+      "image": "https://i.imgur.com/eMsr58c.png",
+      "genre": [
+        "Ação",
+        "Crime",
+        "Suspense"
+      ],
+      "director": "Chad Stahelski",
+      "actors": [
+        "Keanu Reeves",
+        "Halle Berry"
+      ],
+      "rating": 7.4,
+      "iframe": "URL_DO_IFRAME",
+      "favorito": false,
+      "sinopse": "Após matar um membro da alta cúpula da guilda de assassinos, John Wick se torna um alvo de 14 milhões de dólares para os assassinos profissionais em todo o mundo. Agora, ele deve lutar por sua sobrevivência enquanto busca uma maneira de sair dessa situação mortal.",
+      "duracao": "2h 10min",
+      "classificacao": "18 anos"
+    },
+    {
+      "id": 2,
+      "categoria": "filme",
+      "title": "O Poderoso Chefão",
+      "releaseYear": 1972,
+      "image": "https://i.imgur.com/eMsr58c.png",
+      "genre": [
+        "Crime",
+        "Drama"
+      ],
+      "director": "Francis Ford Coppola",
+      "actors": [
+        "Marlon Brando",
+        "Al Pacino"
+      ],
+      "rating": 9.2,
+      "iframe": "#",
+      "favorito": false,
+      "sinopse": "No submundo do crime em Nova Iorque, Don Vito Corleone, um poderoso chefe da máfia, lida com negócios ilícitos enquanto tenta manter sua família unida. Quando seu filho Michael é arrastado para o mundo do crime, uma série de eventos desencadeia uma guerra entre famílias rivais, ameaçando o equilíbrio precário que o Don conseguiu alcançar.",
+      "duracao": "2h 55min",
+      "classificacao": "16 anos"
+    },
+    {
+      "id": 3,
+      "categoria": "filme",
+      "title": "Um Sonho de Liberdade",
+      "releaseYear": 1994,
+      "image": "https://i.imgur.com/eMsr58c.png",
+      "genre": [
+        "Drama"
+      ],
+      "director": "Frank Darabont",
+      "actors": [
+        "Tim Robbins",
+        "Morgan Freeman"
+      ],
+      "rating": 9.3,
+      "iframe": "#",
+      "favorito": true,
+      "sinopse": "Andy Dufresne, um banqueiro injustamente condenado por assassinato, é enviado para a Penitenciária Estadual de Shawshank. Lá, ele forma laços improváveis com outros detentos, incluindo Red. Ao longo dos anos, Andy usa sua inteligência e determinação para enfrentar a vida na prisão, buscando ao mesmo tempo provar sua inocência. Um drama emocionante sobre amizade, esperança e a busca pela liberdade.",
+      "duracao": "2h 22min",
+      "classificacao": "14 anos"
+    },
+    {
+      "id": 4,
+      "categoria": "filme",
+      "title": "O Senhor dos Anéis: O Retorno do Rei",
+      "releaseYear": 2003,
+      "image": "https://i.imgur.com/eMsr58c.png",
+      "genre": [
+        "Ação",
+        "Aventura",
+        "Fantasia"
+      ],
+      "director": "Peter Jackson",
+      "actors": [
+        "Elijah Wood",
+        "Viggo Mortensen"
+      ],
+      "rating": 8.9,
+      "iframe": "#",
+      "favorito": true,
+      "sinopse": "Na conclusão épica da trilogia, Frodo e Sam continuam sua perigosa jornada em direção à Montanha da Perdição, enquanto a batalha final pelo controle da Terra Média se desenrola. Aragorn deve aceitar seu destino como rei, e todos os povos livres se unem para enfrentar as forças das trevas de Sauron. Uma história de coragem, amizade e sacrifício que determinará o destino do mundo.",
+      "duracao": "3h 30min",
+      "classificacao": "14 anos"
+    },
+    {
+      "id": 5,
+      "categoria": "filme",
+      "title": "O Rei Leão",
+      "releaseYear": 1994,
+      "image": "https://i.imgur.com/eMsr58c.png",
+      "genre": [
+        "Animação",
+        "Aventura",
+        "Drama"
+      ],
+      "director": "Roger Allers, Rob Minkoff",
+      "actors": [
+        "Matthew Broderick",
+        "Jeremy Irons"
+      ],
+      "rating": 8.5,
+      "iframe": "#",
+      "favorito": false,
+      "sinopse": "Simba, um jovem leão destinado a se tornar rei, é injustamente acusado da morte de seu pai, Mufasa. Exilado, Simba cresce longe de sua terra natal até que um encontro inesperado o lembra de sua verdadeira identidade e responsabilidades. Ele deve enfrentar seu passado e reivindicar seu lugar de direito como rei da Pedra do Reino. Uma jornada de autodescoberta e redenção.",
+      "duracao": "1h 18min",
+      "classificacao": "Livre"
+    },
+    {
+      "id": 6,
+      "categoria": "filme",
+      "title": "Interestelar",
+      "releaseYear": 2014,
+      "image": "https://i.imgur.com/eMsr58c.png",
+      "genre": [
+        "Aventura",
+        "Drama",
+        "Ficção Científica"
+      ],
+      "director": "Christopher Nolan",
+      "actors": [
+        "Matthew McConaughey",
+        "Anne Hathaway"
+      ],
+      "rating": 8.6,
+      "iframe": "#",
+      "favorito": false,
+      "sinopse": "Em um futuro onde a Terra está à beira do colapso ambiental, um grupo de exploradores é enviado em uma missão interestelar para encontrar um novo lar para a humanidade. Enfrentando distâncias astronômicas e fenômenos cósmicos desconhecidos, eles exploram planetas alienígenas em busca de esperança. Uma narrativa emocionante sobre amor, sacrifício e a luta pela sobrevivência da humanidade.",
+      "duracao": "2h 48min",
+      "classificacao": "12 anos"
+    },
+    {
+      "id": 7,
+      "categoria": "filme",
+      "title": "Cidadão Kane",
+      "releaseYear": 1941,
+      "image": "https://i.imgur.com/eMsr58c.png",
+      "genre": [
+        "Drama",
+        "Mistério"
+      ],
+      "director": "Orson Welles",
+      "actors": [
+        "Orson Welles",
+        "Joseph Cotten"
+      ],
+      "rating": 8.4,
+      "iframe": "URL_DO_IFRAME",
+      "favorito": false,
+      "sinopse": "O magnata da mídia Charles Foster Kane deixa para trás um império após sua morte. Um repórter é designado para descobrir o significado de sua última palavra, 'Rosebud'. Ao explorar a vida de Kane, o filme revela os detalhes de sua ascensão ao poder e a complexidade de sua personalidade, explorando temas como ambição e solidão.",
+      "duracao": "1h 59min",
+      "classificacao": "16 anos"
+    },
+    {
+      "id": 8,
+      "categoria": "filme",
+      "title": "Matrix",
+      "releaseYear": 1999,
+      "image": "https://i.imgur.com/eMsr58c.png",
+      "genre": [
+        "Ação",
+        "Ficção Científica"
+      ],
+      "director": "The Wachowskis",
+      "actors": [
+        "Keanu Reeves",
+        "Laurence Fishburne"
+      ],
+      "rating": 8.7,
+      "iframe": "URL_DO_IFRAME",
+      "favorito": false,
+      "sinopse": "Um jovem hacker chamado Neo descobre que a realidade que ele conhece é uma simulação criada por máquinas para manter a humanidade sob controle. Ele se junta a um grupo de rebeldes para lutar contra as máquinas e despertar a humanidade. O filme é conhecido por suas cenas de ação inovadoras e por explorar filosofias sobre realidade e existência.",
+      "duracao": "2h 16min",
+      "classificacao": "14 anos"
+    },
+    {
+      "id": 9,
+      "categoria": "filme",
+      "title": "Pulp Fiction: Tempo de Violência",
+      "releaseYear": 1994,
+      "image": "https://i.imgur.com/eMsr58c.png",
+      "genre": [
+        "Crime",
+        "Drama"
+      ],
+      "director": "Quentin Tarantino",
+      "actors": [
+        "John Travolta",
+        "Samuel L. Jackson"
+      ],
+      "rating": 8.9,
+      "iframe": "URL_DO_IFRAME",
+      "favorito": false,
+      "sinopse": "O filme interliga várias histórias de criminosos, boxeadores, assassinos e outros personagens enquanto eles navegam por situações bizarras e violentas. A narrativa não linear, diálogos memoráveis e cenas icônicas fizeram de Pulp Fiction um clássico cult.",
+      "duracao": "2h 34min",
+      "classificacao": "18 anos"
+    },
+    {
+      "id": 10,
+      "categoria": "filme",
+      "title": "Clube da Luta",
+      "releaseYear": 1999,
+      "image": "https://i.imgur.com/eMsr58c.png",
+      "genre": [
+        "Drama",
+        "Psicológico"
+      ],
+      "director": "David Fincher",
+      "actors": [
+        "Brad Pitt",
+        "Edward Norton"
+      ],
+      "rating": 8.8,
+      "iframe": "URL_DO_IFRAME",
+      "favorito": false,
+      "sinopse": "Um homem desiludido forma um clube de combate subterrâneo como uma forma de liberar suas frustrações e raiva. No entanto, as coisas saem de controle quando o clube evolui para algo mais sinistro e desafiador. Um filme que examina a alienação moderna e as complexidades da psique humana.",
+      "duracao": "2h 19min",
+      "classificacao": "16 anos"
+    },
+    {
+      "id": 11,
+      "categoria": "filme",
+      "title": "O Iluminado",
+      "releaseYear": 1980,
+      "image": "https://i.imgur.com/eMsr58c.png",
+      "genre": [
+        "Drama",
+        "Terror"
+      ],
+      "director": "Stanley Kubrick",
+      "actors": [
+        "Jack Nicholson",
+        "Shelley Duvall"
+      ],
+      "rating": 8.4,
+      "iframe": "URL_DO_IFRAME",
+      "favorito": false,
+      "sinopse": "Baseado no romance de Stephen King, o filme segue um escritor e sua família enquanto eles cuidam de um hotel isolado durante o inverno. A solidão e o isolamento começam a afetar a sanidade do escritor, levando-o a uma espiral descendente de loucura e violência.",
+      "duracao": "2h 26min",
+      "classificacao": "16 anos"
+    },
+    {
+      "id": 12,
+      "categoria": "filme",
+      "title": "A Lista de Schindler",
+      "releaseYear": 1993,
+      "image": "https://i.imgur.com/eMsr58c.png",
+      "genre": [
+        "Biografia",
+        "Drama",
+        "História"
+      ],
+      "director": "Steven Spielberg",
+      "actors": [
+        "Liam Neeson",
+        "Ralph Fiennes"
+      ],
+      "rating": 8.9,
+      "iframe": "URL_DO_IFRAME",
+      "favorito": false,
+      "sinopse": "Oskar Schindler, um empresário alemão, usa sua fábrica como um refúgio para judeus durante o Holocausto. Ele salva a vida de mais de mil pessoas, mas luta com o peso da responsabilidade e o horror da guerra. Baseado em eventos reais, o filme retrata um ato extraordinário de humanidade em meio à atrocidade.",
+      "duracao": "3h 15min",
+      "classificacao": "16 anos"
+    },
+    {
+      "id": 13,
+      "categoria": "filme",
+      "title": "Interestelar",
+      "releaseYear": 2014,
+      "image": "https://i.imgur.com/eMsr58c.png",
+      "genre": [
+        "Aventura",
+        "Drama",
+        "Ficção Científica"
+      ],
+      "director": "Christopher Nolan",
+      "actors": [
+        "Matthew McConaughey",
+        "Anne Hathaway"
+      ],
+      "rating": 8.6,
+      "iframe": "URL_DO_IFRAME",
+      "favorito": false,
+      "sinopse": "Em um futuro onde a Terra está à beira do colapso ambiental, um grupo de exploradores é enviado em uma missão interestelar para encontrar um novo lar para a humanidade. Enfrentando distâncias astronômicas e fenômenos cósmicos desconhecidos, eles exploram planetas alienígenas em busca de esperança. Uma narrativa emocionante sobre amor, sacrifício e a luta pela sobrevivência da humanidade.",
+      "duracao": "2h 48min",
+      "classificacao": "12 anos"
+    },
+    {
+      "id": 14,
+      "categoria": "filme",
+      "title": "A Origem",
+      "releaseYear": 2010,
+      "image": "https://i.imgur.com/eMsr58c.png",
+      "genre": [
+        "Ação",
+        "Aventura",
+        "Ficção Científica"
+      ],
+      "director": "Christopher Nolan",
+      "actors": [
+        "Leonardo DiCaprio",
+        "Joseph Gordon-Levitt"
+      ],
+      "rating": 8.8,
+      "iframe": "URL_DO_IFRAME",
+      "favorito": false,
+      "sinopse": "Dom Cobb é um ladrão habilidoso que invade os sonhos das pessoas para roubar informações valiosas. Ele é oferecido uma chance de redenção: realizar uma 'inserção', que envolve implantar uma ideia na mente de alguém. O filme explora o poder da mente humana, a realidade subjetiva e as ramificações morais da manipulação.",
+      "duracao": "2h 28min",
+      "classificacao": "14 anos"
+    },
+    {
+      "id": 15,
+      "categoria": "filme",
+      "title": "Cidade de Deus",
+      "releaseYear": 2002,
+      "image": "https://i.imgur.com/eMsr58c.png",
+      "genre": [
+        "Ação",
+        "Crime",
+        "Drama"
+      ],
+      "director": "Fernando Meirelles, Kátia Lund",
+      "actors": [
+        "Alexandre Rodrigues",
+        "Leandro Firmino"
+      ],
+      "rating": 8.6,
+      "iframe": "URL_DO_IFRAME",
+      "favorito": true,
+      "sinopse": "Baseado em fatos reais, o filme segue a vida de jovens na favela Cidade de Deus, no Rio de Janeiro. Enquanto alguns tentam escapar da violência e da criminalidade, outros são puxados para o mundo do crime. A narrativa complexa e a cinematografia impressionante destacam a dura realidade da vida nas favelas.",
+      "duracao": "2h 10min",
+      "classificacao": "18 anos"
+    }
+  ],
+  "usuarios": [
+    {
+      "name": "Administrador",
+      "username": "admin",
+      "password": "123",
+      "confirmPassword": "123",
+      "id": 1,
+      "type": "admin"
+    },
+    {
+      "name": "larissa",
+      "username": "larissa",
+      "password": "321",
+      "confirmPassword": "321",
+      "id": 2
+    }
+  ]
 }

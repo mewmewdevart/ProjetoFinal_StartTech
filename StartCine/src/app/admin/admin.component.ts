@@ -1,261 +1,298 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
-import {MatDialog, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
-import {MatIconModule} from '@angular/material/icon';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { MatDialog, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClient } from '@angular/common/http';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import {
-  MatSnackBar,
-  MatSnackBarHorizontalPosition,
-  MatSnackBarModule,
-  MatSnackBarVerticalPosition,
+	MatSnackBar,
+	MatSnackBarHorizontalPosition,
+	MatSnackBarModule,
+	MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
 
+import { ComunicacaoService } from '../comunicacao.service';
+
+
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss'],
-  standalone: true,
-  imports: [MatFormFieldModule, MatInputModule, MatTableModule, MatIconModule, MatSnackBarModule, MatDialogModule],
+	selector: 'app-admin',
+	templateUrl: './admin.component.html',
+	styleUrls: ['./admin.component.scss'],
+	standalone: true,
+	imports: [MatFormFieldModule, MatInputModule, MatTabsModule, MatTableModule, MatIconModule, MatSnackBarModule, MatDialogModule],
 })
 
 export class AdminComponent implements OnInit {
+	conteudos: any[] = [];
+	horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+	verticalPosition: MatSnackBarVerticalPosition = 'top';
 
-  imovel: any;
-  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
-  verticalPosition: MatSnackBarVerticalPosition = 'top';
+	displayedColumns: string[] = ['foto', 'descricao', 'acoes'];
+	dataSource = new MatTableDataSource<any>();
 
-  displayedColumns: string[] = ['foto', 'descricao', 'acoes'];
-  dataSource = new MatTableDataSource();
+	constructor(
+		public dialog: MatDialog,
+		private _snackBar: MatSnackBar,
+		private http: HttpClient,
+		private comunicacaoService: ComunicacaoService
+	) {}
 
-  constructor ( 
-    public dialog: MatDialog,
-    private _snackBar: MatSnackBar, 
-    private http: HttpClient 
-  ) {}
+	ngOnInit(): void {
+		this.listarConteudos();
+	}
 
-  ngOnInit(): void {
-    this.listarImoveis();
-  }
+	listarConteudos(): void {
+		this.http.get<any[]>('http://localhost:3000/conteudo').subscribe(data => {
+			this.conteudos = data.reverse(); //Exibir de baixo para cima
+			this.dataSource.data = this.conteudos;
+		});
+	}
+	
 
-  listarImoveis(): void {
-    this.http.get<any>('http://localhost:3000/imoveis').subscribe(data => {
-      this.dataSource.data = data;
-    });
-  }
+	modalAdicionar(enterAnimationDuration: string, exitAnimationDuration: string): void {
+		this.dialog.open(AdicionarConteudo, {
+			width: '1000px',
+			data: {
+				enterAnimationDuration,
+				exitAnimationDuration,
+			},
+		});
+	}
 
-  modalAdicionar(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(AdicionarImovel, {
-      width: '1000px',
-      enterAnimationDuration,
-      exitAnimationDuration,
-    });
-  }
+	modalEditar(conteudoId: string, enterAnimationDuration: string, exitAnimationDuration: string): void {
+		const dialogRef = this.dialog.open(EditarConteudo, {
+			width: '1000px',
+			data: {
+				conteudoId,
+				enterAnimationDuration,
+				exitAnimationDuration,
+			},
+		});
 
-  modalEditar(imovelId: string,  enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(EditarImovel, {
-      width: '1000px',
-      enterAnimationDuration,
-      exitAnimationDuration,
-      data: imovelId
-    });
-  }
+		dialogRef.afterClosed().subscribe(result => {
+			this.listarConteudos();
+		});
+	}
 
-  deletarImovel(imovelId: string): void {
-    this.http.delete('http://localhost:3000/imoveis/' + imovelId).subscribe(response => {
-      this._snackBar.open('O imóvel foi removido!', 'Fechar', {
-        horizontalPosition: this.horizontalPosition,
-        verticalPosition: this.verticalPosition,
-        duration: 5000
-      });
-      this.listarImoveis();
-    },
-    error => {
-      this._snackBar.open('Ocorreu um erro ao remover o imovel ' + error, 'Fechar', {
-        horizontalPosition: this.horizontalPosition,
-        verticalPosition: this.verticalPosition,
-        duration: 5000
-      });
-    });
-  }
+	filtrarConteudo(event: Event) {
+		const filterValue = (event.target as HTMLInputElement).value;
+		this.dataSource.filter = filterValue.trim().toLowerCase();
+	}
 
-  toggleFavorito(imovelId: string): void {
-    this.http.get<any>('http://localhost:3000/imoveis/' + imovelId).subscribe(data => {
+	deletarConteudo(conteudoId: string): void {
+		this.http.delete(`http://localhost:3000/conteudo/${conteudoId}`).subscribe(
+			() => {
+				this._snackBar.open('O conteúdo foi removido!', 'Fechar', {
+					horizontalPosition: this.horizontalPosition,
+					verticalPosition: this.verticalPosition,
+					duration: 5000,
+				});
+				this.listarConteudos();
+			},
+			error => {
+				this._snackBar.open(`Ocorreu um erro ao remover o conteúdo: ${error}`, 'Fechar', {
+					horizontalPosition: this.horizontalPosition,
+					verticalPosition: this.verticalPosition,
+					duration: 5000,
+				});
+			}
+		);
+	}
 
-      this.imovel = data;
+	toggleFavorito(conteudoId: string): void {
+		this.http.get<any>(`http://localhost:3000/conteudo/${conteudoId}`).subscribe(data => {
+			const conteudo = data;
+			conteudo.favorito = !conteudo.favorito;
 
-      this.imovel.favorito = !this.imovel.favorito;
-      this.http.patch('http://localhost:3000/imoveis/' + imovelId, { favorito: this.imovel.favorito })
-        .subscribe(
-          response => {
-            // console.log('Property favorito status updated successfully:', response);
-            if (this.imovel.favorito === true) {
-              this._snackBar.open('O imóvel foi favoritado!', 'Fechar', {
-                horizontalPosition: this.horizontalPosition,
-                verticalPosition: this.verticalPosition,
-                duration: 5000
-              });
-            } else {
-              this._snackBar.open('O imóvel foi removido dos favoritos...', 'Fechar', {
-                horizontalPosition: this.horizontalPosition,
-                verticalPosition: this.verticalPosition,
-                duration: 5000
-              });
-            }
+			this.http.patch(`http://localhost:3000/conteudo/${conteudoId}`, { favorito: conteudo.favorito }).subscribe(
+				() => {
+					if (conteudo.favorito === true) {
+						this._snackBar.open('O conteúdo foi favoritado!', 'Fechar', {
+							horizontalPosition: this.horizontalPosition,
+							verticalPosition: this.verticalPosition,
+							duration: 5000,
+						});
+					} else {
+						this._snackBar.open('O conteúdo foi removido dos favoritos...', 'Fechar', {
+							horizontalPosition: this.horizontalPosition,
+							verticalPosition: this.verticalPosition,
+							duration: 5000,
+						});
+					}
 
-            this.http.get<any>('http://localhost:3000/imoveis').subscribe(data => {
-              this.dataSource.data = data;
-            });
-          },
-          error => {
-            // console.error('Error updating property favorito status:', error);
-              this._snackBar.open('Ocorreu um erro ao favoritar/desfavoritar o imóvel!', 'Fechar', {
-                horizontalPosition: this.horizontalPosition,
-                verticalPosition: this.verticalPosition,
-                duration: 5000
-              });
-              // Revert the 'favorito' value if the update fails
-              this.imovel.favorito = !this.imovel.favorito;
-            } 
-            
-      );
-    });
-
-  }
-
-  filtrarImovel(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+					this.listarConteudos();
+				},
+				() => {
+					this._snackBar.open('Ocorreu um erro ao favoritar/desfavoritar o conteúdo!', 'Fechar', {
+						horizontalPosition: this.horizontalPosition,
+						verticalPosition: this.verticalPosition,
+						duration: 5000,
+					});
+					conteudo.favorito = !conteudo.favorito;
+				}
+			);
+		});
+	}
 }
 
 @Component({
-  selector: 'adicionar-imovel',
-  templateUrl: './adicionar-imovel.html',
-  styleUrls: ['./modal.scss'],
-  standalone: true,
-  imports: [MatDialogModule, MatFormFieldModule, MatInputModule, CommonModule, FormsModule],
+	selector: 'adicionar-conteudo',
+	templateUrl: './adicionar-conteudo.html',
+	styleUrls: ['./modal.scss'],
+	standalone: true,
+	imports: [MatDialogModule, MatFormFieldModule, MatTabsModule, MatInputModule, CommonModule, FormsModule],
 })
+export class AdicionarConteudo {
+	conteudo: any = {};
+	id: number;
+	categoria: string;
+	releaseYear: number;
+	image: string;
+	genre: string[];
+	director: string;
+	actors: string[];
+	rating: number;
+	iframe: string;
+	favorito: boolean = false;
+	sinopse: string;
+	duracao: string;
+	classificacao: string;
+	nomeConteudo: string;
 
-export class AdicionarImovel {
+	isFormValid = false;
+	updateFormValidity() {
+		const requiredFields = [
+		  this.conteudo.categoria,
+		  this.conteudo.title,
+		  this.conteudo.releaseYear,
+		  this.conteudo.image,
+		  this.conteudo.director,
+		  this.conteudo.iframe,
+		  this.conteudo.classificacao,
+		  this.conteudo.duracao,
+		  this.conteudo.sinopse,
+		  this.conteudo.nomeConteudo
+		];
+		this.isFormValid = requiredFields.every(field => field !== undefined && field !== null && field !== '');
+	  }
+	horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+	verticalPosition: MatSnackBarVerticalPosition = 'top';
 
-  titulo: string;
-  descricao: string;
-  descricao2: string;
-  foto: string;
-  quartos: number;
-  banheiros: number;
-  area: number;
-  preco: number;
-  favorito: boolean = false;
+	constructor(
+		private http: HttpClient,
+		private _snackBar: MatSnackBar,
+		public dialogRef: MatDialogRef<AdicionarConteudo>
+	) {}
 
-  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
-  verticalPosition: MatSnackBarVerticalPosition = 'top';
+	adicionarConteudo() {
+		if (!this.isFormValid) {
+			this._snackBar.open('Por favor, preencha todos os campos obrigatórios.', 'Fechar', {
+				horizontalPosition: this.horizontalPosition,
+				verticalPosition: this.verticalPosition,
+				duration: 5000,
+			});
+			return; // Impede o envio do formulário se não for válido
+		}
 
-  constructor(
-    private http: HttpClient,
-    private _snackBar: MatSnackBar,
-    public dialogRef: MatDialogRef<AdicionarImovel>
-  ) {}
+		const novoConteudo = {
+			id: this.id,
+			categoria: this.categoria,
+			releaseYear: this.releaseYear,
+			image: this.image,
+			genre: this.genre,
+			director: this.director,
+			actors: this.actors,
+			rating: this.rating,
+			iframe: this.iframe,
+			favorito: false,
+			sinopse: this.sinopse,
+			duracao: this.duracao,
+			classificacao: this.classificacao,
+			nomeConteudo: this.nomeConteudo,
+		};
 
-  adicionarImovel() {
-    const novoImovel = {
-      titulo: this.titulo,
-      descricao: this.descricao,
-      descricao2: this.descricao2,
-      foto: this.foto,
-      quartos: this.quartos,
-      banheiros: this.banheiros,
-      area: this.area,
-      preco: this.preco,
-      favorito: false,
-    };
-
-    this.http.post(' http://localhost:3000/imoveis', novoImovel)
-      .subscribe(
-        (response) => {
-          this._snackBar.open('Imóvel cadastrado com sucesso!', 'Fechar', {
-            horizontalPosition: this.horizontalPosition,
-            verticalPosition: this.verticalPosition,
-            duration: 5000
-          });
-        },
-        (error) => {
-          console.error('Erro ao cadastrar imóvel:', error);
-          this._snackBar.open('Erro ao cadastrar imóvel!', 'Fechar', {
-            horizontalPosition: this.horizontalPosition,
-            verticalPosition: this.verticalPosition,
-            duration: 5000
-          });
-        }
-    );
-  }
+		this.http.post('http://localhost:3000/conteudo', novoConteudo).subscribe(
+			() => {
+				this._snackBar.open('Conteúdo cadastrado com sucesso!', 'Fechar', {
+					horizontalPosition: this.horizontalPosition,
+					verticalPosition: this.verticalPosition,
+					duration: 5000,
+				});
+			},
+			error => {
+				console.error('Erro ao cadastrar conteúdo:', error);
+				this._snackBar.open('Erro ao cadastrar conteúdo!', 'Fechar', {
+					horizontalPosition: this.horizontalPosition,
+					verticalPosition: this.verticalPosition,
+					duration: 5000,
+				});
+			}
+		);
+	}
 }
 
 @Component({
-  selector: 'editar-imovel',
-  templateUrl: './editar-imovel.html',
-  styleUrls: ['./modal.scss'],
-  standalone: true,
-  imports: [MatDialogModule, MatFormFieldModule, MatInputModule, CommonModule, FormsModule],
+	selector: 'editar-conteudo',
+	templateUrl: './editar-conteudo.html',
+	styleUrls: ['./modal.scss'],
+	standalone: true,
+	imports: [MatDialogModule, MatFormFieldModule, MatTabsModule, MatInputModule, CommonModule, FormsModule],
 })
+export class EditarConteudo implements OnInit {
+	conteudo: any = {};
 
-export class EditarImovel implements OnInit {
+	horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+	verticalPosition: MatSnackBarVerticalPosition = 'bottom';
 
-  imovel: any = {};
+	constructor(
+		private http: HttpClient,
+		private _snackBar: MatSnackBar,
+		public dialogRef: MatDialogRef<AdicionarConteudo>,
+		@Inject(MAT_DIALOG_DATA) public data: any
+	) {}
 
-  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
-  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
+	ngOnInit(): void {
+		this.http.get<any>(`http://localhost:3000/conteudo/${this.data.conteudoId}`).subscribe(response => {
+			this.conteudo = response;
+		});
+	}
 
-  constructor(
-    private http: HttpClient,
-    private _snackBar: MatSnackBar,
-    public dialogRef: MatDialogRef<AdicionarImovel>,
-    @Inject(MAT_DIALOG_DATA) public data: any,
-  ) {} 
+	editarConteudo() {
+		const dadosConteudo = {
+			titulo: this.conteudo.titulo,
+			descricao: this.conteudo.descricao,
+			descricao2: this.conteudo.descricao2,
+			foto: this.conteudo.foto,
+			quartos: this.conteudo.quartos,
+			banheiros: this.conteudo.banheiros,
+			area: this.conteudo.area,
+			preco: this.conteudo.preco,
+			favorito: this.conteudo.favorito,
+		};
 
-    ngOnInit(): void {
-      this.http.get<any>('http://localhost:3000/imoveis/' + this.data).subscribe(response => {
-        this.imovel = response;
-      });
-    }
-
-    editarImovel() {
-      const dadosImovel = {
-        titulo: this.imovel.titulo,
-        descricao: this.imovel.descricao,
-        descricao2: this.imovel.descricao2,
-        foto: this.imovel.foto,
-        quartos: this.imovel.quartos,
-        banheiros: this.imovel.banheiros,
-        area: this.imovel.area,
-        preco: this.imovel.preco,
-        favorito: this.imovel.favorito,
-      }
-
-      this.http.patch('http://localhost:3000/imoveis/' + this.data, dadosImovel )
-      .subscribe(
-        (response) => {
-          this._snackBar.open('Imóvel alterado com sucesso!', 'Fechar', {
-            horizontalPosition: this.horizontalPosition,
-            verticalPosition: this.verticalPosition,
-            duration: 5000
-          });
-        },
-        (error) => {
-          console.error('Erro ao alterar imóvel:', error);
-          this._snackBar.open('Erro ao cadastrar imóvel!', 'Fechar', {
-            horizontalPosition: this.horizontalPosition,
-            verticalPosition: this.verticalPosition,
-            duration: 5000
-          });
-        }
-      );
-    }
+		this.http.patch(`http://localhost:3000/conteudo/${this.data.conteudoId}`, dadosConteudo).subscribe(
+			() => {
+				this._snackBar.open('Conteúdo alterado com sucesso!', 'Fechar', {
+					horizontalPosition: this.horizontalPosition,
+					verticalPosition: this.verticalPosition,
+					duration: 5000,
+				});
+			},
+			error => {
+				console.error('Erro ao alterar conteúdo:', error);
+				this._snackBar.open('Erro ao cadastrar conteúdo!', 'Fechar', {
+					horizontalPosition: this.horizontalPosition,
+					verticalPosition: this.verticalPosition,
+					duration: 5000,
+				});
+			}
+		);
+	}
 }

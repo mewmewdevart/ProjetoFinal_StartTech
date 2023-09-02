@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../auth.service';
+import { ComunicacaoService } from '../comunicacao.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,14 +12,14 @@ export class CabecalhoComponent {
 
   constructor(
     private router: Router,
-    private authService: AuthService) {
-    authService.loggedIn$.subscribe((loggedIn: boolean) => {
+    private comunicacaoService: ComunicacaoService) {
+      comunicacaoService.loggedIn$.subscribe((loggedIn: boolean) => {
       this.loggedIn = loggedIn;
     });
   }
 
   logout(): void {
-    this.authService.logout();
+    this.comunicacaoService.logout();
     this.router.navigate(['/home']);
   }
   

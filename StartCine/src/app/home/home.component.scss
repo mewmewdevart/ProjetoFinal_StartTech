@@ -52,6 +52,23 @@ li {
 	padding: 0;
 }
 
+.conteudo-minhaLista {
+		.card {
+		  flex: 1;
+		  background-color: transparent;
+		  text-align: center;
+		  padding: 3px;
+		  cursor: pointer;
+		  img {
+			max-width: 100%;
+			height: auto;
+		  }
+		  &:hover {
+			  transform: scale(1.05); 
+			}
+	}
+}
+
 /* CARROSEL DE FILMES - PRINCIPAIS */
 #carrosel {
 	display: flex;
@@ -127,7 +144,6 @@ li {
 		img {
 		  max-width: 100%;
 		  height: auto;
-		  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 		}
 		&:hover {
 			transform: scale(1.05); 

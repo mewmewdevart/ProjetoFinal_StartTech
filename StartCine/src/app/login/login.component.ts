@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { AuthService } from '../auth.service';
+import { ComunicacaoService } from '../comunicacao.service';
 
 import { HttpClient } from '@angular/common/http';
 
@@ -39,19 +39,19 @@ export class LoginComponent {
   constructor(
     private http: HttpClient,
     private _snackBar: MatSnackBar,
-    private authService: AuthService
+    private comunicacaoService: ComunicacaoService
     ) {
-    authService.loggedIn$.subscribe((loggedIn: boolean) => {
+      comunicacaoService.loggedIn$.subscribe((loggedIn: boolean) => {
       this.loggedIn = loggedIn;
     });
   }
 
   login(): void {
-    this.authService.login(this.username, this.password).subscribe();
+    this.comunicacaoService.login(this.username, this.password).subscribe();
   }
 
   logout(): void {
-    this.authService.logout();
+    this.comunicacaoService.logout();
   }
 
   novaConta(): void {

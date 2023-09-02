@@ -21,7 +21,7 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { DetalhesComponent } from './detalhes/detalhes.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SessionTimerComponent } from './session-timer/session-timer.component';
-import { AuthService } from './auth.service';
+import { ComunicacaoService } from './comunicacao.service';
 
 import ptBr from '@angular/common/locales/pt';
 import { ConteudoComponent } from './conteudo/conteudo.component';
@@ -66,7 +66,7 @@ registerLocaleData(ptBr);
     MatMenuModule,
   ],
   providers: [
-    AuthService,
+    ComunicacaoService,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]

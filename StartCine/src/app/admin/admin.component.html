@@ -1,60 +1,83 @@
-<div class="container">
-    <div class="header">
-        <mat-form-field>
-            <mat-label>Pesquisar</mat-label>
-            <input matInput (keyup)="filtrarImovel($event)" placeholder="Ex. Casa de campo" #input>
-        </mat-form-field>
-        <button mat-button (click)="modalAdicionar('500ms', '500ms')">Cadastrar novo imóvel</button>
-    </div>
-    
-    
-    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    
-        <ng-container matColumnDef="foto">
-        <th mat-header-cell *matHeaderCellDef>Foto do imóvel</th>
-        <td mat-cell *matCellDef="let imovel">
-            <img width="200" src="{{ imovel.foto}}" alt="Foto de {{ imovel.titulo }}" />
-        </td>
-        </ng-container>
-    
-        <ng-container matColumnDef="descricao">
-        <th mat-header-cell *matHeaderCellDef> Descrição </th>
-        <td mat-cell *matCellDef="let imovel">
-            <h2>{{ imovel.titulo }}</h2>
-            {{ imovel.descricao }} <br> {{ imovel.descricao2 }}
-            <ul>
-               <li>Link da Imagem: {{ imovel.foto }}</li>
-               <li>Quartos: {{ imovel.quartos }}</li>
-               <li>Banheiros: {{ imovel.banheiros }}</li>
-               <li>Área total: {{ imovel.area }}m²</li>
-               <li>Preço: {{ imovel.preco }}</li> 
-            </ul>
-        </td>
-        </ng-container>
+<section>
+	<div class="container">
+	  <div class="row">
+		<div class="col">
+		  <div class="header">
+			<mat-form-field>
+			  <mat-label>Pesquisar</mat-label>
+			  <input matInput (keyup)="filtrarConteudo($event)" placeholder="Ex. Cidade de Deus" #input />
+			</mat-form-field>
+			<button mat-button (click)="modalAdicionar('500ms', '500ms')">Cadastrar novo conteúdo</button>
+		  </div>
+  
+		  <div class="table-responsive">
+			<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-        <ng-container matColumnDef="acoes">
-        <th mat-header-cell *matHeaderCellDef> Ações </th>
-        <td mat-cell *matCellDef="let imovel">
-            <button
-                [class]="(imovel.favorito === false ? 'favorite' : 'favorite-checked')"
-                [title]="(imovel.favorito === false ? 'Adicionar aos Favoritos' : 'Remover dos favoritos')"
-                (click)="toggleFavorito(imovel.id)">
-                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon>
-            </button>
-            <button mat-button class="save" (click)="modalEditar(imovel.id, '500ms', '500ms')">
-                <mat-icon aria-hidden="false" aria-label="Editar" fontIcon="edit"></mat-icon>
-            </button>
-            <button mat-button class="delete" (click)="deletarImovel(imovel.id)">
-                <mat-icon aria-hidden="false" aria-label="Apagar" fontIcon="delete"></mat-icon>
-            </button>
-        </td>
-        </ng-container>
-    
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    
-        <tr class="mat-row" *matNoDataRow>
-        <td class="mat-cell" colspan="4">Não foram encontrrados resultados para o termo "{{input.value}}"</td>
-        </tr>
-    </table>
-</div>
+			  <ng-container matColumnDef="foto">
+				<th mat-header-cell *matHeaderCellDef>Foto do conteúdo</th>
+				<td mat-cell *matCellDef="let conteudo" class="align-top">
+				  <img width="250" height="200" [src]="conteudo.image" alt="Foto de {{ conteudo.nomeConteudo }}" />
+				</td>
+			  </ng-container>
+  
+			  <ng-container matColumnDef="descricao">
+				<th mat-header-cell *matHeaderCellDef>Descrição</th>
+				<td mat-cell *matCellDef="let conteudo">
+				  <h2>{{ conteudo.title }}</h2>
+				  <p><span> Sinopse: </span>{{ conteudo.sinopse }}</p>
+				  <div class="row">
+					<div class="col-md-6">
+					  <ul>
+							<li> <span> ID: </span> {{ conteudo.id }}</li>
+							<li> <span> Categoria: </span> {{ conteudo.categoria }}</li>
+							<li><span> Ano de Lançamento: </span> {{ conteudo.releaseYear }}</li>
+							<!-- <li><span> Link da Imagem: </span> {{ conteudo.image }}</li> -->
+							<li><span> Gênero: </span> {{ conteudo.genre.join(', ') }}</li>
+							<li><span> Diretor: </span> {{ conteudo.director }}</li>
+						</ul>
+						</div>
+						<div class="col-md-6">
+						<ul>
+							<li><span>Atores:</span> {{ conteudo.actors.join(', ') }}</li>
+							<li><span>Classificação:</span> {{ conteudo.rating }}</li>
+							<li><span>iFrame:</span> {{ conteudo.iframe }}</li>
+							<li><span>Duração:</span> {{ conteudo.duracao }}</li>
+							<li><span>Classificação:</span> {{ conteudo.classificacao }}</li>
+						</ul>						
+					</div>
+				  </div>
+				</td>
+			  </ng-container>
+  
+			  <ng-container matColumnDef="acoes">
+				<th mat-header-cell *matHeaderCellDef>Ações</th>
+				<td mat-cell *matCellDef="let conteudo">
+				  <button
+					[class]="conteudo.favorito ? 'favorite-checked' : 'favorite'"
+					[title]="conteudo.favorito ? 'Remover dos favoritos' : 'Adicionar aos Favoritos'"
+					(click)="toggleFavorito(conteudo.id)"
+				  >
+					<mat-icon aria-hidden="false" aria-label="Example star icon" fontIcon="star"></mat-icon>
+				  </button>
+				  <button mat-button class="save" (click)="modalEditar(conteudo.id, '500ms', '500ms')">
+					<mat-icon aria-hidden="false" aria-label="Editar" fontIcon="edit"></mat-icon>
+				  </button>
+				  <button mat-button class="delete" (click)="deletarConteudo(conteudo.id)">
+					<mat-icon aria-hidden="false" aria-label="Apagar" fontIcon="delete"></mat-icon>
+				  </button>
+				</td>
+			  </ng-container>
+  
+			  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+			  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+			  <tr class="mat-row" *matNoDataRow>
+				<td class="mat-cell" colspan="4">Não foram encontrados resultados para o termo "{{ input.value }}"</td>
+			  </tr>
+			</table>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  
