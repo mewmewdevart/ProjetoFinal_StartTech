@@ -1,0 +1,46 @@
+@import '../../app.component.scss';
+
+footer {
+	background-color: $corPreto;
+	color: $corBranco;
+	text-align: center;
+	padding: 10px;
+	min-height: 100%;
+	bottom: 0;
+	margin-top: 80px;
+	width: 100%;
+	ul {
+		display: flex;
+		justify-content: center;
+		gap: 26px;
+
+		li {
+			color: $corBranco;
+			font-family: $fontePadrao;
+			font-size: $tamanhoMedio;
+			font-weight: 400;
+
+			&:hover {
+				color: $corPrincipal;
+				cursor: pointer;
+			}
+		}
+	}
+
+	p {
+		padding-top: 16px;
+		color: $corBranco;
+		font-family: $fontePadrao;
+		font-size: $tamanhoMedio;
+		font-weight: 400;
+	}
+}
+
+@media (max-width: 480px) {
+    footer {
+        height: 100%;
+        .container {
+            width: 100%;
+        }
+    }
+}

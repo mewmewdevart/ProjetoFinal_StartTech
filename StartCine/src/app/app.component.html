@@ -1,6 +1,5 @@
 <section>
-    <app-cabecalho></app-cabecalho>
+    <app-cabecalho *ngIf="comunicacaoService.isLogged()"></app-cabecalho>
     <router-outlet></router-outlet>
-    <app-rodape></app-rodape>
+    <app-rodape *ngIf="comunicacaoService.isLogged()"></app-rodape>
 </section>
-  

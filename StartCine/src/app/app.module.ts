@@ -1,3 +1,4 @@
+// Imports do Angular
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
@@ -5,6 +6,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+
+// Imports do Material UI (Angular Material)
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
@@ -13,40 +16,45 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+
+// Import do módulo CommonModule do Angular
 import { CommonModule } from '@angular/common';
 
+// Import dos componentes personalizados do aplicativo
 import { AppComponent } from './app.component';
-import { QuemSomosComponent } from './quem-somos/quem-somos.component';
-import { CabecalhoComponent } from './cabecalho/cabecalho.component';
-import { DetalhesComponent } from './detalhes/detalhes.component';
-import { RodapeComponent } from './rodape/rodape.component';
-import { SessionTimerComponent } from './session-timer/session-timer.component';
+import { CabecalhoComponent } from './home-interna/cabecalho/cabecalho.component';
+import { DetalhesComponent } from './home-interna/detalhes/detalhes.component';
+import { RodapeComponent } from './home-interna/rodape/rodape.component';
 import { ComunicacaoService } from './comunicacao.service';
 
+// Import da localização em português (pt)
 import ptBr from '@angular/common/locales/pt';
-import { ConteudoComponent } from './conteudo/conteudo.component';
-import { PesquisaComponent } from './pesquisa/pesquisa.component';
-import { FavoritosComponent } from './favoritos/favoritos.component';
+
+import { ConteudoComponent } from './home-interna/conteudo/conteudo.component';
+import { PesquisaComponent } from './home-interna/pesquisa/pesquisa.component';
+import { FavoritosComponent } from './home-interna/favoritos/favoritos.component';
 import { HomeExternaComponent } from './home-externa/home-externa.component';
 import { ExibicoesComponent } from './home-externa/exibicoes/exibicoes.component';
 import { SubhomeComponent } from './home-externa/subhome/subhome.component';
+import { RodapeDadosComponent } from './home-interna/rodape/rodape-dados/rodape-dados.component';
+import { GerenciadorAcessosComponent } from './gerenciador-acessos/gerenciador-acessos.component';
 
 registerLocaleData(ptBr);
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		QuemSomosComponent,
 		CabecalhoComponent,
 		DetalhesComponent,
 		RodapeComponent,
-		SessionTimerComponent,
 		ConteudoComponent,
 		PesquisaComponent,
 		FavoritosComponent,
 		HomeExternaComponent,
 		ExibicoesComponent,
 		SubhomeComponent,
+		RodapeDadosComponent,
+		GerenciadorAcessosComponent,
 	],
 	imports: [
 		CommonModule,
@@ -68,7 +76,9 @@ registerLocaleData(ptBr);
 	providers: [
 		ComunicacaoService,
 	],
+	// Definição do esquema de elementos personalizados (Angular Elements Schema)
 	schemas: [CUSTOM_ELEMENTS_SCHEMA],
+	// APPCOMPONENT CARREGANDO INICIALMENTE
 	bootstrap: [AppComponent]
 })
 export class AppModule { }

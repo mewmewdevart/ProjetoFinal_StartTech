@@ -399,7 +399,7 @@
 				"Mamoru Miyano",
 				"Kappei Yamaguchi"
 			],
-			"rating": 9.0,
+			"rating": 9,
 			"iframe": "URL_DO_IFRAME",
 			"favorito": true,
 			"sinopse": "Um estudante encontra um caderno capaz de matar qualquer pessoa cujo nome seja escrito nele. Ele decide usá-lo para eliminar criminosos, mas atrai a atenção de um detetive genial chamado L.",
@@ -497,7 +497,7 @@
 			"sinopse": "Em uma cidade pequena, crianças enfrentam forças sobrenaturais e um laboratório secreto enquanto procuram por um amigo desaparecido.",
 			"duracao": "50 min por episódio",
 			"classificacao": "16 anos"
-		},        
+		},
 		{
 			"id": 23,
 			"categoria": "serie",
@@ -566,23 +566,35 @@
 			"sinopse": "Uma série de antologia que explora uma realidade distópica e as implicações da tecnologia moderna na sociedade.",
 			"duracao": "60 min por episódio",
 			"classificacao": "16 anos"
-		}      
+		}
 	],
 	"usuarios": [
 		{
 			"name": "Administrador",
+			"email": "admin@startCine.com",
 			"username": "admin",
 			"password": "123",
 			"confirmPassword": "123",
-			"id": 1,
-			"type": "admin"
+			"type": "admin",
+			"id": 1
 		},
 		{
-			"name": "larissa",
-			"username": "larissa",
-			"password": "321",
-			"confirmPassword": "321",
+			"name": "testwe",
+			"username": "lslqas",
+			"password": "123",
+			"email": "kdkd@gmail.com",
+			"confirmPassword": "123",
+			"type": "user",
 			"id": 2
+		},
+		{
+			"name": "queijo",
+			"username": "queijo",
+			"password": "987",
+			"email": "queijo@gmail.com",
+			"confirmPassword": "987",
+			"type": "user",
+			"id": 3
 		}
 	]
 }

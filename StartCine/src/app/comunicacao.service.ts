@@ -12,7 +12,9 @@ import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition
 export class ComunicacaoService {
   usuarios: Array<any> = [];
   name: string;
-  username: string;
+  email: string;
+  tipoUsuario: string;
+  //username: string;
   password: string;
   conteudoSelecionado: any;
 
@@ -29,6 +31,10 @@ export class ComunicacaoService {
 
   loggedIn$: Observable<boolean> = this.loggedInSubject.asObservable();
 
+  isLogged(): boolean {
+	return this.loggedInSubject.value;
+  }
+
   login(username: string, password: string): Observable<boolean> {
 	this.httpClient.get<any[]>('http://localhost:3000/usuarios').subscribe(
 	  (response) => {
@@ -44,8 +50,15 @@ export class ComunicacaoService {
 			verticalPosition: this.verticalPosition,
 			duration: 5000,
 		  });
-		  this.router.navigate(['admin']);
+
+		  this.tipoUsuario = usuarioEncontrado.type;  
+		  if (usuarioEncontrado.type === 'admin')
+			this.router.navigate(['admin']);
+		  else 
+		  	this.router.navigate(['home']);
+
 		} else {
+		  this.loggedInSubject.next(false);
 		  this._snackBar.open('Usuário ou senha incorretos!', 'Fechar', {
 			horizontalPosition: this.horizontalPosition,
 			verticalPosition: this.verticalPosition,
@@ -63,9 +76,12 @@ export class ComunicacaoService {
 	);
 	return this.loggedIn$;
   }
+  
 
+  // Método para deslogar o usuário
   logout(): void {
 	this.loggedInSubject.next(false);
+	this.router.navigate(['/home-externa']); // Redireciona para a página de home-externa após o logout
   }
 
   // BUSCAR CONTEÚDOS FAVORITOS
