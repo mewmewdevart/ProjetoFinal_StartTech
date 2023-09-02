@@ -1,0 +1,16 @@
+<section>
+	<div class="conteudo-container">
+	  <div *ngIf="conteudos.length > 0; else noConteudo">
+		<div *ngFor="let conteudo of conteudos" class="conteudo-item">
+		  <h2>{{ conteudo.titulo }}</h2>
+		  <p>{{ conteudo.descricao }}</p>
+		  <img [src]="conteudo.image" alt="Imagem do conteúdo">
+		  <button (click)="verDetalhes(conteudo.id)">Ver Detalhes</button>
+		</div>
+	  </div>
+	  <ng-template #noConteudo>
+		<p>Nenhum conteúdo disponível para esta categoria.</p>
+	  </ng-template>
+	</div>
+  </section>
+  

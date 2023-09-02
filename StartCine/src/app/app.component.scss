@@ -1,2 +1,25 @@
-// Importando estilos globais
-@import '../styles.scss';
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import './scss_reset.scss';
+
+/* Definição de variáveis de fontes */
+$fonteLogo: 'Montserrat Alternates', sans-serif;
+$fontePadrao: 'Raleway', sans-serif;
+$tamanhoPequeno: 12px;
+$tamanhoMedio: 18px;
+$tamanhoGrande: 32px;
+$tamanhoExtraGrande: 42px;
+
+/* Cores */
+$corPrincipal: #FFC603;
+$corPrincipalComplementar: #D8AA0B;
+$corBranco: #FEFBFB;
+$corCinzaClaro: #afafaf;
+$corCinzaMedio: #7b7b7b;
+$corCinzaEscuro: #45484A;
+$corPreto: #060606;
+
+// Cores de Alertas
+$corWarning: #D61C4E;
+$corAlterar: #77D970;

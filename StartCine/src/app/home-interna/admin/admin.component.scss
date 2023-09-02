@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// Definição de variáveis de fontes
+$fonteLogo: 'Montserrat Alternates', sans-serif;
+$fontePadrao: 'Raleway', sans-serif;
+$tamanhoPequeno: 12px;
+$tamanhoMedio: 18px;
+$tamanhoGrande: 32px;
+$tamanhoExtraGrande: 42px;
+
+// Cores
+$corPrincipal: #FFC603;
+$corPrincipalComplementar: #D8AA0B;
+$corBranco: #FEFBFB;
+$corCinzaClaro: #afafaf;
+$corCinzaMedio: #7b7b7b;
+$corCinzaEscuro: #45484A;
+$corPreto: #060606;
+
+// Cores de Alertas
+$corWarning: #D61C4E;
+$corAlterar: #77D970;
+
+
+// Definições globais
+* {
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+
+// Resetando estilos de listas
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+	background-color: $corPreto;
+	min-height: 100vh;
+}
+
+.container {
+	padding-top: 10%;
+	min-height: calc(100vh - 254px);
+	width: 80%;
+	display: block;
+	margin: auto; 
+	.header {
+		display: flex;
+		gap: 20px;
+		button {
+			display: block;
+			width: 30%;
+			min-height: 52px;
+			cursor: pointer;
+			border: none;
+			border-radius: 4px;
+			background-color: $corAlterar;
+			color: $corBranco;
+			font-weight: bold;
+			font-family: $fontePadrao;
+			font-size: $tamanhoMedio;
+			margin-bottom: 20px;
+			&:hover {
+				color: $corPreto;
+			}
+		}
+	}
+	table {
+		width: 100%;
+		td {
+			padding: 0 10px;
+			font-size: 0.9em;
+			font-family: $fontePadrao;
+			line-height: 150%;
+			color: $corCinzaMedio;
+			h2 {
+				font-weight: bold;
+				font-family: $fontePadrao;
+				font-size: $tamanhoGrande;
+				color: $corPreto;
+				margin-top:15px;
+			}
+			ul, li, p  {
+				list-style-type: none;
+				padding-left: 0;
+				margin-left: 0;
+				color: $corPreto;
+				font-size: $tamanhoMedio;
+				line-height: 150%;
+			}
+
+			ul {
+				padding-left: 10px;
+			}
+			span {
+				font-weight: 600;
+			}
+			&:last-child {
+				.favorite {
+					background-color: $corBranco;
+					border: 1px solid $corPrincipal;
+					margin-right: 10px;
+					mat-icon {
+						color: $corPrincipal;
+					}
+				}
+				.favorite-checked {
+					background-color: $corPrincipal;
+					margin-right: 10px;
+				}
+				.save {
+					background-color: $corAlterar;
+					border: 1px solid $corAlterar;
+					mat-icon {
+						color: $corPreto;
+					}
+				}
+				.delete {
+					background-color: $corWarning;
+					border: 1px solid $corWarning;
+					mat-icon {
+						color: $corBranco;
+					}
+				}
+				button {
+					width: 80%;
+					height: 48px;
+					cursor: pointer;
+					border: none;
+					border-radius: 4px;
+					background-color: $corPrincipalComplementar;
+					color: $corBranco;
+					font-family: $fontePadrao;
+					font-size: $tamanhoMedio;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}   
+	.mat-mdc-form-field {
+		font-size: 14px;
+		width: 100%;
+	}
+}

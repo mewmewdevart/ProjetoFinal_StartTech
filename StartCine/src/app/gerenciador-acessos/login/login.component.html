@@ -1,0 +1,55 @@
+<section>
+	<div class="container">
+	  <div class="row logoForm">
+		<img src="../../../assets/images/logo.svg" alt="logo">
+		<p>Onde a Sua História Cinematográfica Começa!</p>
+	  </div>
+	</div>
+	<mat-tab-group *ngIf="!loggedIn" animationDuration="1000ms">
+	  <mat-tab label="Login">
+		<div class="container">
+		  <h2>Entre com suas informações nos campos abaixo:</h2>
+		  <div>
+			<mat-form-field>
+			  <mat-label>Digite seu nome de usuário:</mat-label>
+			  <input matInput placeholder="Nome de usuário" [(ngModel)]="username" required />
+			</mat-form-field>
+			<mat-form-field>
+			  <mat-label>Digite sua senha:</mat-label>
+			  <input matInput placeholder="Senha" [(ngModel)]="password" type="password" required />
+			</mat-form-field>
+			<button mat-button (click)="login()">Login</button>
+		  </div>
+		</div>
+	  </mat-tab>
+	  <mat-tab label="Cadastre-se">
+		<div class="container">
+		  <h2>Faça seu cadastro para ter acesso ao sistema:</h2>
+		  <div>
+			<mat-form-field>
+			  <mat-label>Digite seu nome:</mat-label>
+			  <input matInput placeholder="Nome" [(ngModel)]="name" required />
+			</mat-form-field>
+			<mat-form-field>
+			  <mat-label>Digite um nome de usuário:</mat-label>
+			  <input matInput placeholder="Nome de usuário" [(ngModel)]="username" required />
+			</mat-form-field>
+			<mat-form-field>
+			  <mat-label>Digite seu email:</mat-label>
+			  <input matInput placeholder="Email" [(ngModel)]="email" required />
+			</mat-form-field>
+			<mat-form-field>
+			  <mat-label>Digite uma senha:</mat-label>
+			  <input matInput placeholder="Senha" [(ngModel)]="password" type="password" required />
+			</mat-form-field>
+			<mat-form-field>
+			  <mat-label>Confirme sua senha:</mat-label>
+			  <input matInput placeholder="Confirmar senha" [(ngModel)]="confirmPassword" type="password" required />
+			</mat-form-field>
+			<button mat-button (click)="novaConta()">Criar conta</button>
+		  </div>
+		</div>
+	  </mat-tab>
+	</mat-tab-group>	  
+  </section>
+  

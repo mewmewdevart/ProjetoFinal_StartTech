@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// Definição de variáveis de fontes
+$fonteLogo: 'Montserrat Alternates', sans-serif;
+$fontePadrao: 'Raleway', sans-serif;
+$tamanhoPequeno: 12px;
+$tamanhoMedio: 18px;
+$tamanhoGrande: 32px;
+$tamanhoExtraGrande: 42px;
+
+// Cores
+$corPrincipal: #FFC603;
+$corPrincipalComplementar: #D8AA0B;
+$corBranco: #FEFBFB;
+$corCinzaClaro: #afafaf;
+$corCinzaMedio: #7b7b7b;
+$corCinzaEscuro: #45484A;
+$corPreto: #060606;
+
+// Cores de Alertas
+$corWarning: #D61C4E;
+$corAlterar: #77D970;
+
+
+// Definições globais
+* {
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+
+// Resetando estilos de listas
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-container {
+	width: 80%;
+	padding: 20px 0;
+	h1 {
+		font-size: $tamanhoGrande;
+		font-family: $fontePadrao;
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	input {
+		border-radius: none;
+	}
+	.form-outline, .mb-3, .form-check {
+		resize: none;
+	}
+	.form-control::placeholder {
+		color: $corCinzaClaro;
+		resize: none;
+	}
+		button {
+		display: block;
+		background-color: $corPrincipal;
+		color: $corBranco;
+		font-size: $tamanhoGrande;
+		line-height: $tamanhoGrande;
+		border: none;
+		border-radius: 4px;
+		width: 100%;
+		height: 48px;
+		cursor: pointer;
+		&:hover {
+			background-color: $corPrincipalComplementar;
+		}
+		&:disabled {
+			cursor: not-allowed;
+		}
+	}
+}
+
+textarea {
+	resize: none;
+  }
+
+/* 
+.modal-container {
+	width: 70%;
+	display: block;
+	margin: 0 auto;
+	padding: 20px 0;
+	h1 {
+		font-family: $fontePadrao;
+		font-size: $tamanhoGrande;
+		color: $corPrincipal;
+	}
+	mat-form-field {
+		display: block;
+		font-family: $fontePadrao;
+		font-size: $tamanhoMedio;
+	}
+	button {
+		display: block;
+		background-color: $corPrincipal;
+		color: $corBranco;
+		font-size: $tamanhoGrande;
+		line-height: $tamanhoGrande;
+		border: none;
+		border-radius: 4px;
+		width: 100%;
+		height: 48px;
+		cursor: pointer;
+		&:hover {
+			background-color: $corPrincipalComplementar;
+		}
+		&:disabled {
+			cursor: not-allowed;
+		}
+	}
+}
+*/

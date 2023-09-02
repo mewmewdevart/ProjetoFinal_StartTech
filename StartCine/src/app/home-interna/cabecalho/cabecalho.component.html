@@ -1,0 +1,64 @@
+<mat-toolbar>
+	<div class="container">
+	<img src="../../assets/images/logo.svg" alt="logo do startCine">
+
+	<!-- Tela menor que 1000px? display: flex -->
+	<div class="navbar-responsivo-menu">
+		<button mat-button [matMenuTriggerFor]="menu"> <mat-icon>menu</mat-icon></button>
+		<mat-menu #menu="matMenu">
+			<button mat-menu-item routerLink="/"><mat-icon>home</mat-icon>Inicio</button>
+			<button mat-button [routerLink]="['/conteudo', 'filme']"><mat-icon>movie_filter</mat-icon>Filmes</button>
+			<button mat-button [routerLink]="['/conteudo', 'serie']"><mat-icon>live_tv</mat-icon>Séries</button>
+			<button mat-button [routerLink]="['/conteudo', 'anime']"><img src="../../assets/images/icon-pokemon.svg" alt="pikachu animation" class="anime-icon">Animes</button>
+			<button mat-menu-item routerLink="favoritos"><mat-icon>add</mat-icon>Minha lista</button>
+		</mat-menu>
+	</div>
+
+	<!-- Tela menor que 1000px? display: none -->
+	<div class="navbar-responsivo">
+	  	<button mat-button routerLink="/"><mat-icon>home</mat-icon>Inicio</button>
+		<button mat-button [routerLink]="['/conteudo', 'filme']"><mat-icon>movie_filter</mat-icon>Filmes</button>
+		<button mat-button [routerLink]="['/conteudo', 'serie']"><mat-icon>live_tv</mat-icon>Séries</button>
+		<button mat-button [routerLink]="['/conteudo', 'anime']"><img src="../../assets/images/icon-pokemon.svg" alt="pikachu animation" class="anime-icon">Animes</button>
+		<button mat-button routerLink="pesquisa"><mat-icon>search</mat-icon>Pesquisar</button>
+	</div>
+
+	  <span class="example-spacer"></span>
+
+	  <div class="navbar-direita">
+		<button mat-button routerLink="favoritos" class="navbar-responsivo-direita"><mat-icon>add</mat-icon>Minha lista</button>
+		<button mat-button routerLink="admin" class="navbar-responsivo-direita" *ngIf="loggedIn && comunicacaoService.tipoUsuario === 'admin'">
+			<mat-icon>assessment</mat-icon>Painel
+		  </button>		  
+		<button mat-button [matMenuTriggerFor]="accountMenu"> <mat-icon>account_circle</mat-icon></button>
+		<mat-menu #accountMenu="matMenu">
+			<button mat-menu-item routerLink="#">Conta</button>
+			<button mat-menu-item routerLink="#">Ajuda</button>
+			<button class="auth" *ngIf="loggedIn" mat-menu-item (click)="logout()">
+				Sair
+			</button>
+		</mat-menu>
+	</div>
+	</div>
+</mat-toolbar>
+	
+<!-- 
+<mat-toolbar>
+	<div class="container">
+		<h1>StartCine+</h1>
+		<span class="menu-spacer"></span>
+		<button mat-button routerLink="/">Home</button>
+		<button mat-button routerLink="quem-somos">Quem Somos</button>
+		<button mat-button routerLink="contato">Contato</button>
+
+		
+		<button class="auth" *ngIf="!loggedIn" mat-button routerLink="login">
+			<mat-icon aria-hidden="false" aria-label="Acessar o sistema" fontIcon="login"></mat-icon>
+			Acessar o sistema
+		</button>
+		<button class="auth" *ngIf="loggedIn" mat-button (click)="logout()">
+			<mat-icon aria-hidden="false" aria-label="Sair do sistema" fontIcon="logout"></mat-icon>
+			Sair do sistema
+		</button>
+	</div>    
+</mat-toolbar> -->
