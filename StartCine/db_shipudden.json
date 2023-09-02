@@ -84,7 +84,7 @@
 			],
 			"rating": 8.9,
 			"iframe": "#",
-			"favorito": false,
+			"favorito": true,
 			"sinopse": "Na conclusão épica da trilogia, Frodo e Sam continuam sua perigosa jornada em direção à Montanha da Perdição, enquanto a batalha final pelo controle da Terra Média se desenrola. Aragorn deve aceitar seu destino como rei, e todos os povos livres se unem para enfrentar as forças das trevas de Sauron. Uma história de coragem, amizade e sacrifício que determinará o destino do mundo.",
 			"duracao": "3h 30min",
 			"classificacao": "14 anos"
@@ -339,27 +339,234 @@
 		},
 		{
 			"id": 16,
-			"categoria": "filme",
-			"title": "A Viagem de Chihiro",
-			"releaseYear": 2001,
+			"categoria": "anime",
+			"title": "Naruto",
+			"releaseYear": 2002,
 			"image": "https://i.imgur.com/eMsr58c.png",
 			"genre": [
-				"Animação",
+				"Ação",
 				"Aventura",
-				"Família"
+				"Fantasia"
 			],
-			"director": "Hayao Miyazaki",
+			"director": "Hayato Date",
 			"actors": [
-				"Rumi Hiiragi",
-				"Miyu Irino"
+				"Junko Takeuchi",
+				"Maile Flanagan"
+			],
+			"rating": 8.3,
+			"iframe": "URL_DO_IFRAME",
+			"favorito": false,
+			"sinopse": "Naruto é um jovem ninja que busca se tornar o mais poderoso ninja de sua aldeia, a Aldeia da Folha. Ele enfrenta desafios, inimigos e busca conquistar o respeito de seus colegas ninja.",
+			"duracao": "24 min por episódio",
+			"classificacao": "14 anos"
+		},
+		{
+			"id": 17,
+			"categoria": "anime",
+			"title": "One Piece",
+			"releaseYear": 1999,
+			"image": "https://i.imgur.com/eMsr58c.png",
+			"genre": [
+				"Ação",
+				"Aventura",
+				"Comédia"
+			],
+			"director": "Kōnosuke Uda",
+			"actors": [
+				"Mayumi Tanaka",
+				"Akemi Okamura"
+			],
+			"rating": 8.7,
+			"iframe": "URL_DO_IFRAME",
+			"favorito": true,
+			"sinopse": "Monkey D. Luffy e sua tripulação pirata procuram pelo lendário tesouro conhecido como 'One Piece'. Eles enfrentam perigos e inimigos em sua jornada pelo Grande Mar.",
+			"duracao": "24 min por episódio",
+			"classificacao": "12 anos"
+		},
+		{
+			"id": 18,
+			"categoria": "anime",
+			"title": "Death Note",
+			"releaseYear": 2006,
+			"image": "https://i.imgur.com/eMsr58c.png",
+			"genre": [
+				"Mistério",
+				"Crime",
+				"Psicológico"
+			],
+			"director": "Tetsurō Araki",
+			"actors": [
+				"Mamoru Miyano",
+				"Kappei Yamaguchi"
+			],
+			"rating": 9.0,
+			"iframe": "URL_DO_IFRAME",
+			"favorito": true,
+			"sinopse": "Um estudante encontra um caderno capaz de matar qualquer pessoa cujo nome seja escrito nele. Ele decide usá-lo para eliminar criminosos, mas atrai a atenção de um detetive genial chamado L.",
+			"duracao": "23 min por episódio",
+			"classificacao": "16 anos"
+		},
+		{
+			"id": 19,
+			"categoria": "anime",
+			"title": "Attack on Titan",
+			"releaseYear": 2013,
+			"image": "https://i.imgur.com/eMsr58c.png",
+			"genre": [
+				"Ação",
+				"Drama",
+				"Fantasia"
+			],
+			"director": "Tetsurō Araki",
+			"actors": [
+				"Yuki Kaji",
+				"Yui Ishikawa"
+			],
+			"rating": 8.9,
+			"iframe": "URL_DO_IFRAME",
+			"favorito": false,
+			"sinopse": "A humanidade enfrenta a ameaça dos Titãs, criaturas gigantes que devoram seres humanos. Eren Yeager e seus amigos se juntam às forças militares para combater essa ameaça.",
+			"duracao": "24 min por episódio",
+			"classificacao": "18 anos"
+		},
+		{
+			"id": 20,
+			"categoria": "anime",
+			"title": "My Hero Academia",
+			"releaseYear": 2016,
+			"image": "https://i.imgur.com/eMsr58c.png",
+			"genre": [
+				"Ação",
+				"Aventura",
+				"Superpoderes"
+			],
+			"director": "Kenji Nagasaki",
+			"actors": [
+				"Daiki Yamashita",
+				"Kenta Miyake"
+			],
+			"rating": 8.4,
+			"iframe": "URL_DO_IFRAME",
+			"favorito": true,
+			"sinopse": "Em um mundo onde a maioria da população possui superpoderes, um jovem chamado Izuku Midoriya luta para se tornar um herói e enfrenta desafios para provar seu valor.",
+			"duracao": "24 min por episódio",
+			"classificacao": "12 anos"
+		},
+		{
+			"id": 21,
+			"categoria": "serie",
+			"title": "Game of Thrones",
+			"releaseYear": 2011,
+			"image": "https://i.imgur.com/eMsr58c.png",
+			"genre": [
+				"Fantasia",
+				"Drama",
+				"Ação"
+			],
+			"director": "Vários diretores",
+			"actors": [
+				"Emilia Clarke",
+				"Kit Harington"
+			],
+			"rating": 9.3,
+			"iframe": "URL_DO_IFRAME",
+			"favorito": true,
+			"sinopse": "Uma luta pelo trono de ferro em Westeros, onde famílias nobres conspiram e guerreiam pelo controle dos Sete Reinos.",
+			"duracao": "55 min por episódio",
+			"classificacao": "18 anos"
+		},
+		{
+			"id": 22,
+			"categoria": "serie",
+			"title": "Stranger Things",
+			"releaseYear": 2016,
+			"image": "https://i.imgur.com/eMsr58c.png",
+			"genre": [
+				"Ficção Científica",
+				"Terror",
+				"Suspense"
+			],
+			"director": "Vários diretores",
+			"actors": [
+				"Millie Bobby Brown",
+				"Winona Ryder"
+			],
+			"rating": 8.7,
+			"iframe": "URL_DO_IFRAME",
+			"favorito": true,
+			"sinopse": "Em uma cidade pequena, crianças enfrentam forças sobrenaturais e um laboratório secreto enquanto procuram por um amigo desaparecido.",
+			"duracao": "50 min por episódio",
+			"classificacao": "16 anos"
+		},        
+		{
+			"id": 23,
+			"categoria": "serie",
+			"title": "Breaking Bad",
+			"releaseYear": 2008,
+			"image": "https://i.imgur.com/eMsr58c.png",
+			"genre": [
+				"Crime",
+				"Drama",
+				"Suspense"
+			],
+			"director": "Vários diretores",
+			"actors": [
+				"Bryan Cranston",
+				"Aaron Paul"
+			],
+			"rating": 9.5,
+			"iframe": "URL_DO_IFRAME",
+			"favorito": true,
+			"sinopse": "Um professor de química vira um fabricante de metanfetamina após ser diagnosticado com câncer terminal, e ele se envolve no submundo do crime.",
+			"duracao": "47 min por episódio",
+			"classificacao": "18 anos"
+		},
+		{
+			"id": 24,
+			"categoria": "serie",
+			"title": "The Crown",
+			"releaseYear": 2016,
+			"image": "https://i.imgur.com/eMsr58c.png",
+			"genre": [
+				"Drama",
+				"História",
+				"Biografia"
+			],
+			"director": "Vários diretores",
+			"actors": [
+				"Olivia Colman",
+				"Tobias Menzies"
 			],
 			"rating": 8.6,
 			"iframe": "URL_DO_IFRAME",
 			"favorito": false,
-			"sinopse": "A jovem Chihiro e seus pais acidentalmente entram em um mundo mágico repleto de espíritos e seres sobrenaturais. Quando seus pais são transformados em porcos, Chihiro embarca em uma jornada para salvar sua família e descobre seu próprio poder no processo. Um conto de amadurecimento e maravilha, apresentado com a magia característica do Studio Ghibli.",
-			"duracao": "2h 5min",
-			"classificacao": "Livre"
-		}
+			"sinopse": "A história do reinado da Rainha Elizabeth II, explorando os desafios políticos e pessoais que ela enfrentou ao longo dos anos.",
+			"duracao": "58 min por episódio",
+			"classificacao": "16 anos"
+		},
+		{
+			"id": 25,
+			"categoria": "serie",
+			"title": "Black Mirror",
+			"releaseYear": 2011,
+			"image": "https://i.imgur.com/eMsr58c.png",
+			"genre": [
+				"Drama",
+				"Ficção Científica",
+				"Suspense"
+			],
+			"director": "Vários diretores",
+			"actors": [
+				"Bryce Dallas Howard",
+				"Daniel Kaluuya"
+			],
+			"rating": 8.8,
+			"iframe": "URL_DO_IFRAME",
+			"favorito": true,
+			"sinopse": "Uma série de antologia que explora uma realidade distópica e as implicações da tecnologia moderna na sociedade.",
+			"duracao": "60 min por episódio",
+			"classificacao": "16 anos"
+		}      
 	],
 	"usuarios": [
 		{

@@ -104,7 +104,7 @@ export class ComunicacaoService {
 		this.conteudoSelecionado = conteudo;
 	}
   
-    // Metodo para adicionar um novo conteudo
+	// Metodo para adicionar um novo conteudo
 	adicionarConteudo(conteudo: any): Observable<any> {
 		return this.httpClient.post('http://localhost:3000/conteudo', conteudo);
 	  }
@@ -127,5 +127,10 @@ export class ComunicacaoService {
 	  // Metodo para buscar todos os conteúdos
 	  getTodosConteudos(): Observable<any[]> {
 		return this.httpClient.get<any[]>('http://localhost:3000/conteudo');
+	  }
+
+	  // Metodo para conseguir os conteudos por categoria
+	  getConteudosPorCategoria(categoria: string): Observable<any[]> {
+		return this.httpClient.get<any[]>(`http://localhost:3000/conteudo?categoria=${categoria}`);
 	  }
 }

@@ -11,21 +11,21 @@ import { FavoritosComponent } from './favoritos/favoritos.component';
 import { PesquisaComponent } from './pesquisa/pesquisa.component';
 
 const routes: Routes = [
-  //{ path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'admin', component: AdminComponent },
-  { path: 'quem-somos', component: QuemSomosComponent },
-  { path: 'conteudo', component: ConteudoComponent },
-  { path: 'conteudo', component: ConteudoComponent },
-  { path: 'pesquisa', component: PesquisaComponent },
-  { path: 'favoritos', component: FavoritosComponent },
-  { path: 'contato', component: ContatoComponent },
-  { path: 'detalhes/:id', component: DetalhesComponent }
+	{ path: '', redirectTo: 'home', pathMatch: 'full' },
+
+	{ path: '', component: HomeComponent },
+	{ path: 'login', component: LoginComponent },
+	{ path: 'admin', component: AdminComponent },
+	{ path: 'quem-somos', component: QuemSomosComponent },
+	{ path: 'conteudo/:categoria', component: ConteudoComponent },
+	{ path: 'pesquisa', component: PesquisaComponent },
+	{ path: 'favoritos', component: FavoritosComponent },
+	{ path: 'contato', component: ContatoComponent },
+	{ path: 'detalhes/:id', component: DetalhesComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule]
 })
 export class AppRoutingModule { }
