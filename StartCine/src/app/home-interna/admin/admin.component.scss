@@ -57,7 +57,7 @@ li {
 }
 
 section {
-	background-color: $corPreto;
+	background-color: $corPreto ;
 	min-height: 100vh;
 }
 
@@ -163,5 +163,134 @@ section {
 	.mat-mdc-form-field {
 		font-size: 14px;
 		width: 100%;
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	.container {
+		padding-top: 10%;
+		min-height: calc(100vh - 254px);
+		width: 90%;
+		display: block;
+		margin: auto; 
+		.header {
+			display: flex;
+			gap: 20px;
+			button {
+				display: block;
+				width: 50%;
+				min-height: 52px;
+				cursor: pointer;
+				border: none;
+				border-radius: 4px;
+				background-color: $corAlterar;
+				color: $corBranco;
+				font-weight: bold;
+				font-family: $fontePadrao;
+				font-size: $tamanhoPequeno;
+				margin-bottom: 20px;
+				&:hover {
+					color: $corPreto;
+				}
+			}
+		}
+		table {
+			width: 100%;
+			th{
+				display: none;
+			}
+			td {
+				border: none;
+				display: block;
+				padding: 0 20px;
+				font-size: 0.9em;
+				font-family: $fontePadrao;
+				line-height: 150%;
+				color: $corCinzaMedio;
+				img{
+					width: 100%;
+				}
+				h2 {
+					font-weight: bold;
+					font-family: $fontePadrao;
+					font-size: $tamanhoGrande;
+					color: $corPreto;
+					margin-top:15px;
+					padding-left: 15vw;
+				}
+				ul, li, p  {
+					list-style-type: none;
+					padding-left: 0;
+					margin-left: 0;
+					color: $corPreto;
+					font-size: $tamanhoMedio;
+					line-height: 100%;
+					&::first-letter{
+						display: block;
+						margin-top: 100px;
+					}
+				}
+	
+				ul {
+					padding-left: 10px;
+					&:last-child{
+						margin-bottom: 10px;
+					}
+				}
+				span {
+					font-weight: 600;
+				}
+				&:last-child {
+					.favorite {
+						background-color: $corBranco;
+						border: 1px solid $corPrincipal;
+						margin-right: 10px;
+						mat-icon {
+							color: $corPrincipal;
+						}
+					}
+					.favorite-checked {
+						background-color: $corPrincipal;
+						margin-right: 10px;
+					}
+					.save {
+						background-color: $corAlterar;
+						border: 1px solid $corAlterar;
+						mat-icon {
+							color: $corPreto;
+						}
+					}
+					.delete {
+						background-color: $corWarning;
+						border: 1px solid $corWarning;
+						mat-icon {
+							color: $corBranco;
+						}
+					}
+					button {
+						width: 20%;
+						height: 48px;
+						cursor: pointer;
+						border: none;
+						border-radius: 4px;
+						background-color: $corPrincipalComplementar;
+						color: $corBranco;
+						font-family: $fontePadrao;
+						font-size: $tamanhoMedio;
+						margin-bottom: 10px;
+						margin-left: 15px;
+						margin-right: 10px;
+						&:first-child{
+							margin-left: 40px;
+						}
+					}
+				}
+			}
+		}   
+		.mat-mdc-form-field {
+			font-size: 14px;
+			width: 100%;
+		}
 	}
 }
