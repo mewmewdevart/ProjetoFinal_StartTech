@@ -44,10 +44,11 @@ section {
         margin-top: 10%;
         height: 50px;
         border-radius: 0px;
-        &hover {
-			color:  $corCinzaClaro;
-            border: 2px solid $corCinzaClaro;
-        }
+        &:hover {
+			border: none;
+			color: $corBranco;
+			background-color: $corCinzaMedio;
+		}
     }
 
     #button1{

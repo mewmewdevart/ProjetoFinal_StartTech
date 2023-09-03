@@ -1,142 +1,140 @@
 @import '../app.component.scss';
 
-section {
-	background-color: $corPreto;
-	width: 100%;
-	min-height: 100vh;
-}
-
-.sessao01 {
-  position: relative;
-  height: 100vh;
-  background-image: url("https://s3-alpha-sig.figma.com/img/154e/382f/b7e8be84d7248b8b9812172cad1cd0c9?Expires=1694390400&Signature=VVlr6nNJi1iCRZlooI99XOSOwje1juyxek8HQ7to2gWdN5foBY-P1bJ5FX~TXZokQm5Dmga2wyINzPHUMHnmDy-BbgwIeY7y0obGD2qL~iGHFibBTEj2KA6ppMMg-Ga0-OGOkRs8Y~B9btYSuy-6gNXDt0l6cg0w2Xtl4sMir33rGqOWyloFlMbPztIgFM~9mLM1dPLijyYv7SkJbo5V2Hiqg5mVZCKH9mJwnd0QqfbZ9mIU-5v9bkQF2VwVm3ayVG5~yzYScAPG6z~QxFu0zUsZo-RegDz4Gi6TmEOjXOS~L8dfkrZ~BAcoDRq6FwILs~YGsW3AWf39hJpom2b9bA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  filter: blur(0.1px);
-  header {
-	display: flex;
-	justify-content: flex-start;
-	font-family: $fontePadrao;
-	z-index: 5;
-	color: $corBranco;
-	gap: 10px;
-	img {
-		width: 144px;
-	}
-	div {
-		background-color: $corPrincipal;
-		width: 4px;
-		height: 25px;
-	}
-	h1 {
-		color: $corBranco;
-		font-family: $fontePadrao;
-		font-size: 16px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: normal;
-		text-transform: uppercase;
-	}
-  }
-  &::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+section.sessao01 {
 	background-image: url("https://s3-alpha-sig.figma.com/img/154e/382f/b7e8be84d7248b8b9812172cad1cd0c9?Expires=1694390400&Signature=VVlr6nNJi1iCRZlooI99XOSOwje1juyxek8HQ7to2gWdN5foBY-P1bJ5FX~TXZokQm5Dmga2wyINzPHUMHnmDy-BbgwIeY7y0obGD2qL~iGHFibBTEj2KA6ppMMg-Ga0-OGOkRs8Y~B9btYSuy-6gNXDt0l6cg0w2Xtl4sMir33rGqOWyloFlMbPztIgFM~9mLM1dPLijyYv7SkJbo5V2Hiqg5mVZCKH9mJwnd0QqfbZ9mIU-5v9bkQF2VwVm3ayVG5~yzYScAPG6z~QxFu0zUsZo-RegDz4Gi6TmEOjXOS~L8dfkrZ~BAcoDRq6FwILs~YGsW3AWf39hJpom2b9bA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-	filter: blur(2px);
-	z-index: -1;
-  }
-  .container{
+	filter: blur(0.1px);
 	width: 100%;
-	margin: 0 auto;
-	padding-top: 30px;
-	.row {
-	  .col-md-6 {
-		padding-left: 50px;
-		.texto-exibicoes{
-		  color: $corBranco;
-		  font-family: $fontePadrao;
-
-		  h2{
-			margin-top: 100px;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	.container {
+		width: 80%;
+		margin: auto;
+		header {
+			margin-top: 50px;
 			color: $corBranco;
-			font-family: $fontePadrao;
-			font-size: 32px;
-			font-style: normal;
-			font-weight: 800;
-			line-height: normal;
-			text-transform: uppercase;
-			width: 392px;
-			height: 158px;
-		  }
-
-		  p{
-			width: 529px;
-			flex-shrink: 0;
-			color: $corBranco;
-			font-family: $fontePadrao;
-			font-size: $tamanhoMedio;
-			font-style: normal;
-			font-weight: 500;
-			text-transform: uppercase;
-		  }
-
-		  .texto-secundario{
-			margin-top: 20px;
-			margin-bottom: 30px;
-		  }
+			display: flex;
+			justify-content: flex-start;
+			gap: 20px;
+			.line {
+				width: 3px;
+				height: 20px;
+				background-color: $corPrincipal;
+			}
+			h1 {
+				color: #FFF;
+				font-family: $fontePadrao;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 700;
+				line-height: normal;
+				text-transform: uppercase;
+			}
 		}
-	  }
+		.texto-exibicoes {
+			h2 {
+				margin-top: 35%;
+				color: #FFF;
+				font-family: $fontePadrao;
+				font-size: 32px;
+				font-style: normal;
+				font-weight: 800;
+				line-height: normal;
+				text-transform: uppercase;
+			}
+			.texto-secundario {
+				margin-top: 26px;
+				p {
+					color: #FFF;
+					font-family:$fontePadrao;
+					font-size: $tamanhoMedio;
+					font-style: normal;
+					font-weight: 500;
+					line-height: normal;
+					text-transform: uppercase;
+				}
+			}
+		}
 	}
-	
-	button {
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: url("https://s3-alpha-sig.figma.com/img/154e/382f/b7e8be84d7248b8b9812172cad1cd0c9?Expires=1694390400&Signature=VVlr6nNJi1iCRZlooI99XOSOwje1juyxek8HQ7to2gWdN5foBY-P1bJ5FX~TXZokQm5Dmga2wyINzPHUMHnmDy-BbgwIeY7y0obGD2qL~iGHFibBTEj2KA6ppMMg-Ga0-OGOkRs8Y~B9btYSuy-6gNXDt0l6cg0w2Xtl4sMir33rGqOWyloFlMbPztIgFM~9mLM1dPLijyYv7SkJbo5V2Hiqg5mVZCKH9mJwnd0QqfbZ9mIU-5v9bkQF2VwVm3ayVG5~yzYScAPG6z~QxFu0zUsZo-RegDz4Gi6TmEOjXOS~L8dfkrZ~BAcoDRq6FwILs~YGsW3AWf39hJpom2b9bA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		filter: blur(2px);
+		z-index: -1;
+	  }
+	  .btn {
 		width: 356px;
 		font-family: $fontePadrao, cursive;
 		font-weight: bold;
 		color:  $corBranco;
-		background-color: $corPrincipal;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		margin-top: 3%;
 		height: 50px;
 		border-radius: 0px;
-	}
-	#button1:hover {
-		background-color: $corPrincipalComplementar;
-	}
-
-	.butao2 {
+	  }
+	  
+	  .btn-butao1 {
+		background-color: $corPrincipal;
+		color: $corBranco;
+		display: inline-flex;
+		height: 50px;
+		min-width: 356px;
+		padding: 6px 25px 6px 16px;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		font-family: $fontePadrao;
+		font-size: $tamanhoMedio -4;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 24px; 
+		text-transform: uppercase;
+		&:hover {
+			background-color: $corPrincipalComplementar;
+		}
+	  }
+	  .btn-butao2 {
 		border: 2px solid $corBranco;
-		background-color: transparent;
-	}
-
-	.butao2:hover {
-		color: $corCinzaEscuro;
-		border: 1px solid $corCinzaEscuro;
-	}
-  }
+		color: $corBranco;
+		display: inline-flex;
+		height: 50px;
+		min-width: 356px;
+		padding: 6px 25px 6px 16px;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+		font-family: $fontePadrao;
+		font-size: $tamanhoMedio -4;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 24px; 
+		text-transform: uppercase;
+		&:hover {
+			border: none;
+			color: $corBranco;
+			background-color: $corCinzaMedio;
+		}
+		margin-bottom: 50px;
+	  }	  
 }
 
-// Estilos para telas pequenas (até 768px)
-@media screen and (max-width: 768px) {
-  .sessao01 {
-	text-align: center;
-	width: 100%;
-	min-height: 80vh;
-	background-image: url("https://www.whatsong.org/images/tvshow/backdrop/t6mukQI9vmCOTf70BcyvijqOFA1.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
 
+@media screen and (max-width: 1200px) {
 	.container {
+<<<<<<< HEAD
 	  width: 100%;
 	  margin: 0 auto;
 	  padding-right: 35px;
@@ -168,16 +166,38 @@ section {
 			  text-align: center;
 			}
 		  }
+=======
+	  header {
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		gap: 10px;
+  
+		.line {
+		  display: none;
+		}
+  
+		h1 {
+		  text-align: center;
+		}
+	  }
+  
+	  .texto-exibicoes {
+		text-align: center;
+  
+		h2 {
+			margin-top: 5%;
+		}
+  
+		.texto-secundario {
+		  margin-top: 10px; 
+>>>>>>> 451b4de9d02dd71dc045d108e7af57aabb17d9d5
 		}
 	  }
 	}
+  
+	.btn {
+	  margin: 10px auto; 
+	}
   }
-}
-
-// Estilos para telas médias (de 769px até 1024px)
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-}
-
-// Estilos para telas grandes (acima de 1024px)
-@media screen and (min-width: 1025px) {
-}
+  

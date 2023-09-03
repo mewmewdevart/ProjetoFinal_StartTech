@@ -1,17 +1,19 @@
 <section class="sessao01">
-    <div class="container">
-        <div class="row">
-            <div class="texto-exibicoes">
-                <h2>TODAS AS SUAS SÉRIES, ANIMES E FILMES FAVORITOS EM UM SÓ LUGAR.</h2>
-                <p>"Passagem direta para um mundo de entretenimento ilimitado!"</p>
-                <div class="cartao-externo">
-                  <div *ngFor="let cartao of destaques">
-                    <mat-card >
-                      <img [src]="cartao.foto" alt="">
-                    </mat-card> 
-                  </div>      
-                </div>
-              </div>
-        </div>
-    </div>
+	<div class="container">
+			<div class="row">
+					<div class="col-12">
+							<div class="texto-exibicoes">
+									<h2>TODAS AS SUAS SÉRIES, ANIMES E FILMES FAVORITOS EM UM SÓ LUGAR.</h2>
+									<p>"Passagem direta para um mundo de entretenimento ilimitado!"</p>
+									<div class="row justify-content-center">
+											<div class="col-2 col-md-2 mb-4" *ngFor="let cartao of destaques"> <!-- Adicione a classe "mb-4" para margem inferior -->
+													<div class="card">
+															<img  routerLink="/login" [src]="cartao.foto" alt="card do filme">
+													</div>
+											</div>
+									</div>
+							</div>
+					</div>
+			</div>
+	</div>
 </section>
