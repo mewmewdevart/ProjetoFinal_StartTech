@@ -46,7 +46,7 @@
 				<div class="row">
 				  <div class="col-md-6">
 					<div class="mb-3">
-					  <p>Texto legal sobre o filme</p>
+
 					</div>
 				  </div>
 				  <div class="col-md-6">
@@ -60,6 +60,7 @@
 						</div>
 						<div class="col-md-6">
 						  <p>Direção: <br> {{filme.director}}</p>
+						  <p>Categoria: <br> {{filme.categoria.charAt(0).toUpperCase() + filme.categoria.slice(1)}}</p> <!-- Torna a primeira letra em maiuscula -->
 						</div>
 					  </div>
 					</div>

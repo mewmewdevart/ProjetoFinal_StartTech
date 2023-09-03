@@ -26,24 +26,12 @@
 </section>
 
 <section>
-	<!-- Listagem de conteúdos favoritos -->
-	<div *ngFor="let conteudo of conteudosFavoritos">
-		<mat-grid-tile *ngIf="conteudo.favorito === true">
-			<div class="container-fluid conteudo-minhaLista">
-				<h1>MINHA LISTA</h1>
-				<div class="row">
-					<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-						<div class="card">
-							<img [src]="conteudo.image" [alt]="conteudo.title" class="img-fluid">
-							<h2>{{conteudo.title}}</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</mat-grid-tile>
-	</div>
-
 	<!-- Carrossel de conteúdos -->
+	<div class="container containerTitle">
+		<div class="row">
+			<h2 class="title">Recomendados</h2>
+		</div>
+	</div>
 	<div class="carousel-slider">
 		<div id="conteudoCarousel" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-inner">
@@ -64,7 +52,7 @@
 			</button>
 			<button class="carousel-control-next" type="button" data-bs-target="#conteudoCarousel" data-bs-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
+				<span class="c">Next</span>
 			</button>
 		</div>
 	</div>

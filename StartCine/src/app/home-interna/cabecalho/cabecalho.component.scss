@@ -25,7 +25,11 @@ mat-toolbar {
 			width: 20px;
 			filter: invert(100%) grayscale(100%) brightness(1000%) sepia(0%);
 			color: $corPrincipal;
+<<<<<<< HEAD:StartCine/src/app/home-interna/cabecalho/cabecalho.component.scss
 			transition: filter 0.3s; 
+=======
+			transition: filter 0.3s; /* Adiciona uma transição suave para o efeito */
+>>>>>>> origin/larissa-exibicoes-internas:StartCine/src/app/cabecalho/cabecalho.component.scss
 		  }
 		  .anime-icon {
 			padding-top: 5px;
@@ -61,6 +65,7 @@ mat-toolbar {
   }
 }
 
+
 .navbar-responsivo-menu {
   display: none;
   font-family: $fontePadrao;
@@ -78,4 +83,8 @@ mat-toolbar {
   .navbar-responsivo-direita {
 	display: none;
   }
+<<<<<<< HEAD:StartCine/src/app/home-interna/cabecalho/cabecalho.component.scss
 }
+=======
+}
+>>>>>>> origin/larissa-exibicoes-internas:StartCine/src/app/cabecalho/cabecalho.component.scss

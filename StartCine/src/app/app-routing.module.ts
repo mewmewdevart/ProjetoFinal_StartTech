@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+<<<<<<< HEAD
 import { LoginComponent } from './gerenciador-acessos/login/login.component';
 import { AdminComponent } from './home-interna/admin/admin.component';
 import { HomeComponent } from './home-interna/home.component';
@@ -14,6 +15,15 @@ import { RodapeDadosComponent } from './home-interna/rodape/rodape-dados/rodape-
 import { ComunicacaoService } from './comunicacao.service';
 import { Router } from '@angular/router';
 import { AuthGuard } from './auth.guard'; 
+=======
+import { HomeComponent } from './home/home.component';
+import { RodapeDadosComponent } from './rodape-dados/rodape-dados.component';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'rodape-dados', component: RodapeDadosComponent }
+];
+>>>>>>> origin/larissa-exibicoes-internas
 
 const routes: Routes = [
 	{ path: 'login', component: LoginComponent },

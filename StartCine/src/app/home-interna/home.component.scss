@@ -80,7 +80,6 @@ li {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	min-height: 90vh;
 	background-color: $corPreto;
   
 	.carousel-control-prev,
@@ -94,8 +93,6 @@ li {
 	  height: 80vh;
   
 	  .content-carrosel {
-		padding: 20px;
-  
 		h1 {
 		  color: $corBranco;
 		  font-family: $fontePadrao;
@@ -133,10 +130,32 @@ li {
 	}
   }
 
+.content-carrosel{
+	width: 75%;
+	margin: 0 auto;
+}
+.containerTitle{
+	width: 76%;
+	padding-top: 10px;
+	margin: 0 auto;
+	.title {
+		color: $corPrincipal;
+		font-family: $fontePadrao;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 56px;
+	}
+}
+
 /* CARROSEL DOS FILMES EM MINIATURA*/
 .carousel-slider {
 	max-width: 100%;
 	overflow: hidden;
+	.carousel-control-prev,
+	.carousel-control-next {
+	  opacity: 0;
+	}
 	.card-item {
 	  display: flex;
 	  align-items: stretch;
@@ -155,10 +174,15 @@ li {
 			transform: scale(1.05); 
 		  }
 		h4 {
-		  margin-top: 10px;
-		  font-size: 18px;
+			font-weight: 600;
+			color: $corBranco;
+			margin-top: 10px;
+			font-size: 18px;
 		}
 	  }
 	}
   }
-  
+
+  section {
+	min-height: 40vh !important;
+  }

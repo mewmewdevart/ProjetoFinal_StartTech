@@ -32,8 +32,7 @@
 		  </button>		  
 		<button mat-button [matMenuTriggerFor]="accountMenu"> <mat-icon>account_circle</mat-icon></button>
 		<mat-menu #accountMenu="matMenu">
-			<button mat-menu-item routerLink="#">Conta</button>
-			<button mat-menu-item routerLink="#">Ajuda</button>
+			<button mat-menu-item routerLink="/contato">Ajuda</button>
 			<button class="auth" *ngIf="loggedIn" mat-menu-item (click)="logout()">
 				Sair
 			</button>

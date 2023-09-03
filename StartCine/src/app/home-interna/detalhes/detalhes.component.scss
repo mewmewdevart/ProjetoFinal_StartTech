@@ -28,8 +28,8 @@
 	margin-bottom: 7%;
   }
   .btn-container {
+	margin-top: 16px;
 	display: flex;
-	gap: 11px;
 	button {
 	  background-color: $corBranco;
 	  display: flex;
@@ -39,7 +39,6 @@
 	  align-items: center;
 	  gap: 8px;
 	  border-radius: 6px;
-	  margin-top: 16px;
 	  color: $corPreto;
 	  font-size: 14px;
 	  font-weight: 700;

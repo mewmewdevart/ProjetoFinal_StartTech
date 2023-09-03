@@ -1,0 +1,81 @@
+// Importando estilos globais
+@import '../../styles.scss';
+section {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	min-height: calc(100vh - 124px);
+	background-color: $preto;
+}
+
+.container {
+	margin-top: 5%;
+	width: 80%;
+	h1 {
+		margin-bottom: 10px;
+		color: $branco;
+		font-weight: bold;
+	}
+}
+
+.mat-mdc-tab-header { 
+    font-size: 18px;
+    line-height: 150%;
+}
+  
+  .mat-mdc-tab.mdc-tab {
+    background-color: $cinza;
+  }
+  
+  .mat-mdc-tab-body.mat-mdc-tab-body-active {
+	min-height: 40vh;
+	font-weight: 400;
+	color: $branco;
+}
+  
+  .mat-mdc-tab.mdc-tab { 
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: normal;
+    background-color: $pretoSuave;
+    &.mdc-tab-indicator--active { 
+      background-color: $cinza;
+    }
+  }
+  
+  .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label {
+    color: $branco;
+    }
+  
+.mdc-tab-indicator__content--underline, .mat-mdc-tab-group, .mat-mdc-tab-nav-bar  {
+    --mdc-tab-indicator-active-indicator-color: #C4C4C4;
+    --mat-tab-header-disabled-ripple-color: rgba(0, 0, 0, 0.38);
+    --mat-tab-header-pagination-icon-color: #000;
+    --mat-tab-header-inactive-label-text-color: rgba(0, 0, 0, 0.6);
+    --mat-tab-header-active-label-text-color: #C4C4C4;
+    --mat-tab-header-active-ripple-color: #C4C4C4;
+    --mat-tab-header-inactive-ripple-color: #C4C4C4;
+    --mat-tab-header-inactive-focus-label-text-color: rgba(0, 0, 0, 0.6);
+    --mat-tab-header-inactive-hover-label-text-color: rgba(0, 0, 0, 0.6);
+	--mat-tab-header-active-focus-label-text-color: #060606;
+    --mat-tab-header-active-hover-label-text-color: #C4C4C4;
+    --mat-tab-header-active-focus-indicator-color: #C4C4C4;
+    --mat-tab-header-active-hover-indicator-color: #C4C4C4;
+  }
+  
+  .mdc-tab-indicator .mdc-tab-indicator__content.mdc-tab-indicator__content--underline {
+	border-top-width: 4px;
+	border-color: $cinza;
+}
+  
+  
+// Media queries para tamanhos de tela específicos
+@media screen and (max-width: 1000px) {
+	.container {
+		margin-top: 15%;
+		width: 100%;
+		h1 {
+			margin-bottom: 10px;
+		}
+	}
+}

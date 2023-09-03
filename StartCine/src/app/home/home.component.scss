@@ -1,0 +1,259 @@
+// Importando estilos globais
+@import '../../styles.scss';
+
+#carrosel {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 124px);
+    background-color: $preto;
+}
+
+// Definições globais
+* {
+	box-sizing: border-box;
+	scrollbar-color: transparent transparent;
+	scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+	width: 0;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+	background: transparent;
+	border: none;
+}
+
+* {
+	-ms-overflow-style: none;
+}
+
+// Resetando estilos de listas
+ol,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+// Estilos para a seção de carrossel
+.container-content {
+	position: static;
+	width: 80%;
+	display: flex;
+	margin: 0 auto;
+
+	.content-carrosel {
+		width: 400px;
+		font-family: $fontePadrao;
+		color: $branco;
+		h1 {
+			font-size: 48px;
+			font-weight: 800;
+			line-height: 56px;
+		}
+		h2, p {
+			font-size: 16px;
+			margin-top: 16px;
+		}
+		button {
+			margin-top: 16px;
+			background-color: $corPrincipal;
+			display: flex;
+			padding: 6px 16px;
+			align-items: center;
+			gap: 8px;
+			border-radius: 6px;
+			color: $branco;
+			font-size: 14px;
+			font-weight: 700;
+			text-transform: uppercase;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out;
+			&:hover {
+				background-color: $corSombraPrincipal;
+			}
+		}
+	}
+}
+	
+.carrossel {
+		position: relative;
+		width: 100%;
+		filter: drop-shadow(0 0 10px #0003);
+		perspective: 100px;
+	}
+
+	.carrossel-visao-geral {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		overflow-x: scroll;
+		counter-reset: item;
+		scroll-behavior: smooth;
+		scroll-snap-type: x mandatory;
+	}
+	.carrossel-slide {
+		position: relative;
+		flex: 0 0 100%;
+		width: 100%;
+		counter-increment: item;
+		background-repeat: no-repeat;
+    	background-size: cover;
+    	background-position: center;
+		&:before {
+			content: counter(item);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate3d(-50%, -40%, 70px);
+			font-size:0;
+		}
+	}
+
+	.carrossel-capturador {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		scroll-snap-align: center;
+	}
+
+	@media (hover: hover) {
+		.carrossel-capturador {
+			animation-name: paraProximo, capturar;
+			animation-timing-function: ease;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+		}
+
+		.carrossel-slide:last-child .carrossel-capturador {
+			animation-name: paraInicio, capturar;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.carrossel-capturador {
+			animation-name: none;
+		}
+	}
+
+	.carrossel:hover .carrossel-capturador,
+	.carrossel:focus-within .carrossel-capturador {
+		animation-name: none;
+	}
+
+	.carrossel-navegacao {
+		position: absolute;
+		right: 0;
+		bottom: 40%;
+		left: 0;
+		text-align: right;
+		padding-right: 20px;
+	}
+
+	.carrossel-lista-navegacao,
+	.carrossel-item-navegacao {
+		display: block;
+	}
+
+	.carrossel-botao-navegacao {
+		display: inline-block;
+		color: $branco;
+		transition: transform 0.1s;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 14px; 
+		text-decoration: none;
+	}
+
+	.carrossel::before,
+	.carrossel::after {
+		content: "";
+		z-index: 1;
+		background-size: 1.5rem 1.5rem;
+		background-repeat: no-repeat;
+		background-position: center center;
+		color: $branco;
+		font-size: 2rem;
+		line-height: 2rem;
+		text-align: center;
+		pointer-events: none;
+	}
+
+	@keyframes paraProximo {
+		75% {
+			left: 0;
+		}
+		95% {
+			left: 100%;
+		}
+		98% {
+			left: 100%;
+		}
+		99% {
+			left: 0;
+		}
+	}
+
+	@keyframes paraInicio {
+		75% {
+			left: 0;
+		}
+		95% {
+			left: -300%;
+		}
+		98% {
+			left: -300%;
+		}
+		99% {
+			left: 0;
+		}
+	}
+
+	@keyframes capturar {
+		96% {
+			scroll-snap-align: center;
+		}
+		97% {
+			scroll-snap-align: none;
+		}
+		99% {
+			scroll-snap-align: none;
+		}
+		100% {
+			scroll-snap-align: center;
+		}
+	}
+
+// Media queries para tamanhos de tela específicos
+@media screen and (max-width: 1000px) {
+    .container-content {
+        width: 80%;
+        margin-top: 13%;
+		margin-left: 13%;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    .container-content {
+        width: 78%;
+        margin-top: 13%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .container-content {
+        width: 69%;
+    }
+}

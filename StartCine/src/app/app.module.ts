@@ -16,16 +16,33 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+<<<<<<< HEAD
+=======
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import { NgFor } from '@angular/common';
+>>>>>>> origin/larissa-exibicoes-internas
 
 // Import do módulo CommonModule do Angular
 import { CommonModule } from '@angular/common';
 
 // Import dos componentes personalizados do aplicativo
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 import { CabecalhoComponent } from './home-interna/cabecalho/cabecalho.component';
 import { DetalhesComponent } from './home-interna/detalhes/detalhes.component';
 import { RodapeComponent } from './home-interna/rodape/rodape.component';
 import { ComunicacaoService } from './comunicacao.service';
+=======
+import { CabecalhoComponent } from './cabecalho/cabecalho.component';
+import { HomeComponent } from './home/home.component';
+import { ExibicoesExternasComponent } from './exibicoes-externas/exibicoes-externas.component';
+import { HomeExternaComponent } from './home-externa/home-externa.component';
+import { RodapeComponent } from './rodape/rodape.component';
+import { RodapeDadosComponent } from './rodape-dados/rodape-dados.component';
+import { SliderHomeComponent } from './slider-home/slider-home.component';
+>>>>>>> origin/larissa-exibicoes-internas
 
 // Import da localização em português (pt)
 import ptBr from '@angular/common/locales/pt';
@@ -42,6 +59,7 @@ import { GerenciadorAcessosComponent } from './gerenciador-acessos/gerenciador-a
 registerLocaleData(ptBr);
 
 @NgModule({
+<<<<<<< HEAD
 	declarations: [
 		AppComponent,
 		CabecalhoComponent,
@@ -80,5 +98,33 @@ registerLocaleData(ptBr);
 	schemas: [CUSTOM_ELEMENTS_SCHEMA],
 	// APPCOMPONENT CARREGANDO INICIALMENTE
 	bootstrap: [AppComponent]
+=======
+  declarations: [
+    AppComponent,
+    CabecalhoComponent,
+    HomeComponent,
+    ExibicoesExternasComponent,
+    HomeExternaComponent,
+    RodapeComponent,
+    RodapeDadosComponent,
+    SliderHomeComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatGridListModule,
+    MatButtonModule,
+    MatCardModule,
+    NgFor,
+    MatTabsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+>>>>>>> origin/larissa-exibicoes-internas
 })
 export class AppModule { }

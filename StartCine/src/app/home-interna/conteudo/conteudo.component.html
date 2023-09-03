@@ -1,16 +1,23 @@
 <section>
-	<div class="conteudo-container">
-	  <div *ngIf="conteudos.length > 0; else noConteudo">
-		<div *ngFor="let conteudo of conteudos" class="conteudo-item">
-		  <h2>{{ conteudo.titulo }}</h2>
-		  <p>{{ conteudo.descricao }}</p>
-		  <img [src]="conteudo.image" alt="Imagem do conteúdo">
-		  <button (click)="verDetalhes(conteudo.id)">Ver Detalhes</button>
+	<div class="container-fluid">
+		<div class="container">
+			<h1>{{ categoria === 'serie' ? 'Séries' : categoria === 'anime' ? 'Animes' : categoria === 'filme' ? 'Filmes' : 'Categoria Desconhecida' }}</h1>
+			<div *ngIf="conteudos.length > 0; else noConteudo" class="row">
+				<div class="row">
+					<div class="card-item col-md-3 col-sm-6 mb-3" *ngFor="let conteudo of conteudos">
+						<div class="card" (click)="verDetalhes(conteudo.id)">
+							<img [src]="conteudo.image" [alt]="conteudo.title" class="img-fluid">
+							<h2>{{conteudo.title}}</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<ng-template #noConteudo>
+				<p class="col">Nenhum conteúdo disponível para esta categoria.</p>
+			</ng-template>
 		</div>
-	  </div>
-	  <ng-template #noConteudo>
-		<p>Nenhum conteúdo disponível para esta categoria.</p>
-	  </ng-template>
 	</div>
   </section>
+  
+  
   
