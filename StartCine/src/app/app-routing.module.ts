@@ -12,12 +12,21 @@ import { PesquisaComponent } from './home-interna/pesquisa/pesquisa.component';
 import { HomeExternaComponent } from './home-externa/home-externa.component';
 import { RodapeDadosComponent } from './home-interna/rodape/rodape-dados/rodape-dados.component';
 
+<<<<<<< HEAD
 import { ComunicacaoService } from './comunicacao.service';
 import { Router } from '@angular/router';
 import { AuthGuard } from './auth.guard'; 
 =======
 import { HomeComponent } from './home/home.component';
 import { RodapeDadosComponent } from './rodape-dados/rodape-dados.component';
+=======
+
+
+const routes: Routes = [
+  
+ 
+];
+>>>>>>> origin/edu-login-cadastro
 
 const routes: Routes = [
   { path: '', component: HomeComponent },

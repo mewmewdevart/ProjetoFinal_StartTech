@@ -7,6 +7,7 @@
   }
 
 
+<<<<<<< HEAD
 html, body { height: 100%; }
 body {
   font-size: var(--tamanhoMedio);
@@ -15,3 +16,13 @@ body {
   margin: 0;
   min-height: 100vh;
 }
+=======
+$fontePadrao: 'Raleway', sans-serif;
+$fonteLogo: 'Montserrat Alternates', sans-serif;
+$titulos: 3.5%; 
+$paragrafos:  112.5%;
+
+html, body { min-height: 100vh; font-family: $fontePadrao; font-size: $paragrafos;}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+>>>>>>> origin/edu-login-cadastro

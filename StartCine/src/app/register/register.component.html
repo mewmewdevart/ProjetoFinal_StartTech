@@ -1,0 +1,34 @@
+
+<mat-card>
+<mat-card-header>
+    <h1>Cadastrar</h1>
+</mat-card-header>
+    <mat-card-content>
+        <form class="example-form" [formGroup]="registerform" (ngSubmit)="proceedregisteration()">
+            <mat-form-field class="example-full-width">
+              <mat-label>nome</mat-label>
+              <input matInput formControlName="id" placeholder="Digite seu user name">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" placeholder="Digite seu email">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>senha</mat-label>
+              <input type="password" matInput formControlName="password" placeholder="Digite uma senha">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>senha</mat-label>
+              <input type="password" matInput formControlName="password" placeholder="Digite uma senha">
+            </mat-form-field>
+            
+          
+              <div>
+                <button type="submit" mat-raised-button color="primary">Entrar</button>
+                <a routerLink="/login" mat-raised-button color="accent">Já tem conta?Entre agora</a>
+              </div>
+            
+          </form>
+          
+    </mat-card-content>
+  </mat-card>

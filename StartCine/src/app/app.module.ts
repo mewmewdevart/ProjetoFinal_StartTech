@@ -39,10 +39,17 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { HomeComponent } from './home/home.component';
 import { ExibicoesExternasComponent } from './exibicoes-externas/exibicoes-externas.component';
 import { HomeExternaComponent } from './home-externa/home-externa.component';
+<<<<<<< HEAD
 import { RodapeComponent } from './rodape/rodape.component';
 import { RodapeDadosComponent } from './rodape-dados/rodape-dados.component';
 import { SliderHomeComponent } from './slider-home/slider-home.component';
 >>>>>>> origin/larissa-exibicoes-internas
+=======
+import { MaterialModule } from 'src/material.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {ToastrModule} from 'ngx-toastr'
+>>>>>>> origin/edu-login-cadastro
 
 // Import da localização em português (pt)
 import ptBr from '@angular/common/locales/pt';
@@ -120,8 +127,16 @@ registerLocaleData(ptBr);
     MatGridListModule,
     MatButtonModule,
     MatCardModule,
+<<<<<<< HEAD
     NgFor,
     MatTabsModule
+=======
+    MaterialModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    NgFor,
+    ToastrModule.forRoot()
+>>>>>>> origin/edu-login-cadastro
   ],
   providers: [],
   bootstrap: [AppComponent]
