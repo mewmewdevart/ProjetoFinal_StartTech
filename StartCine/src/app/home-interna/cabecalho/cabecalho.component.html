@@ -1,6 +1,6 @@
 <mat-toolbar>
 	<div class="container">
-	<img src="../../assets/images/logo.svg" alt="logo do startCine">
+	<img routerLink="/" src="../../assets/images/logo.svg" alt="logo do startCine" class="logoStart">
 
 	<!-- Tela menor que 1000px? display: flex -->
 	<div class="navbar-responsivo-menu">
@@ -9,7 +9,7 @@
 			<button mat-menu-item routerLink="/"><mat-icon>home</mat-icon>Inicio</button>
 			<button mat-button [routerLink]="['/conteudo', 'filme']"><mat-icon>movie_filter</mat-icon>Filmes</button>
 			<button mat-button [routerLink]="['/conteudo', 'serie']"><mat-icon>live_tv</mat-icon>Séries</button>
-			<button mat-button [routerLink]="['/conteudo', 'anime']"><img src="../../assets/images/icon-pokemon.svg" alt="pikachu animation" class="anime-icon">Animes</button>
+			<button mat-button [routerLink]="['/conteudo', 'anime']"><img src="../../assets/images/icon-pokemon.svg" alt="pikachu animation" class="anime-icon-responsivo">Animes</button>
 			<button mat-menu-item routerLink="favoritos"><mat-icon>add</mat-icon>Minha lista</button>
 		</mat-menu>
 	</div>

@@ -3,10 +3,14 @@
 mat-toolbar {
   font-family: $fontePadrao;
   background-color: transparent;
+  font-size: $tamanhoMedio;
   position: fixed;
   z-index: 5;
   color: $corBranco;
   .container {
+	.logoStart {
+		cursor: pointer;
+	}
 	width: 80%;
 	display: flex;
 	margin: auto;
@@ -18,15 +22,7 @@ mat-toolbar {
 	.navbar-responsivo, .navbar-direita {
 	  position: relative;
 	  font-family: $fontePadrao;
-	  
 	  button {
-		.anime-icon {
-			padding-top: 5px;
-			width: 20px;
-			filter: invert(100%) grayscale(100%) brightness(1000%) sepia(0%);
-			color: $corPrincipal;
-			transition: filter 0.3s; 
-		  }
 		  .anime-icon {
 			padding-top: 5px;
 			width: 20px;
@@ -38,6 +34,10 @@ mat-toolbar {
 			}
 		  }
 		&:hover {
+			.anime-icon{
+				filter: none;
+				color: $corPrincipal;
+			}
 			color: $corPrincipal;
 		  &:before {
 			content: '';
@@ -68,8 +68,16 @@ mat-toolbar {
 
 @media screen and (max-width: 1000px) {
   .navbar-responsivo-menu {
-	display: flex;
+	display: none;
   }
+
+  .anime-icon-responsivo {
+	padding-top: 5px;
+	width: 20px;
+	filter: invert(100%) grayscale(100%);
+	color: $corPrincipal;
+	transition: filter 0.3s; 
+}
   
   .navbar-responsivo {
 	display: none;

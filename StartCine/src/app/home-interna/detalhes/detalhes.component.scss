@@ -1,5 +1,11 @@
 @import '../../app.component.scss';
 
+
+.imagem-detalhe {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
 // Container de Detalhes
 .detalhes {
 	margin-top: 10%;
@@ -105,8 +111,6 @@ mat-tab-group {
 		text-align: center;
 		font-size: $tamanhoMedio;
 		color: $corBranco;
-		margin-top: 10px;
-		font-size: 18px;
 	}
 }
 
