@@ -7,7 +7,7 @@
 						<div class="content-carrosel container">
 							<h1>{{ conteudo.title }}</h1>
 							<p>{{ getSinopseLimitada(conteudo.sinopse) }}</p>
-							<button class="btn btn-primary" type="button"><span class="material-icons">play_arrow</span> Assistir ao Trailer</button>
+							<button (click)="verDetalhes(conteudo.id)" class="btn btn-primary" type="button"><span class="material-icons">play_arrow</span> Assistir ao Trailer</button>
 						</div>
 					</div>
 				</div>
@@ -25,24 +25,12 @@
 	</a>
 </section>
 
-<section>
-	<!-- Listagem de conteúdos favoritos -->
-	<div *ngFor="let conteudo of conteudosFavoritos">
-		<mat-grid-tile *ngIf="conteudo.favorito === true">
-			<div class="container-fluid conteudo-minhaLista">
-				<h1>MINHA LISTA</h1>
-				<div class="row">
-					<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-						<div class="card">
-							<img [src]="conteudo.image" [alt]="conteudo.title" class="img-fluid">
-							<h2>{{conteudo.title}}</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-		</mat-grid-tile>
+<section id="carroselDown">
+	<div class="container">
+		<div class="row containerTitle">
+			<h2>Mais Vistos</h2>
+		</div>
 	</div>
-
 	<!-- Carrossel de conteúdos -->
 	<div class="carousel-slider">
 		<div id="conteudoCarousel" class="carousel slide" data-bs-ride="carousel">

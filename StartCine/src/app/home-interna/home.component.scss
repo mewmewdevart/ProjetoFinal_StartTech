@@ -80,8 +80,8 @@ li {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	min-height: 90vh;
 	background-color: $corPreto;
+	color: $corBranco;
   
 	.carousel-control-prev,
 	.carousel-control-next {
@@ -137,6 +137,10 @@ li {
 .carousel-slider {
 	max-width: 100%;
 	overflow: hidden;
+	.carousel-control-prev,
+	.carousel-control-next {
+	  opacity: 0;
+	}
 	.card-item {
 	  display: flex;
 	  align-items: stretch;
@@ -155,10 +159,31 @@ li {
 			transform: scale(1.05); 
 		  }
 		h4 {
+			color: $corBranco;
 		  margin-top: 10px;
 		  font-size: 18px;
 		}
 	  }
 	}
   }
-  
+
+#carroselDown {
+	min-height: 40vh !important;
+  }
+.content-carrosel {
+	width: 80%;
+}
+
+.containerTitle{
+	width: 89.5%;
+	margin: 0 auto;
+	h2 {
+		margin-top: 10px;
+		color: $corBranco;
+		font-family: Raleway;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 56px;
+	}
+}
