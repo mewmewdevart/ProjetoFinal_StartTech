@@ -1,1 +1,62 @@
-<p>pesquisa works!</p>
+<section>
+	<div class="container">
+	  <div class="row">
+		<div class="col">
+		  <div class="header">
+			<mat-form-field>
+			  <mat-label>Pesquisar</mat-label>
+			  <input matInput (keyup)="filtrarConteudo($event)" placeholder="Ex. Cidade de Deus" #input />
+			</mat-form-field>
+		  </div>
+		</div>
+	  </div>
+	  <div class="row">
+		<div class="col-12">
+		  <table mat-table [dataSource]="dataSource" class="table table-bordered smaller-table">
+			<ng-container matColumnDef="foto">
+			  <th mat-header-cell *matHeaderCellDef> Conteúdo </th>
+			  <td mat-cell *matCellDef="let element" (click)="verDetalhes(element.id)">
+				<img width="250" height="200" [src]="element.image" [alt]="'Foto de ' + element.title" />
+			  </td>
+			</ng-container>
+  
+			<ng-container matColumnDef="descricao">
+			  <th mat-header-cell *matHeaderCellDef>Descrição</th>
+			  <td mat-cell *matCellDef="let conteudo">
+				<h2>{{ conteudo.title }}</h2>
+				<p><span> Sinopse: </span>{{ conteudo.sinopse }}</p>
+				<div class="row">
+				  <div class="col-md-6">
+					<ul>
+					  <li> <span> ID: </span> {{ conteudo.id }}</li>
+					  <li> <span> Categoria: </span> {{ conteudo.categoria }}</li>
+					  <li><span> Ano de Lançamento: </span> {{ conteudo.releaseYear }}</li>
+					  <li><span> Gênero: </span> {{ conteudo.genre.join(', ') }}</li>
+					  <li><span> Diretor: </span> {{ conteudo.director }}</li>
+					</ul>
+				  </div>
+				  <div class="col-md-6">
+					<ul>
+					  <li><span>Atores:</span> {{ conteudo.actors.join(', ') }}</li>
+					  <li><span>Classificação:</span> {{ conteudo.rating }}</li>
+					  <li><span>iFrame:</span> {{ conteudo.iframe }}</li>
+					  <li><span>Duração:</span> {{ conteudo.duracao }}</li>
+					  <li><span>Classificação:</span> {{ conteudo.classificacao }}</li>
+					</ul>                        
+				  </div>
+				</div>
+			  </td>
+			</ng-container>
+  
+			<tr mat-header-row *matHeaderRowDef="['foto', 'descricao']"></tr>
+			<tr mat-row *matRowDef="let row; columns: ['foto', 'descricao']"></tr>
+		  </table>
+		</div>
+	  </div>
+	</div>
+  
+	<tr class="mat-row" *matNoDataRow>
+	  <td class="mat-cell" colspan="2">Não foram encontrados resultados para o termo "{{ input.value }}"</td>
+	</tr>
+  </section>
+  
