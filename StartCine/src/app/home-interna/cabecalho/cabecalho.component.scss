@@ -23,6 +23,8 @@ mat-toolbar {
 	  position: relative;
 	  font-family: $fontePadrao;
 	  button {
+			font-size: $tamanhoMedio;
+			font-family: $fontePadrao;
 		  .anime-icon {
 			padding-top: 5px;
 			width: 20px;

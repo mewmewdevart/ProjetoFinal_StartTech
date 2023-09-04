@@ -1,75 +1,54 @@
 <section>
 	<div class="container">
-
-	<header class="row">
-		<div class="text-center">
-		  <img src="../../../assets/images/logo.svg" alt="logo">
-		  <p>Onde a Sua História Cinematográfica Começa!</p>
-		</div>
-	</header>
-
+		<header class="row">
+			<div class="text-center">
+			  <img src="../../../assets/images/logo.svg" alt="Logo da Empresa XYZ">
+			  <p>Onde a Sua História Cinematográfica Começa!</p>
+			</div>
+		</header>
 	</div>
 	<mat-tab-group *ngIf="!loggedIn" animationDuration="1000ms">
-	  <mat-tab label="Login">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-6 offset-md-3">
-			  <h2 class="text-center">Entre com suas informações nos campos abaixo:</h2>
-			  <div>
-				<mat-form-field>
-				  <mat-label>Digite seu nome de usuário:</mat-label>
-				  <input matInput placeholder="Nome de usuário" [(ngModel)]="username" required />
-				</mat-form-field>
-				<mat-form-field>
-				  <mat-label>Digite sua senha:</mat-label>
-				  <input matInput placeholder="Senha" [(ngModel)]="password" type="password" required />
-				</mat-form-field>
-				<div class="text-center">
-				  <button mat-button (click)="login()">Login</button>
+		<mat-tab label="Login">
+			<div class="container">
+				<h2>Entre com suas informações nos campos abaixo:</h2>
+				<div>
+					<mat-form-field>
+						<input matInput id="username" placeholder="Nome de usuário" [(ngModel)]="username" required />
+					</mat-form-field>
+					<mat-form-field>
+						<input matInput id="password" placeholder="Senha" [(ngModel)]="password" type="password" required />
+					</mat-form-field>
+					<button mat-button (click)="login()">Login</button>
 				</div>
-			  </div>
 			</div>
-		  </div>
-		</div>
-	  </mat-tab>
-	  <mat-tab label="Cadastre-se">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-6 offset-md-3">
-			  <h2 class="text-center">Faça seu cadastro para ter acesso ao sistema:</h2>
-			  <div>
-				<mat-form-field>
-				  <mat-label>Digite seu nome:</mat-label>
-				  <input matInput placeholder="Nome" [(ngModel)]="name" required />
-				</mat-form-field>
-				<mat-form-field>
-				  <mat-label>Digite um nome de usuário:</mat-label>
-				  <input matInput placeholder="Nome de usuário" [(ngModel)]="username" required />
-				</mat-form-field>
-				<mat-form-field>
-				  <mat-label>Digite seu email:</mat-label>
-				  <input matInput placeholder="Email" [(ngModel)]="email" required />
-				</mat-form-field>
-				<mat-form-field>
-				  <mat-label>Digite uma senha:</mat-label>
-				  <input matInput placeholder="Senha" [(ngModel)]="password" type="password" required />
-				</mat-form-field>
-				<mat-form-field>
-				  <mat-label>Confirme sua senha:</mat-label>
-				  <input matInput placeholder="Confirmar senha" [(ngModel)]="confirmPassword" type="password" required />
-				</mat-form-field>
-				<div class="text-center">
-				  <button mat-button (click)="novaConta()">Criar conta</button>
+		</mat-tab>
+		<mat-tab label="Cadastre-se">
+			<div class="container">
+				<h2>Faça seu cadastro para ter acesso ao sistema:</h2>
+				<div>
+					<mat-form-field>
+						<input matInput id="name" placeholder="Nome" [(ngModel)]="name" required />
+					</mat-form-field>
+					<mat-form-field>
+						<input matInput id="new-username" placeholder="Nome de usuário" [(ngModel)]="username" required />
+					</mat-form-field>
+					<mat-form-field>
+						<input matInput id="email" placeholder="Email" [(ngModel)]="email" required />
+					</mat-form-field>
+					<mat-form-field>
+						<input matInput id="new-password" placeholder="Senha" [(ngModel)]="password" type="password" required />
+					</mat-form-field>
+					<mat-form-field>
+						<input matInput id="confirm-password" placeholder="Confirmar senha" [(ngModel)]="confirmPassword" type="password" required />
+					</mat-form-field>
+					<button mat-button (click)="novaConta()">Criar conta</button>
 				</div>
-			  </div>
 			</div>
-		  </div>
-		</div>
-	  </mat-tab>
-	</mat-tab-group>
+		</mat-tab>
+	  </mat-tab-group>
 
-	<div class="loginFoot">
+	  <div class="loginFoot">
 		<p>@2023 StartCine+ | Todos os direitos reservados.</p>
 	</div>
-  </section>
   
+</section>
