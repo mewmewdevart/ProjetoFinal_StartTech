@@ -84,7 +84,7 @@
       ],
       "rating": 8.9,
       "iframe": "#",
-      "favorito": true,
+      "favorito": false,
       "sinopse": "Na conclusão épica da trilogia, Frodo e Sam continuam sua perigosa jornada em direção à Montanha da Perdição, enquanto a batalha final pelo controle da Terra Média se desenrola. Aragorn deve aceitar seu destino como rei, e todos os povos livres se unem para enfrentar as forças das trevas de Sauron. Uma história de coragem, amizade e sacrifício que determinará o destino do mundo.",
       "duracao": "3h 30min",
       "classificacao": "14 anos"
@@ -267,29 +267,6 @@
       "sinopse": "Oskar Schindler, um empresário alemão, usa sua fábrica como um refúgio para judeus durante o Holocausto. Ele salva a vida de mais de mil pessoas, mas luta com o peso da responsabilidade e o horror da guerra. Baseado em eventos reais, o filme retrata um ato extraordinário de humanidade em meio à atrocidade.",
       "duracao": "3h 15min",
       "classificacao": "16 anos"
-    },
-    {
-      "id": 13,
-      "categoria": "filme",
-      "title": "Interestelar",
-      "releaseYear": 2014,
-      "image": "https://i.imgur.com/eMsr58c.png",
-      "genre": [
-        "Aventura",
-        "Drama",
-        "Ficção Científica"
-      ],
-      "director": "Christopher Nolan",
-      "actors": [
-        "Matthew McConaughey",
-        "Anne Hathaway"
-      ],
-      "rating": 8.6,
-      "iframe": "URL_DO_IFRAME",
-      "favorito": false,
-      "sinopse": "Em um futuro onde a Terra está à beira do colapso ambiental, um grupo de exploradores é enviado em uma missão interestelar para encontrar um novo lar para a humanidade. Enfrentando distâncias astronômicas e fenômenos cósmicos desconhecidos, eles exploram planetas alienígenas em busca de esperança. Uma narrativa emocionante sobre amor, sacrifício e a luta pela sobrevivência da humanidade.",
-      "duracao": "2h 48min",
-      "classificacao": "12 anos"
     },
     {
       "id": 14,
