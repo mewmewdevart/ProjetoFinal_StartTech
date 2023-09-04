@@ -586,15 +586,6 @@
       "confirmPassword": "123",
       "type": "user",
       "id": 2
-    },
-    {
-      "name": "queijo",
-      "username": "queijo",
-      "password": "987",
-      "email": "queijo@gmail.com",
-      "confirmPassword": "987",
-      "type": "user",
-      "id": 3
     }
   ]
 }
