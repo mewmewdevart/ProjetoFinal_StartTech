@@ -16,6 +16,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatTableModule } from '@angular/material/table';
 
 // Import do módulo CommonModule do Angular
 import { CommonModule } from '@angular/common';
@@ -72,6 +73,7 @@ registerLocaleData(ptBr);
 		MatButtonModule,
 		MatIconModule,
 		MatMenuModule,
+		MatTableModule
 	],
 	providers: [
 		ComunicacaoService,

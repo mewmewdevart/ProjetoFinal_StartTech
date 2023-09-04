@@ -5,7 +5,7 @@
       "categoria": "filme",
       "title": "John Wick 3: Parabellum",
       "releaseYear": 2019,
-      "image": "https://i.imgur.com/eMsr58c.png",
+      "image": "https://s3-alpha-sig.figma.com/img/154e/382f/b7e8be84d7248b8b9812172cad1cd0c9?Expires=1694390400&Signature=VVlr6nNJi1iCRZlooI99XOSOwje1juyxek8HQ7to2gWdN5foBY-P1bJ5FX~TXZokQm5Dmga2wyINzPHUMHnmDy-BbgwIeY7y0obGD2qL~iGHFibBTEj2KA6ppMMg-Ga0-OGOkRs8Y~B9btYSuy-6gNXDt0l6cg0w2Xtl4sMir33rGqOWyloFlMbPztIgFM~9mLM1dPLijyYv7SkJbo5V2Hiqg5mVZCKH9mJwnd0QqfbZ9mIU-5v9bkQF2VwVm3ayVG5~yzYScAPG6z~QxFu0zUsZo-RegDz4Gi6TmEOjXOS~L8dfkrZ~BAcoDRq6FwILs~YGsW3AWf39hJpom2b9bA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
       "genre": [
         "Ação",
         "Crime",
@@ -18,7 +18,7 @@
       ],
       "rating": 7.4,
       "iframe": "URL_DO_IFRAME",
-      "favorito": true,
+      "favorito": false,
       "sinopse": "Após matar um membro da alta cúpula da guilda de assassinos, John Wick se torna um alvo de 14 milhões de dólares para os assassinos profissionais em todo o mundo. Agora, ele deve lutar por sua sobrevivência enquanto busca uma maneira de sair dessa situação mortal.",
       "duracao": "2h 10min",
       "classificacao": "18 anos"
@@ -84,7 +84,7 @@
       ],
       "rating": 8.9,
       "iframe": "#",
-      "favorito": true,
+      "favorito": false,
       "sinopse": "Na conclusão épica da trilogia, Frodo e Sam continuam sua perigosa jornada em direção à Montanha da Perdição, enquanto a batalha final pelo controle da Terra Média se desenrola. Aragorn deve aceitar seu destino como rei, e todos os povos livres se unem para enfrentar as forças das trevas de Sauron. Uma história de coragem, amizade e sacrifício que determinará o destino do mundo.",
       "duracao": "3h 30min",
       "classificacao": "14 anos"
@@ -378,7 +378,7 @@
       ],
       "rating": 8.7,
       "iframe": "URL_DO_IFRAME",
-      "favorito": true,
+      "favorito": false,
       "sinopse": "Monkey D. Luffy e sua tripulação pirata procuram pelo lendário tesouro conhecido como 'One Piece'. Eles enfrentam perigos e inimigos em sua jornada pelo Grande Mar.",
       "duracao": "24 min por episódio",
       "classificacao": "12 anos"
@@ -401,7 +401,7 @@
       ],
       "rating": 9,
       "iframe": "URL_DO_IFRAME",
-      "favorito": true,
+      "favorito": false,
       "sinopse": "Um estudante encontra um caderno capaz de matar qualquer pessoa cujo nome seja escrito nele. Ele decide usá-lo para eliminar criminosos, mas atrai a atenção de um detetive genial chamado L.",
       "duracao": "23 min por episódio",
       "classificacao": "16 anos"
@@ -447,7 +447,7 @@
       ],
       "rating": 8.4,
       "iframe": "URL_DO_IFRAME",
-      "favorito": true,
+      "favorito": false,
       "sinopse": "Em um mundo onde a maioria da população possui superpoderes, um jovem chamado Izuku Midoriya luta para se tornar um herói e enfrenta desafios para provar seu valor.",
       "duracao": "24 min por episódio",
       "classificacao": "12 anos"
@@ -470,7 +470,7 @@
       ],
       "rating": 9.3,
       "iframe": "URL_DO_IFRAME",
-      "favorito": true,
+      "favorito": false,
       "sinopse": "Uma luta pelo trono de ferro em Westeros, onde famílias nobres conspiram e guerreiam pelo controle dos Sete Reinos.",
       "duracao": "55 min por episódio",
       "classificacao": "18 anos"
@@ -493,7 +493,7 @@
       ],
       "rating": 8.7,
       "iframe": "URL_DO_IFRAME",
-      "favorito": true,
+      "favorito": false,
       "sinopse": "Em uma cidade pequena, crianças enfrentam forças sobrenaturais e um laboratório secreto enquanto procuram por um amigo desaparecido.",
       "duracao": "50 min por episódio",
       "classificacao": "16 anos"
@@ -516,7 +516,7 @@
       ],
       "rating": 9.5,
       "iframe": "URL_DO_IFRAME",
-      "favorito": true,
+      "favorito": false,
       "sinopse": "Um professor de química vira um fabricante de metanfetamina após ser diagnosticado com câncer terminal, e ele se envolve no submundo do crime.",
       "duracao": "47 min por episódio",
       "classificacao": "18 anos"
@@ -562,7 +562,7 @@
       ],
       "rating": 8.8,
       "iframe": "URL_DO_IFRAME",
-      "favorito": true,
+      "favorito": false,
       "sinopse": "Uma série de antologia que explora uma realidade distópica e as implicações da tecnologia moderna na sociedade.",
       "duracao": "60 min por episódio",
       "classificacao": "16 anos"
@@ -577,6 +577,15 @@
       "confirmPassword": "123",
       "type": "admin",
       "id": 1
+    },
+    {
+      "name": "user",
+      "username": "user",
+      "password": "123",
+      "email": "user@gmail.com",
+      "confirmPassword": "123",
+      "type": "user",
+      "id": 2
     }
   ]
 }
