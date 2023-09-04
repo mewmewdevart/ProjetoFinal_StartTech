@@ -1,5 +1,5 @@
 <div *ngIf="filme !== undefined">
-	<div [style.background-image]="'url(\'' + filme.image + '\')'" class="imagem-detalhe">
+	<div [style.background-image]="'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + filme.image + ')'" class="imagem-detalhe">
 	  <div class="d-flex justify-content-center align-items-center min-vh-100 detalhes-container">
 		<div class="container detalhes">
 		  <h2>{{ filme.title }}</h2>

@@ -70,7 +70,7 @@ mat-toolbar {
 
 @media screen and (max-width: 1000px) {
   .navbar-responsivo-menu {
-	display: none;
+	display: flex;
   }
 
   .anime-icon-responsivo {
