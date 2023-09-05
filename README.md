@@ -30,7 +30,7 @@ Principais funcionalidades e implementações do projeto:
 - [x] Páginas de Categorias: Os conteúdos foram organizados em páginas dedicadas a cada tipo de conteúdo (animes, séries e filmes), proporcionando uma navegação intuitiva.
 - [x] Página Administrativa: Foi criada uma página de administração que permite aos administradores realizar operações de CRUD (Create, Read, Update, Delete) em produtos.
 - [x] Framework de Interfaces: Foram utilizados frameworks de interfaces como Material e Bootstrap para aprimorar a experiência do usuário.
-- [x] Responsividade: O projeto foi projetado para ser responsivo, adaptando-se a diferentes dispositivos e tamanhos de tela. (porém depende)
+- [x] Responsividade: O projeto foi projetado para ser responsivo, adaptando-se a diferentes dispositivos e tamanhos de tela. (porém depende).
 
 ## 💫 Implementações futuras
 - [ ] Publicar o site na Web com um dominio personalizado.
@@ -87,9 +87,9 @@ http://localhost:4200
 ❗️ | Caso queira acessar o painel de administração de conteudos publicos na plataforma, será necessario logar com o id: `admin` senha: `123` .
 
 ## Tecnologias
-- [VS CODE](https://code.visualstudio.com/) | Meu ambiente de desenvolvimento integrado para escrever, ler e executar código Java com mais eficiência.
-- [Git Bash](https://git-scm.com/downloads) | GitBash para realizar os commits
-- [Figma](https://www.figma.com/) | Figma para desenvolver alguns elementos da interface
+- [VS CODE](https://code.visualstudio.com/) | Ambiente de desenvolvimento integrado para escrever, ler e executar código do projeto com mais eficiência.
+- [Git Bash](https://git-scm.com/downloads) | GitBash para realizar os commits.
+- [Figma](https://www.figma.com/) | Figma para desenvolver alguns elementos da interface.
 - [Bootstrap](https://getbootstrap.com/) | Bootstrap para ajudar na responsividade.
 - [Material UI](https://material.angular.io/) | Implementação de componentes de interface.
 - [Angular](https://angular.io/start) | Plataforma de aplicações Web.
