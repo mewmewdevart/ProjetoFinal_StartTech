@@ -32,8 +32,14 @@ Principais funcionalidades e implementações do projeto:
 - [x] Framework de Interfaces: Foram utilizados frameworks de interfaces como Material e Bootstrap para aprimorar a experiência do usuário.
 - [x] Responsividade: O projeto foi projetado para ser responsivo, adaptando-se a diferentes dispositivos e tamanhos de tela. (porém depende)
 
-## Estrutura do diretório/ (principais)
-//TO DO
+## 💫 Implementações futuras
+- [ ] Publicar o site na Web com um dominio personalizado.
+- [ ] Realizar o Deploy de uma Api criada em C#, para que o banco de dados suporte maiores fluxos de acessos.
+- [ ] Ampliar nossa acessibilidade, incluindo recursos como narração de texto e ferramentas de Libras, para atender às necessidades de todas as pessoas, promovendo uma experiência inclusiva e igualitária.
+- [ ] Disponibilizar acesso gratuito limitado, permitindo que o público experimente nossos produtos antes de adquiri-los.
+- [ ] Para o próximo Backlog, queremos implementar testes automatizados os quais tivemos contato e entendemos sua importância.
+- [ ] Aprofundar ainda mais a Experiência do Usuário (UX Design), para um acesso maia fluído do usuário.
+
 
 ## Instruções  🔧
 
@@ -67,38 +73,43 @@ ng serve
 ```
 
 3. Iniciar o banco de dados
-Em outro terminal, iniciar o servidor da API REST falsa, o json-server:
+Em outro terminal, inicie o servidor da API REST falsa, o json-server em conjunto com o db.json:
 
 ```bash
 json-server --watch db.json
 ```
 
-**3. Acesse o link gerado no seu navegador web**
+**3. Retorne para o primeiro terminal, e acesse o link gerado no prompt no seu navegador web**
 ```bash
 http://localhost:4200
 ```
+
+❗️ | Caso queira acessar o painel de administração de conteudos publicos na plataforma, será necessario logar com o id: `admin` senha: `123` .
 
 ## Tecnologias
 - [VS CODE](https://code.visualstudio.com/) | Meu ambiente de desenvolvimento integrado para escrever, ler e executar código Java com mais eficiência.
 - [Git Bash](https://git-scm.com/downloads) | GitBash para realizar os commits
 - [Figma](https://www.figma.com/) | Figma para desenvolver alguns elementos da interface
-- [Angular](https://angular.io/start) | Angularz versão [xx/xx](com Typescript).
+- [Bootstrap](https://getbootstrap.com/) | Bootstrap para ajudar na responsividade.
+- [Material UI](https://material.angular.io/) | Implementação de componentes de interface.
+- [Angular](https://angular.io/start) | Plataforma de aplicações Web.
 
 ## Referencias
 - [Markdown](https://www.markdownguide.org/basic-syntax/) | Documentação de como utilizar o Markdown.
 - [Documentação W3Schools](https://www.w3schools.com/) | Documentação e tutoriais praticos.
 - [Figma Community](https://www.figma.com/community) | Inspiração na prototipação do projeto.
+- +Forums e Blogs da internet para sanar as minhas duvidas relacionadas a linguagem (Alura, Stack Overflow e Geeks for geeks).
 
 ## 📜 Licença
 Este projeto é licenciado sob os termos do arquivo [LICENÇA](LICENSE). Veja o arquivo para mais detalhes. <br>
 
 <p align="center">
   Desenvolvido com muito ☕ por
-  <a href="https://github.com/Guzius" target="_blank">Gustavo Sotrati Taques</a>,
-  <a href="https://github.com/jyonaha" target="_blank">João Ionafa</a>,
-  <a href="https://github.com/jEduardo07" target="_blank">José Eduardo</a>,
-  <a href="https://github.com/mewmewdevart" target="_blank">Larissa Cristina Benedito</a> e
-  <a href="https://github.com/Mrnho1" target="_blank">Lucas da Silva Marinho</a>.
+  <a href="https://linktr.ee/guzius" target="_blank">Gustavo Sotrati Taques</a>,
+  <a href="https://linktr.ee/joaoionafa" target="_blank">João Ionafa</a>,
+  <a href="https://linktr.ee/JEduardoS" target="_blank">José Eduardo</a>,
+  <a href="https://linktr.ee/mewmewdevart" target="_blank">Larissa Cristina Benedito</a> e
+  <a href="https://linktr.ee/mrnho" target="_blank">Lucas da Silva Marinho</a>.
 </p>
 
 
