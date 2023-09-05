@@ -125,9 +125,31 @@ mat-tab-group {
 	pointer-events: none;
   }
   
-  mat-icon {
+  mat-icon{
 	color: $corPrincipal;
   }
+
+  mat-icon:active {
+	animation: bounce 1.0s linear;
+}
+
+@keyframes bounce {
+	20% {
+		transform: translateY(-6px);
+	}
+
+	40% {
+		transform: translateY(0px);
+	}
+
+	80% {
+		transform: translateY(-2px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
 
 // Tab do Detalhes
 .mat-mdc-tab-header {

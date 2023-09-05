@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ComunicacaoService } from '../../comunicacao.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import * as $ from 'jquery';
 
 @Component({
 	selector: 'app-detalhes',
@@ -11,7 +12,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 	styleUrls: ['./detalhes.component.scss']
 })
 export class DetalhesComponent implements OnInit {
-
+	
 	filmeId: string;
 	filme: any;
 	isButtonDisabled = false;

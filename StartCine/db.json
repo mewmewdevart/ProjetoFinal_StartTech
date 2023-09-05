@@ -18,7 +18,7 @@
       ],
       "rating": 7.4,
       "iframe": "URL_DO_IFRAME",
-      "favorito": false,
+      "favorito": true,
       "sinopse": "Após matar um membro da alta cúpula da guilda de assassinos, John Wick se torna um alvo de 14 milhões de dólares para os assassinos profissionais em todo o mundo. Agora, ele deve lutar por sua sobrevivência enquanto busca uma maneira de sair dessa situação mortal.",
       "duracao": "2h 10min",
       "classificacao": "18 anos"
@@ -563,6 +563,22 @@
       "confirmPassword": "123",
       "type": "user",
       "id": 2
+    },
+    {
+      "name": "Gustavo Sotrati Taques",
+      "username": "Guzius",
+      "email": "gustavotaques11@gmail.com",
+      "password": "batman123",
+      "user": "user",
+      "id": 3
+    },
+    {
+      "name": "Gustavo Sotrati Taques",
+      "username": "gustavotaques11@gmail.com",
+      "email": "gustavotaques11@gmail.com",
+      "password": "batman123",
+      "user": "user",
+      "id": 4
     }
   ]
 }
