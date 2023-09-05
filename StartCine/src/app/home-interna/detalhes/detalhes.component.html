@@ -22,7 +22,7 @@
 				<mat-card-actions>
 					<button class="botaoAdd" [ngClass]="{'disabled-button': isButtonDisabled}"
 					[title]="filme.favorito === true ? 'favorite-checked' : 'favorite'"
-					  [title]="(filme.favorito === true ? 'Adicionar aos Favoritos' : 'Remover dos favoritos')"
+					  [title]="(filme.favorito === true ? 'Remover dos favoritos' : 'Adicionar aos Favoritos')"
 					  (click)="toggleFavorito(filme.id)">
 					  <mat-icon aria-hidden="false" aria-label="Example star icon" fontIcon="star"></mat-icon>
 					</button>
