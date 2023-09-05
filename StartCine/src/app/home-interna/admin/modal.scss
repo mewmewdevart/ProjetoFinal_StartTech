@@ -57,7 +57,9 @@ li {
 }
 
 .modal-container {
+	text-align: center;
 	width: 80%;
+	margin: 0 auto;
 	padding: 20px 0;
 	h1 {
 		font-size: $tamanhoGrande;

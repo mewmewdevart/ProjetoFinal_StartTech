@@ -1,5 +1,65 @@
 <div class="modal-container">
 	<h1>Editar Conteúdo</h1>
+	<mat-form-field>
+		<mat-label>Categoria:</mat-label>
+		<input matInput placeholder="Ex.: Filme" [(ngModel)]="conteudo.categoria" required />
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Título:</mat-label>
+		<input matInput placeholder="Ex.: Matrix" [(ngModel)]="conteudo.title" required />
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Ano de Lançamento:</mat-label>
+		<input matInput placeholder="Ex.: 1999" [(ngModel)]="conteudo.releaseYear" />
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Imagem:</mat-label>
+		<input matInput placeholder="Cole aqui a URL da imagem" [(ngModel)]="conteudo.image" />
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Gênero:</mat-label>
+		<input matInput placeholder="Ex.: Ação, Ficção Científica" [(ngModel)]="conteudo.genre" />
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Diretor:</mat-label>
+		<input matInput placeholder="Ex.: Wachowskis" [(ngModel)]="conteudo.director" />
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Atores:</mat-label>
+		<input matInput placeholder="Ex.: Keanu Reeves, Laurence Fishburne" [(ngModel)]="conteudo.actors" />
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Classificação:</mat-label>
+		<input matInput placeholder="Ex.: PG-13" [(ngModel)]="conteudo.classificacao" />
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Nota:</mat-label>
+		<input matInput placeholder="Ex.: 8.7" [(ngModel)]="conteudo.rating" />
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Iframe:</mat-label>
+		<input matInput placeholder="Cole aqui o código Iframe" [(ngModel)]="conteudo.iframe" />
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Sinopse:</mat-label>
+		<textarea matInput [(ngModel)]="conteudo.sinopse"></textarea>
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Duração:</mat-label>
+		<input matInput placeholder="Ex.: 2h 16min" [(ngModel)]="conteudo.duracao" />
+	</mat-form-field>
+	<!-- <mat-form-field>
+		<mat-label>Favorito:</mat-label>
+		<mat-checkbox [(ngModel)]="conteudo.favorito">Favorito</mat-checkbox>
+	</mat-form-field> -->
+	<button mat-button (click)="editarConteudo()">
+		Enviar
+	</button>
+</div>
+
+<!-- 
+<div class="modal-container">
+	<h1>Editar Conteúdo</h1>
 	<form #conteudoForm="ngForm">
 	<mat-form-field>
 		<mat-label>Categoria:</mat-label>
@@ -58,3 +118,4 @@
 	</button>
 	</form>
 </div>
+-->
