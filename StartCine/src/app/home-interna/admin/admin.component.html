@@ -52,13 +52,14 @@
 			  <ng-container matColumnDef="acoes">
 				<th mat-header-cell *matHeaderCellDef>Ações</th>
 				<td mat-cell *matCellDef="let conteudo">
+					<!-- 
 				  <button
 					[class]="conteudo.favorito ? 'favorite-checked' : 'favorite'"
 					[title]="conteudo.favorito ? 'Remover dos favoritos' : 'Adicionar aos Favoritos'"
 					(click)="toggleFavorito(conteudo.id)"
 				  >
 					<mat-icon aria-hidden="false" aria-label="Example star icon" fontIcon="star"></mat-icon>
-				  </button>
+				  </button> -->
 				  <button mat-button class="save" (click)="modalEditar(conteudo.id, '500ms', '500ms')">
 					<mat-icon aria-hidden="false" aria-label="Editar" fontIcon="edit"></mat-icon>
 				  </button>

@@ -1,3 +1,62 @@
+
+<div class="modal-container">
+	<h1> Adicionar um novo conteudo </h1>
+	<mat-form-field>
+		<mat-label>Categoria:</mat-label>
+		<input matInput placeholder="Ex.: Filme" [(ngModel)]="categoria" required>
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Título:</mat-label>
+		<input matInput placeholder="Ex.: Matrix" [(ngModel)]="title" required>
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Ano de Lançamento:</mat-label>
+		<input matInput placeholder="Ex.: 1999" [(ngModel)]="releaseYear" required>
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Imagem:</mat-label>
+		<input matInput placeholder="Cole aqui a URL da imagem" [(ngModel)]="image" required>
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Gênero:</mat-label>
+		<input matInput placeholder="Ex.: Ação, Ficção Científica" [(ngModel)]="genre" required>
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Diretor:</mat-label>
+		<input matInput placeholder="Ex.: Wachowskis" [(ngModel)]="director" required>
+	</mat-form-field>
+
+	<mat-form-field>
+		<mat-label>Atores:</mat-label>
+		<input matInput placeholder="Ex.: Keanu Reeves, Laurence Fishburne" [(ngModel)]="actors" required>
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Classificação:</mat-label>
+		<input matInput placeholder="Ex.: PG-13" [(ngModel)]="classificacao" required>
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Nota:</mat-label>
+		<input matInput placeholder="Ex.: 8.7" [(ngModel)]="rating" required>
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Iframe:</mat-label>
+		<input matInput placeholder="Cole aqui o código Iframe" [(ngModel)]="iframe" required>
+	</mat-form-field>
+	<mat-form-field>
+		<mat-label>Sinopse:</mat-label>
+		<textarea matInput [(ngModel)]="sinopse" required></textarea>
+	</mat-form-field>
+	<mat-form-field class="mb-3">
+		<mat-label>Duração:</mat-label>
+		<input matInput placeholder="Ex.: 2h 16min" [(ngModel)]="duracao" required>
+	</mat-form-field>
+
+	<button mat-button (click)="adicionarConteudo()">
+		Enviar
+	</button>
+</div>
+
+<!-- 
 <div class="modal-container container">
 	<h1 class="mb-4">Adicionando um novo conteúdo</h1>
 	<div class="row">
@@ -58,3 +117,4 @@
 		Enviar
 	</button>
 </div>
+-->
